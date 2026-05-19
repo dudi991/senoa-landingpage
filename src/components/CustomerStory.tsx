@@ -1,0 +1,60 @@
+import { useLanguage } from '../context/LanguageContext';
+
+const CustomerStory = () => {
+  const { t } = useLanguage();
+
+  return (
+    <section id="philosophy" className="w-full bg-white pt-10 lg:pt-14 pb-12 lg:pb-16 overflow-hidden">
+      <div className="max-w-[1800px] mx-auto px-8 lg:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-stretch">
+          
+          {/* Left Column - Editorial Storytelling Aligned with Image Top */}
+          <div className="lg:col-span-5 flex flex-col justify-start py-0 relative">
+            
+            {/* Elegant category label */}
+            <div className="text-left mb-8 lg:mb-8">
+              <span className="font-sans text-[10px] tracking-[0.3em] font-semibold text-primary/40 uppercase mb-3 block">
+                {t('philosophy.tag')}
+              </span>
+              <div className="w-12 h-[1px] bg-midnight/80"></div>
+            </div>
+
+            {/* Elegant Grand Typographic Headline */}
+            <div>
+              <h2 className="text-4xl lg:text-[3.25rem] leading-[1.15] font-serif text-primary tracking-tight">
+                {t('philosophy.title').split('\n').map((line, i) => (
+                  <span key={i}>
+                    {line}
+                    {i < t('philosophy.title').split('\n').length - 1 && <br />}
+                  </span>
+                ))}
+              </h2>
+            </div>
+            
+            {/* Story Paragraphs beautifully coupled with Headline with closer spacing */}
+            <div className="space-y-6 text-base lg:text-[17px] text-primary/70 leading-relaxed font-light mt-6 lg:mt-8 max-w-md">
+              <p>
+                {t('philosophy.text1')}
+              </p>
+              <p className="font-light text-primary/95 text-[18px] lg:text-[20px] pt-4 border-t border-primary/10 leading-relaxed">
+                {t('philosophy.text2')}
+              </p>
+            </div>
+          </div>
+
+          {/* Right Column - Large Widescreen Editorial Image */}
+          <div className="lg:col-span-7 relative min-h-[400px] lg:min-h-[500px] rounded-sm overflow-hidden shadow-sm">
+            <img 
+              src="images/derAbend.png" 
+              alt={t('philosophy.title')} 
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default CustomerStory;
