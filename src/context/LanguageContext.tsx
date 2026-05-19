@@ -15,7 +15,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Hero
     'hero.slogan': 'Nicht für den Schlaf. Sondern für den Moment davor.',
     'hero.title': 'Feierabend beginnt im Kopf.',
-    'hero.desc': 'SENOA ist dein tägliches Abendritual — ein bewusster Übergang aus dem Leistungsmodus in echte Ruhe.',
+    'hero.desc': 'SENOA ist ein bewusstes Abendritual für alle, die nach einem vollen Tag wieder bei sich ankommen wollen. Dein täglicher Übergang in echte Ruhe.',
     'hero.cta': 'TEIL VON SENOA WERDEN',
     'hero.benefit1': 'Mentales Entlasten',
     'hero.benefit2': 'Regeneration',
@@ -65,7 +65,7 @@ const translations: Record<Language, Record<string, string>> = {
     'ing.mag_thre': 'Unterstützt die kognitive Regeneration',
     'ing.theanine': 'Fördert Ruhe ohne Schläfrigkeit',
     'ing.ashwa': 'Reduziert Stress & unterstützt die Belastbarkeit',
-    'ing.saffron': 'Unterstützt Stimmung & emotionale Balance',
+    'ing.saffron': 'Unterstützt Stimmung & emotional Balance',
     'ing.phosph': 'Unterstützt Cortisol-Balance & kognitive Leistung',
     'ing.reishi': 'Unterstützt Immunabwehr & Regeneration',
     'ing.apigenin': 'Fördert Entspannung & Schlafqualität',
@@ -97,7 +97,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Hero
     'hero.slogan': 'Not for sleep. But for the moment before.',
     'hero.title': 'Evening starts in your mind.',
-    'hero.desc': 'SENOA is your daily evening ritual — a conscious transition from high-performance mode to true stillness.',
+    'hero.desc': 'SENOA is a conscious evening ritual for anyone who wants to return to themselves after a full day. Your daily transition into true stillness.',
     'hero.cta': 'BECOME PART OF SENOA',
     'hero.benefit1': 'Mental Unwinding',
     'hero.benefit2': 'Regeneration',

@@ -5,9 +5,8 @@ const Gallery = () => {
   const images = [
     "images/gallery1.png",
     "images/gallery2.png",
-    "images/gallery1.png",
-    "images/gallery2.png",
-    "images/gallery1.png"
+    "images/gallery3.png",
+    "images/gallery4.png"
   ];
 
   return (
@@ -38,7 +37,7 @@ const Gallery = () => {
           {images.map((src, index) => (
             <div 
               key={index} 
-              className="w-[85vw] sm:w-[50vw] md:w-[33.333vw] lg:w-[25vw] aspect-[21/9] relative flex-shrink-0 cursor-pointer overflow-hidden border-r-[6px] border-white snap-start transition-opacity duration-700 group-hover:opacity-40 hover:!opacity-100"
+              className="w-[85vw] sm:w-[50vw] md:w-[33.333vw] lg:w-[25vw] aspect-[16/10] relative flex-shrink-0 cursor-pointer overflow-hidden border-r-[6px] border-white snap-start transition-opacity duration-700 group-hover:opacity-40 hover:!opacity-100"
             >
               <img 
                 src={src} 

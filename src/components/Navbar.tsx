@@ -8,20 +8,20 @@ const Navbar = () => {
       <div className="text-3xl tracking-[0.15em] font-sans text-primary">SENOA</div>
       
       {/* Language Switcher */}
-      <div className="flex items-center gap-2 font-sans text-[10px] tracking-[0.25em] font-semibold text-primary/40">
+      <div className="flex items-center gap-2 font-sans text-[12px] tracking-[0.2em] font-semibold text-white/80">
         <button 
           onClick={() => setLanguage('de')} 
-          className={`hover:text-primary transition-colors duration-300 focus:outline-none ${
-            language === 'de' ? 'text-primary font-bold underline underline-offset-4 decoration-primary/30' : ''
+          className={`hover:text-white transition-colors duration-300 focus:outline-none ${
+            language === 'de' ? 'text-white font-bold underline underline-offset-4 decoration-white/50' : ''
           }`}
         >
           DE
         </button>
-        <span className="text-primary/10">|</span>
+        <span className="text-white/30">|</span>
         <button 
           onClick={() => setLanguage('en')} 
-          className={`hover:text-primary transition-colors duration-300 focus:outline-none ${
-            language === 'en' ? 'text-primary font-bold underline underline-offset-4 decoration-primary/30' : ''
+          className={`hover:text-white transition-colors duration-300 focus:outline-none ${
+            language === 'en' ? 'text-white font-bold underline underline-offset-4 decoration-white/50' : ''
           }`}
         >
           EN

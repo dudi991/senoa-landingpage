@@ -1,4 +1,4 @@
-import { Brain, Target, Sun } from 'lucide-react';
+import { Brain, Sun } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -21,11 +21,11 @@ const Hero = () => {
         <img 
           src="images/hero.png" 
           alt="SENOA Night Reset Background" 
-          className="w-full h-full object-cover object-center opacity-85"
+          className="w-full h-full object-cover object-bottom origin-bottom opacity-85 saturate-[1.12] contrast-[1.04] brightness-[0.93]"
           style={{ transform: `translateY(${scrollY * 0.35}px) scale(1.15)`, willChange: 'transform' }}
         />
         {/* Subtle gradient to ensure text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-white/20 to-transparent lg:from-white/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/75 via-white/30 to-transparent lg:from-white/50" />
       </div>
 
       {/* Lunar Monogram Watermark (Signature Element) */}
@@ -45,10 +45,13 @@ const Hero = () => {
       <div className="relative z-10 w-full px-8 pt-32 lg:pt-24 pb-4">
         <div className="max-w-[1600px] mx-auto">
           <div className="flex flex-col justify-center max-w-2xl">
+            {/* 1. Slogan (Hook at Top) */}
             <span className="font-serif italic text-lg lg:text-xl text-primary/60 mb-4 block">
               {t('hero.slogan')}
             </span>
-            <h1 className="text-5xl lg:text-[4.75rem] leading-[1.1] mb-6 font-serif text-primary">
+            
+            {/* 2. Headline H1 */}
+            <h1 className="text-5xl lg:text-[4.75rem] leading-[1.1] mb-16 font-serif text-primary">
               {t('hero.title').split('\n').map((line, i) => (
                 <span key={i}>
                   {line}
@@ -56,11 +59,13 @@ const Hero = () => {
                 </span>
               ))}
             </h1>
-            <p className="text-primary/80 text-base lg:text-lg mb-12 max-w-md leading-relaxed font-light">
+
+            {/* 4. Description */}
+            <p className="text-primary/80 text-base lg:text-lg mb-10 max-w-md leading-relaxed font-light">
               {t('hero.desc')}
             </p>
 
-
+            {/* 5. Icons */}
             <div className="flex flex-wrap gap-x-16 lg:gap-x-20 gap-y-6 mb-12">
               <div className="flex flex-col items-start">
                 <Brain className="w-8 h-8 mb-4 text-primary" strokeWidth={1} />
@@ -68,12 +73,6 @@ const Hero = () => {
                   {t('hero.benefit1').split(' ').map((word, i) => (
                     <span key={i} className="block">{word}</span>
                   ))}
-                </span>
-              </div>
-              <div className="flex flex-col items-start">
-                <Target className="w-8 h-8 mb-4 text-primary" strokeWidth={1} />
-                <span className="text-[10px] tracking-widest font-semibold uppercase leading-tight block mt-[10px]">
-                  {t('hero.benefit2')}
                 </span>
               </div>
               <div className="flex flex-col items-start">
@@ -86,7 +85,7 @@ const Hero = () => {
               </div>
             </div>
 
-
+            {/* 6. CTA */}
             <div>
               <a href="#waitlist" className="inline-block text-center bg-accent px-12 w-full max-w-[320px] py-4 text-xs tracking-widest font-semibold uppercase mb-4 text-white hover:bg-opacity-80 transition-opacity">
                 {t('hero.cta')}
