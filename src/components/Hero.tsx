@@ -1,27 +1,16 @@
-import { useEffect, useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 
 const Hero = () => {
-  const [scrollY, setScrollY] = useState(0);
   const { t } = useLanguage();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
-    <section className="relative w-full min-h-[80vh] lg:h-[85vh] flex items-center overflow-hidden bg-white py-24 lg:py-0">
+    <section className="relative w-full min-h-[70vh] lg:h-[75vh] flex items-center overflow-hidden bg-white py-16 lg:py-0">
       {/* Background Image */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img 
-          src="images/hero.png" 
+          src="images/hero.webp" 
           alt="SENOA Night Reset Background" 
-          className="w-full h-full object-cover object-bottom origin-bottom opacity-85 saturate-[1.12] contrast-[1.04] brightness-[0.93]"
-          style={{ transform: `translateY(${scrollY * 0.35}px) scale(1.15)`, willChange: 'transform' }}
+          className="w-full h-full object-cover object-center opacity-85 saturate-[1.12] contrast-[1.04] brightness-[0.93]"
         />
         {/* Subtle gradient to ensure text readability */}
         <div className="absolute inset-0 bg-gradient-to-r from-white/75 via-white/30 to-transparent lg:from-white/50" />
