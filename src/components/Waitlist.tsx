@@ -59,6 +59,7 @@ const Waitlist = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full bg-white border border-primary/20 text-primary px-6 py-3.5 text-xs focus:outline-none focus:border-primary/50 transition-colors font-light placeholder-primary/40 rounded-sm text-center"
                   required
+                  autoComplete="off"
                 />
                 <button 
                   type="submit" 

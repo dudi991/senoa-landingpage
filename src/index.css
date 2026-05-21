@@ -106,6 +106,13 @@
   .calm-mode .text-primary\/40 {
     color: rgba(243, 244, 246, 0.45) !important;
   }
+
+  /* Make all ingredients and trust icons crisp and visible in calm mode */
+  .calm-mode #ingredients svg {
+    color: #F3F4F6 !important;
+    stroke: #F3F4F6 !important;
+    opacity: 0.85 !important;
+  }
   
   .calm-mode .border-primary\/10,
   .calm-mode .border-primary\/5,
@@ -124,6 +131,14 @@
   .calm-mode input:focus,
   .calm-mode textarea:focus {
     border-color: #F3F4F6 !important;
+  }
+  
+  /* Gallery image borders and background override in calm mode */
+  .calm-mode .border-white {
+    border-color: #0B0D14 !important;
+  }
+  .calm-mode .bg-primary\/5 {
+    background-color: #0B0D14 !important;
   }
   
   /* Global smooth transition rule for calm mode */
