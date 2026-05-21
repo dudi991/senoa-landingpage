@@ -7,7 +7,7 @@ interface NavbarProps {
 }
 
 const Navbar = ({ isCalm, onToggleCalm }: NavbarProps) => {
-  const { language, setLanguage } = useLanguage();
+  const { language, setLanguage, t } = useLanguage();
 
   return (
     <nav className="w-full bg-transparent flex items-center justify-between px-8 py-8 absolute top-0 left-0 z-50">
@@ -18,18 +18,18 @@ const Navbar = ({ isCalm, onToggleCalm }: NavbarProps) => {
         {/* Calm Mode Button */}
         <button 
           onClick={onToggleCalm}
-          className="flex items-center gap-2 text-white/80 hover:text-white transition-colors duration-300 focus:outline-none cursor-pointer"
-          title={isCalm ? "Tagesmodus einschalten" : "Abendmodus aktivieren"}
+          className="flex items-center gap-2 text-white hover:text-white/80 transition-colors duration-300 focus:outline-none cursor-pointer"
+          title={isCalm ? (language === 'de' ? "Tagesmodus einschalten" : "Switch to Day Mode") : (language === 'de' ? "Abendmodus aktivieren" : "Activate Evening Mode")}
         >
           {isCalm ? (
             <>
               <Sun className="w-4 h-4 text-accent animate-pulse" strokeWidth={2} />
-              <span className="hidden sm:inline text-accent font-bold">TAGESMODUS</span>
+              <span className="hidden sm:inline text-white font-bold">{t('navbar.calm_active')}</span>
             </>
           ) : (
             <>
               <Moon className="w-4 h-4 text-white/60" strokeWidth={2} />
-              <span className="hidden sm:inline text-white/60">ABENDMODUS</span>
+              <span className="hidden sm:inline text-white font-semibold">{t('navbar.calm_inactive')}</span>
             </>
           )}
         </button>

@@ -117,7 +117,9 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.about': 'ÜBER UNS',
     'footer.contact': 'KONTAKT',
     'footer.privacy': 'DATENSCHUTZ',
-    'footer.imprint': 'IMPRESSUM'
+    'footer.imprint': 'IMPRESSUM',
+    'navbar.calm_active': 'TAGESMODUS',
+    'navbar.calm_inactive': 'ABENDMODUS'
   },
   en: {
     // Hero
@@ -225,7 +227,9 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.about': 'ABOUT',
     'footer.contact': 'CONTACT',
     'footer.privacy': 'PRIVACY',
-    'footer.imprint': 'IMPRINT'
+    'footer.imprint': 'IMPRINT',
+    'navbar.calm_active': 'DAY MODE',
+    'navbar.calm_inactive': 'EVENING MODE'
   }
 };
 

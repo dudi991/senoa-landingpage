@@ -63,6 +63,30 @@
     background-color: #0B0D14 !important;
   }
   
+  /* Ingredients cards and bottom trust strip background overrides */
+  .calm-mode .bg-\[\#FAF9F6\] {
+    background-color: #151821 !important;
+    border-color: rgba(243, 244, 246, 0.08) !important;
+  }
+  
+  /* Circles inside ingredients cards */
+  .calm-mode .bg-white.w-14.h-14,
+  .calm-mode .w-14.h-14 {
+    background-color: #1F2432 !important;
+    border-color: rgba(243, 244, 246, 0.08) !important;
+  }
+  
+  /* Hero dark gradient overlay for optimal readability in calm mode */
+  .calm-mode .calm-gradient-overlay {
+    background-image: linear-gradient(to right, rgba(11, 13, 20, 0.94) 0%, rgba(11, 13, 20, 0.6) 60%, rgba(11, 13, 20, 0.25) 100%) !important;
+  }
+  
+  @media (max-width: 1023px) {
+    .calm-mode .calm-gradient-overlay {
+      background-image: linear-gradient(to bottom, rgba(11, 13, 20, 0.9) 0%, rgba(11, 13, 20, 0.65) 60%, rgba(11, 13, 20, 0.85) 100%) !important;
+    }
+  }
+  
   .calm-mode .text-primary,
   .calm-mode h1,
   .calm-mode h2,
@@ -76,17 +100,19 @@
   }
   
   .calm-mode .text-primary\/60 {
-    color: rgba(243, 244, 246, 0.6) !important;
+    color: rgba(243, 244, 246, 0.65) !important;
   }
   
   .calm-mode .text-primary\/40 {
-    color: rgba(243, 244, 246, 0.4) !important;
+    color: rgba(243, 244, 246, 0.45) !important;
   }
   
   .calm-mode .border-primary\/10,
   .calm-mode .border-primary\/5,
-  .calm-mode border-t {
-    border-color: rgba(243, 244, 246, 0.1) !important;
+  .calm-mode border-t,
+  .calm-mode .divide-primary\/10 > :not([hidden]) ~ :not([hidden]),
+  .calm-mode .md\:border-r {
+    border-color: rgba(243, 244, 246, 0.08) !important;
   }
   
   .calm-mode input,

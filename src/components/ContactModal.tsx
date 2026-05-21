@@ -1,5 +1,6 @@
 import { X, Check } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import { useLanguage } from '../context/LanguageContext';
 
 interface ContactModalProps {
   isOpen: boolean;
@@ -7,6 +8,8 @@ interface ContactModalProps {
 }
 
 const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
+  const { language } = useLanguage();
+  
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -71,7 +74,11 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
         throw new Error('Submission failed');
       }
     } catch (err) {
-      setError('Es gab ein Problem beim Senden deiner Nachricht. Bitte versuche es noch einmal.');
+      setError(
+        language === 'de'
+          ? 'Es gab ein Problem beim Senden deiner Nachricht. Bitte versuche es noch einmal.'
+          : 'There was a problem sending your message. Please try again.'
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -88,7 +95,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
           onClick={onClose}
           className="flex items-center gap-2 font-sans text-[12px] tracking-[0.2em] font-bold text-primary/60 hover:text-primary transition-colors focus:outline-none cursor-pointer"
         >
-          SCHLIESSEN
+          {language === 'de' ? 'SCHLIESSEN' : 'CLOSE'}
           <X className="w-4 h-4" strokeWidth={1.5} />
         </button>
       </div>
@@ -96,12 +103,12 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
       {/* Content Container */}
       <div className="max-w-2xl mx-auto px-8 pt-32 pb-24 font-sans text-primary">
         <span className="font-sans text-[11px] tracking-[0.3em] font-semibold text-primary/40 uppercase mb-3 block">
-          Kontakt
+          {language === 'de' ? 'Kontakt' : 'Contact'}
         </span>
         <div className="w-12 h-[1px] bg-primary/20 mb-8"></div>
         
         <p className="text-primary/70 text-lg font-light leading-relaxed mb-12">
-          Wir würden uns freuen, von dir zu hören – wir antworten so schnell wie möglich.
+          We’d love to hear from you – we reply as quickly as possible.
         </p>
 
         {isSubmitted ? (
@@ -109,22 +116,26 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
             <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-6">
               <Check className="w-6 h-6" strokeWidth={2} />
             </div>
-            <h3 className="font-serif text-2xl text-primary mb-3">Vielen Dank.</h3>
+            <h3 className="font-serif text-2xl text-primary mb-3">
+              {language === 'de' ? 'Vielen Dank.' : 'Thank you.'}
+            </h3>
             <p className="text-primary/60 font-light text-[15px] max-w-md mx-auto leading-relaxed">
-              Deine Nachricht wurde erfolgreich übermittelt. Wir lesen jede Nachricht aufmerksam und melden uns so schnell wie möglich bei dir.
+              {language === 'de'
+                ? 'Deine Nachricht wurde erfolgreich übermittelt. Wir lesen jede Nachricht aufmerksam und melden uns so schnell wie möglich bei dir.'
+                : 'Your message has been successfully sent. We read every message carefully and will get back to you as soon as possible.'}
             </p>
             <button
               onClick={onClose}
-              className="mt-8 font-sans text-[11px] tracking-[0.15em] font-bold uppercase py-3 px-6 border border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300"
+              className="mt-8 font-sans text-[11px] tracking-[0.15em] font-bold uppercase py-3 px-6 border border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 cursor-pointer"
             >
-              Fenster schließen
+              {language === 'de' ? 'Fenster schließen' : 'Close Window'}
             </button>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-8">
             <div className="flex flex-col">
               <label htmlFor="name" className="font-sans text-[11px] tracking-[0.15em] font-bold uppercase text-primary/60 mb-2">
-                Dein Name
+                {language === 'de' ? 'Dein Name' : 'Your Name'}
               </label>
               <input
                 type="text"
@@ -132,14 +143,14 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                 required
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                placeholder="Dominik Schwab"
+                placeholder={language === 'de' ? 'Dominik Schwab' : 'Dominik Schwab'}
                 className="w-full border-b border-primary/20 bg-transparent py-3 focus:border-primary focus:outline-none transition-colors duration-300 font-light text-[15px] placeholder-primary/20"
               />
             </div>
 
             <div className="flex flex-col">
               <label htmlFor="email" className="font-sans text-[11px] tracking-[0.15em] font-bold uppercase text-primary/60 mb-2">
-                Deine Emailadresse
+                {language === 'de' ? 'Deine Emailadresse' : 'Your Email Address'}
               </label>
               <input
                 type="email"
@@ -154,7 +165,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
 
             <div className="flex flex-col">
               <label htmlFor="message" className="font-sans text-[11px] tracking-[0.15em] font-bold uppercase text-primary/60 mb-2">
-                Deine Nachricht
+                {language === 'de' ? 'Deine Nachricht' : 'Your Message'}
               </label>
               <textarea
                 id="message"
@@ -162,7 +173,11 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                 rows={5}
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                placeholder="Schreibe hier deine Nachricht an uns..."
+                placeholder={
+                  language === 'de'
+                    ? 'Schreibe hier deine Nachricht an uns...'
+                    : 'Write your message to us here...'
+                }
                 className="w-full border-b border-primary/20 bg-transparent py-3 focus:border-primary focus:outline-none transition-colors duration-300 font-light text-[15px] placeholder-primary/20 resize-none leading-relaxed"
               />
             </div>
@@ -179,7 +194,13 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                 disabled={!isFormValid || isSubmitting}
                 className="w-full font-sans text-[13px] tracking-[0.15em] font-bold uppercase py-4 px-8 border border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-primary disabled:cursor-not-allowed cursor-pointer"
               >
-                {isSubmitting ? 'WIRD GESENDET...' : 'NACHRICHT SENDEN'}
+                {isSubmitting
+                  ? language === 'de'
+                    ? 'WIRD GESENDET...'
+                    : 'SENDING...'
+                  : language === 'de'
+                  ? 'NACHRICHT SENDEN'
+                  : 'SEND MESSAGE'}
               </button>
             </div>
           </form>

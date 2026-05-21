@@ -13,7 +13,7 @@ const Hero = () => {
           className="w-full h-full object-cover object-[center_35%] opacity-85 saturate-[1.12] contrast-[1.04] brightness-[0.93] animate-ken-burns"
         />
         {/* Subtle gradient to ensure text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white/75 via-white/30 to-transparent lg:from-white/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/75 via-white/30 to-transparent lg:from-white/50 calm-gradient-overlay" />
       </div>
 
       {/* Lunar Monogram Watermark (Signature Element) */}
