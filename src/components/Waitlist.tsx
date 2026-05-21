@@ -22,7 +22,7 @@ const Waitlist = () => {
           
           {/* Column 1 - Left: Serif Headline */}
           <div className="text-left">
-            <h2 className="text-3xl lg:text-[32px] font-serif font-normal text-primary leading-[1.3] max-w-xs">
+            <h2 className="text-4xl lg:text-5xl leading-[1.15] font-serif text-primary tracking-tight max-w-xs">
               {t('waitlist.title').split('\n').map((line, i) => (
                 <span key={i}>
                   {line}
@@ -71,33 +71,36 @@ const Waitlist = () => {
           </div>
           
           {/* Column 3 - Right: Three aligned benefit items */}
-          <div className="grid grid-cols-3 gap-2 lg:gap-4 text-center items-start">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4 lg:gap-6 text-center items-start">
             {/* Item 1 */}
-            <div className="flex flex-col items-center gap-3">
-              <Star className="w-6 h-6 text-primary/40" strokeWidth={1} />
-              <span className="font-sans text-[8px] lg:text-[9px] tracking-[0.2em] font-semibold text-primary/50 uppercase leading-relaxed">
-                {t('waitlist.benefit1').split('\n').map((line, i) => (
-                  <span key={i} className="block">{line}</span>
-                ))}
-              </span>
+            <div className="flex flex-col items-center max-w-[200px] mx-auto">
+              <Star className="w-10 h-10 text-primary/40 mb-5" strokeWidth={1} />
+              <h4 className="font-sans text-[13px] tracking-[0.15em] font-bold text-primary uppercase mb-2 leading-snug">
+                {t('waitlist.benefit1_title')}
+              </h4>
+              <p className="text-[15px] text-primary/60 leading-snug font-light">
+                {t('waitlist.benefit1_desc')}
+              </p>
             </div>
             {/* Item 2 */}
-            <div className="flex flex-col items-center gap-3">
-              <Mail className="w-6 h-6 text-primary/40" strokeWidth={1} />
-              <span className="font-sans text-[8px] lg:text-[9px] tracking-[0.2em] font-semibold text-primary/50 uppercase leading-relaxed">
-                {t('waitlist.benefit2').split('\n').map((line, i) => (
-                  <span key={i} className="block">{line}</span>
-                ))}
-              </span>
+            <div className="flex flex-col items-center max-w-[200px] mx-auto">
+              <Mail className="w-10 h-10 text-primary/40 mb-5" strokeWidth={1} />
+              <h4 className="font-sans text-[13px] tracking-[0.15em] font-bold text-primary uppercase mb-2 leading-snug">
+                {t('waitlist.benefit2_title')}
+              </h4>
+              <p className="text-[15px] text-primary/60 leading-snug font-light">
+                {t('waitlist.benefit2_desc')}
+              </p>
             </div>
             {/* Item 3 */}
-            <div className="flex flex-col items-center gap-3">
-              <Gift className="w-6 h-6 text-primary/40" strokeWidth={1} />
-              <span className="font-sans text-[8px] lg:text-[9px] tracking-[0.2em] font-semibold text-primary/50 uppercase leading-relaxed">
-                {t('waitlist.benefit3').split('\n').map((line, i) => (
-                  <span key={i} className="block">{line}</span>
-                ))}
-              </span>
+            <div className="flex flex-col items-center max-w-[200px] mx-auto">
+              <Gift className="w-10 h-10 text-primary/40 mb-5" strokeWidth={1} />
+              <h4 className="font-sans text-[13px] tracking-[0.15em] font-bold text-primary uppercase mb-2 leading-snug">
+                {t('waitlist.benefit3_title')}
+              </h4>
+              <p className="text-[15px] text-primary/60 leading-snug font-light">
+                {t('waitlist.benefit3_desc')}
+              </p>
             </div>
           </div>
 

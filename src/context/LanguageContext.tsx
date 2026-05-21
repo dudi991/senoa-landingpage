@@ -101,14 +101,17 @@ const translations: Record<Language, Record<string, string>> = {
     'gallery.desc': 'Wir leben in Tagen voller Reize, Termine und Entscheidungen. SENOA steht für den bewussten Gegenpol: weniger Funktionieren, mehr Ankommen. Weniger Optimierung, mehr echter Abend.',
 
     // Waitlist
-    'waitlist.title': 'Für das, was nach dem Arbeitstag kommt. Dein Abend. Dein Ritual.',
-    'waitlist.desc': 'Werde Teil von SENOA.',
+    'waitlist.title': 'Werde Teil von SENOA.',
+    'waitlist.desc': 'Für ruhigere Abende. Für bewusstere Rituale. Für das, was nach dem Arbeitstag kommt.',
     'waitlist.placeholder': 'Deine E-Mail-Adresse',
     'waitlist.submit': 'DABEI SEIN',
     'waitlist.success': 'Du bist Teil von SENOA.',
-    'waitlist.benefit1': 'Exklusiver Vorabzugang',
-    'waitlist.benefit2': 'Persönliche Updates',
-    'waitlist.benefit3': 'Spezielle Angebote',
+    'waitlist.benefit1_title': 'Früher Zugang',
+    'waitlist.benefit1_desc': 'Als Erste:r erfahren, wenn SENOA startet.',
+    'waitlist.benefit2_title': 'Ritual-Impulse',
+    'waitlist.benefit2_desc': 'Gedanken, Bilder und kleine Abendmomente.',
+    'waitlist.benefit3_title': 'Launch-Vorteile',
+    'waitlist.benefit3_desc': 'Exklusive Vorteile zum Start.',
 
     // Footer
     'footer.about': 'ÜBER UNS',
@@ -206,14 +209,17 @@ const translations: Record<Language, Record<string, string>> = {
     'gallery.desc': 'We live in days full of stimuli, deadlines and decisions. SENOA stands for the conscious antipode: less functioning, more arriving. Less optimization, more genuine evening.',
 
     // Waitlist
-    'waitlist.title': 'For what comes after the workday. Your evening. Your ritual.',
-    'waitlist.desc': 'Become part of SENOA.',
+    'waitlist.title': 'Become part of SENOA.',
+    'waitlist.desc': 'For calmer evenings. For more conscious rituals. For what comes after the workday.',
     'waitlist.placeholder': 'Your email address',
     'waitlist.submit': 'JOIN NOW',
     'waitlist.success': 'You are now part of SENOA.',
-    'waitlist.benefit1': 'Exclusive Early Access',
-    'waitlist.benefit2': 'Personal Updates',
-    'waitlist.benefit3': 'Special Offers',
+    'waitlist.benefit1_title': 'Early Access',
+    'waitlist.benefit1_desc': 'Be the first to know when SENOA launches.',
+    'waitlist.benefit2_title': 'Ritual Impulses',
+    'waitlist.benefit2_desc': 'Thoughts, imagery, and quiet evening moments.',
+    'waitlist.benefit3_title': 'Launch Benefits',
+    'waitlist.benefit3_desc': 'Exclusive benefits when we launch.',
 
     // Footer
     'footer.about': 'ABOUT',
