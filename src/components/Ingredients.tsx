@@ -67,11 +67,11 @@ const Ingredients = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="ingredients" className="pt-6 pb-20 lg:pt-8 lg:pb-28 px-8 bg-white relative z-20">
-      <div className="max-w-[1800px] mx-auto">
+    <section id="ingredients" className="pt-6 pb-16 lg:pt-8 lg:pb-20 px-8 lg:px-16 xl:px-24 bg-white relative z-20">
+      <div className="max-w-[1300px] mx-auto">
         
         {/* Section Header */}
-        <div className="text-center mb-16 lg:mb-24">
+        <div className="text-center mb-12 lg:mb-16">
           <span className="font-sans text-[10px] tracking-[0.3em] font-semibold text-primary/40 uppercase mb-3 block">
             {t('ingredients.tag')}
           </span>
@@ -90,18 +90,18 @@ const Ingredients = () => {
         </div>
 
         {/* Curated Groups */}
-        <div className="space-y-16 lg:space-y-24">
+        <div className="space-y-10 lg:space-y-12">
           {groups.map((group, gIdx) => {
             const GroupIcon = group.icon;
             return (
               <div 
                 key={gIdx} 
-                className={`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 pb-16 lg:pb-20 ${
+                className={`grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 pb-10 lg:pb-12 ${
                   gIdx < groups.length - 1 ? 'border-b border-primary/10' : ''
                 }`}
               >
                 {/* Left Column: Group Hero Card */}
-                <div className="lg:col-span-3 bg-[#FAF9F6] border border-primary/10 rounded-sm p-8 flex flex-col items-center text-center justify-center">
+                <div className="lg:col-span-3 bg-[#FAF9F6] border border-primary/10 rounded-sm p-6 flex flex-col items-center text-center justify-center">
                   <div className="w-14 h-14 rounded-full border border-primary/10 bg-white flex items-center justify-center text-primary/70 mb-5 shadow-sm">
                     <GroupIcon className="w-6 h-6" strokeWidth={1} />
                   </div>
@@ -117,7 +117,7 @@ const Ingredients = () => {
                 </div>
 
                 {/* Right Column: Ingredients Grid */}
-                <div className="lg:col-span-9 grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-16 items-center">
+                <div className="lg:col-span-9 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10 items-center">
                   {group.ingredients.map((ing, iIdx) => {
                     const IngIcon = ing.icon;
                     return (
@@ -141,8 +141,8 @@ const Ingredients = () => {
         </div>
 
         {/* Bottom Trust Strip */}
-        <div className="mt-16 lg:mt-24 bg-[#FAF9F6] border border-primary/10 rounded-sm p-8 lg:p-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 divide-y md:divide-y-0 md:divide-x divide-primary/10">
+        <div className="mt-12 lg:mt-16 bg-[#FAF9F6] border border-primary/10 rounded-sm p-6 lg:p-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4 divide-y md:divide-y-0 md:divide-x divide-primary/10">
             {trustItems.map((item, idx) => {
               const TrustIcon = item.icon;
               return (
