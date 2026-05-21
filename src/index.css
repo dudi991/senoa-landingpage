@@ -43,4 +43,80 @@
       transform: translateY(0);
     }
   }
+  .animate-ken-burns {
+    animation: kenBurns 40s ease-in-out infinite alternate;
+  }
+  @keyframes kenBurns {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.06);
+    }
+  }
+  
+  /* Calm Mode CSS Transitions & Overrides */
+  .calm-mode .bg-white,
+  .calm-mode .bg-secondary,
+  .calm-mode section,
+  .calm-mode footer {
+    background-color: #0B0D14 !important;
+  }
+  
+  .calm-mode .text-primary,
+  .calm-mode h1,
+  .calm-mode h2,
+  .calm-mode h3 {
+    color: #F3F4F6 !important;
+  }
+  
+  .calm-mode .text-primary\/80,
+  .calm-mode p {
+    color: rgba(243, 244, 246, 0.8) !important;
+  }
+  
+  .calm-mode .text-primary\/60 {
+    color: rgba(243, 244, 246, 0.6) !important;
+  }
+  
+  .calm-mode .text-primary\/40 {
+    color: rgba(243, 244, 246, 0.4) !important;
+  }
+  
+  .calm-mode .border-primary\/10,
+  .calm-mode .border-primary\/5,
+  .calm-mode border-t {
+    border-color: rgba(243, 244, 246, 0.1) !important;
+  }
+  
+  .calm-mode input,
+  .calm-mode textarea {
+    color: #F3F4F6 !important;
+    border-color: rgba(243, 244, 246, 0.2) !important;
+  }
+  
+  .calm-mode input:focus,
+  .calm-mode textarea:focus {
+    border-color: #F3F4F6 !important;
+  }
+  
+  /* Global smooth transition rule for calm mode */
+  .min-h-screen,
+  section,
+  div,
+  span,
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  footer,
+  input,
+  textarea,
+  button,
+  a {
+    transition: background-color 1.2s cubic-bezier(0.16, 1, 0.3, 1), 
+                color 1.2s cubic-bezier(0.16, 1, 0.3, 1), 
+                border-color 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
 }
