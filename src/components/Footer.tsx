@@ -1,7 +1,14 @@
 import { Camera, Link as LinkIcon } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
-const Footer = () => {
+interface FooterProps {
+  onShowImprint?: () => void;
+  onShowContact?: () => void;
+  onShowAbout?: () => void;
+  onShowPrivacy?: () => void;
+}
+
+const Footer = ({ onShowImprint, onShowContact, onShowAbout, onShowPrivacy }: FooterProps) => {
   const { t } = useLanguage();
 
   return (
@@ -18,30 +25,42 @@ const Footer = () => {
 
           {/* Center Column: Legal Links */}
           <div className="flex flex-row flex-wrap justify-center items-center gap-6 lg:gap-8">
-            <a 
-              href="#" 
-              className="font-sans text-[13px] tracking-[0.15em] font-bold uppercase text-primary/60 hover:text-primary transition-colors duration-200"
+            <button 
+              onClick={(e) => {
+                e.preventDefault();
+                onShowAbout?.();
+              }}
+              className="font-sans text-[13px] tracking-[0.15em] font-bold uppercase text-primary/60 hover:text-primary transition-colors duration-200 focus:outline-none cursor-pointer"
             >
               {t('footer.about')}
-            </a>
-            <a 
-              href="#" 
-              className="font-sans text-[13px] tracking-[0.15em] font-bold uppercase text-primary/60 hover:text-primary transition-colors duration-200"
+            </button>
+            <button 
+              onClick={(e) => {
+                e.preventDefault();
+                onShowContact?.();
+              }}
+              className="font-sans text-[13px] tracking-[0.15em] font-bold uppercase text-primary/60 hover:text-primary transition-colors duration-200 focus:outline-none cursor-pointer"
             >
               {t('footer.contact')}
-            </a>
-            <a 
-              href="#" 
-              className="font-sans text-[13px] tracking-[0.15em] font-bold uppercase text-primary/60 hover:text-primary transition-colors duration-200"
+            </button>
+            <button 
+              onClick={(e) => {
+                e.preventDefault();
+                onShowPrivacy?.();
+              }}
+              className="font-sans text-[13px] tracking-[0.15em] font-bold uppercase text-primary/60 hover:text-primary transition-colors duration-200 focus:outline-none cursor-pointer"
             >
               {t('footer.privacy')}
-            </a>
-            <a 
-              href="#" 
-              className="font-sans text-[13px] tracking-[0.15em] font-bold uppercase text-primary/60 hover:text-primary transition-colors duration-200"
+            </button>
+            <button 
+              onClick={(e) => {
+                e.preventDefault();
+                onShowImprint?.();
+              }}
+              className="font-sans text-[13px] tracking-[0.15em] font-bold uppercase text-primary/60 hover:text-primary transition-colors duration-200 focus:outline-none cursor-pointer"
             >
               {t('footer.imprint')}
-            </a>
+            </button>
           </div>
 
           {/* Right Column: Social / Share Icons */}
