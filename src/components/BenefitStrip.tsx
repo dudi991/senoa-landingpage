@@ -17,7 +17,7 @@ const BenefitStrip = () => {
       <div className="max-w-[1800px] mx-auto">
         {/* Section Header */}
         <div className="mb-16 text-center">
-          <span className="font-sans text-[10px] tracking-[0.3em] font-semibold text-primary/40 uppercase mb-3 block">
+          <span className="font-sans text-[11px] tracking-[0.3em] font-semibold text-primary/40 uppercase mb-3 block">
             {t('benefits.tag')}
           </span>
           <div className="w-12 h-[1px] bg-midnight/80 mx-auto"></div>
@@ -36,10 +36,10 @@ const BenefitStrip = () => {
                 <div className="h-16 flex items-center justify-center mb-6 text-primary/70">
                   <Icon size={48} strokeWidth={1} />
                 </div>
-                <h3 className="font-sans text-[13px] tracking-[0.2em] uppercase text-primary mb-4 font-bold">
+                <h3 className="font-sans text-[14px] tracking-[0.2em] uppercase text-primary mb-4 font-bold">
                   {t(`benefits.title${benefit.key}`)}
                 </h3>
-                <p className="text-primary/70 text-[14px] leading-relaxed font-light max-w-[260px]">
+                <p className="text-primary/70 text-[15px] leading-relaxed font-light max-w-[260px]">
                   {t(`benefits.text${benefit.key}`)}
                 </p>
               </div>

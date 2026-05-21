@@ -72,7 +72,7 @@ const Ingredients = () => {
         
         {/* Section Header */}
         <div className="text-center mb-12 lg:mb-16">
-          <span className="font-sans text-[10px] tracking-[0.3em] font-semibold text-primary/40 uppercase mb-3 block">
+          <span className="font-sans text-[11px] tracking-[0.3em] font-semibold text-primary/40 uppercase mb-3 block">
             {t('ingredients.tag')}
           </span>
           <div className="w-12 h-[1px] bg-midnight/80 mx-auto mb-8"></div>
@@ -105,7 +105,7 @@ const Ingredients = () => {
                   <div className="w-14 h-14 rounded-full border border-primary/10 bg-white flex items-center justify-center text-primary/70 mb-3 shadow-sm">
                     <GroupIcon className="w-6 h-6" strokeWidth={1} />
                   </div>
-                  <span className="font-sans text-[10px] tracking-[0.25em] font-bold text-primary/40 uppercase mb-2">
+                  <span className="font-sans text-[11px] tracking-[0.25em] font-bold text-primary/40 uppercase mb-2">
                     {t(group.tagKey)}
                   </span>
                   <h3 className="font-serif text-3xl lg:text-[2.25rem] text-primary font-light mb-2 leading-tight">

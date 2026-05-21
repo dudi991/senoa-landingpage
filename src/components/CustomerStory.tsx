@@ -13,7 +13,7 @@ const CustomerStory = () => {
             
             {/* Elegant category label - Pinned to the top on desktop */}
             <div className="text-left mb-8 lg:mb-0 lg:absolute lg:top-0 lg:left-0">
-              <span className="font-sans text-[10px] tracking-[0.3em] font-semibold text-primary/40 uppercase mb-3 block">
+              <span className="font-sans text-[11px] tracking-[0.3em] font-semibold text-primary/40 uppercase mb-3 block">
                 {t('philosophy.tag')}
               </span>
               <div className="w-12 h-[1px] bg-midnight/80"></div>

@@ -22,7 +22,7 @@ const Ritual = () => {
           <div className="lg:col-span-4 flex flex-col justify-between h-full py-1">
             {/* Top block */}
             <div className="text-left">
-              <span className="text-[10px] tracking-[0.3em] font-semibold text-primary/40 uppercase mb-4 block">
+              <span className="font-sans text-[11px] tracking-[0.3em] font-semibold text-primary/40 uppercase mb-4 block">
                 {t('ritual.tag')}
               </span>
               <div className="w-12 h-[1px] bg-midnight/80"></div>

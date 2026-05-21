@@ -14,7 +14,7 @@ const Gallery = () => {
       {/* Header Container (remains centered and bounded) */}
       <div className="max-w-[1800px] mx-auto px-8 lg:px-12 mb-16">
         <div className="text-center">
-          <span className="font-sans text-[10px] tracking-[0.3em] font-semibold text-primary/40 uppercase mb-3 block">
+          <span className="font-sans text-[11px] tracking-[0.3em] font-semibold text-primary/40 uppercase mb-3 block">
             {t('gallery.tag')}
           </span>
           <div className="w-12 h-[1px] bg-midnight/80 mx-auto mb-6"></div>
