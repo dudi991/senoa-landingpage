@@ -15,13 +15,14 @@ const translations: Record<Language, Record<string, string>> = {
     // Hero
     'hero.slogan': 'Nicht für den Schlaf. Sondern für den Moment davor.',
     'hero.title': 'Feierabend beginnt im Kopf.',
-    'hero.desc': 'SENOA ist ein bewusstes Abendritual für alle, die nach einem vollen Tag wieder bei sich ankommen wollen. Dein täglicher Übergang in echte Ruhe.',
+    'hero.desc': 'SENOA ist dein tägliches Abendritual — ein bewusster Übergang aus dem Leistungsmodus in echte Ruhe.\n\nNicht für den Schlaf. Sondern für den Moment davor.',
     'hero.cta': 'TEIL VON SENOA WERDEN',
     'hero.benefit1': 'Mentales Entlasten',
     'hero.benefit2': 'Regeneration',
     'hero.benefit3': 'Innere Stille',
 
     // BenefitStrip
+    'benefits.tag': 'Der innere Wechsel',
     'benefits.title1': 'Abschalten',
     'benefits.text1': 'Den Arbeitstag bewusst hinter dir lassen.',
     'benefits.title2': 'Ankommen',
@@ -37,7 +38,7 @@ const translations: Record<Language, Record<string, string>> = {
     'philosophy.tag': 'Die Philosophie',
     'philosophy.title': 'Der Abend gehört wieder dir.',
     'philosophy.text1': 'Zwischen Meetings, Nachrichten und Gedanken, die nie ganz still werden, verlieren viele Menschen den Moment, an dem der Tag wirklich endet.',
-    'philosophy.text2': 'SENOA schafft Raum für genau diesen Übergang.',
+    'philosophy.text2': 'SENOA schafft Raum für genau diesen Übergang — bevor aus Funktionieren wieder Ankommen wird.',
 
     // EditorialPause
     'pause.line1': 'Weniger funktionieren.',
@@ -47,18 +48,18 @@ const translations: Record<Language, Record<string, string>> = {
     'ritual.tag': 'Das Ritual',
     'ritual.title': 'Ein kleiner Moment. Große Wirkung.',
     'ritual.desc': 'Ein Scoop. Ein ruhiger Moment. Ein bewusstes Signal an dich selbst: Der Tag darf enden.',
-    'ritual.step1_tag': 'ANKUNFT',
-    'ritual.step1_text': 'Gib einen Löffel (7g) in 200 ml Wasser. Lass den Tag beginnen zu verblassen.',
-    'ritual.step2_tag': 'PRÄSENZ',
-    'ritual.step2_text': 'Gut umrühren und einen Moment für dich nehmen. Nimm einen tiefen Atemzug.',
-    'ritual.step3_tag': 'RUHE',
-    'ritual.step3_text': 'Genieße dein Abendritual 30–60 Minuten vor dem Schlafen.',
+    'ritual.step1_tag': 'Ankommen',
+    'ritual.step1_text': 'Ein Scoop in dein Glas. Ein erster Moment, der nur dir gehört.',
+    'ritual.step2_tag': 'Loslassen',
+    'ritual.step2_text': 'Rühren. Atmen. Den Tag langsam aus dem Kopf nehmen.',
+    'ritual.step3_tag': 'Ruhiger werden',
+    'ritual.step3_text': 'Trink dein Ritual, bevor der Abend in die Nacht übergeht.',
     'ritual.alt': 'SENOA Abendritual Zubereitung Schritt',
 
     // Ingredients
-    'ingredients.tag': 'Die Rezeptur',
+    'ingredients.tag': 'Rezeptur',
     'ingredients.title': 'Sorgfältig ausgewählt. Für deinen Abend.',
-    'ingredients.desc': 'Ausgewählte Nährstoffe und Pflanzenextrakte — bewusst kombiniert für ein Abendritual, das Ruhe, Verträglichkeit und Alltagstauglichkeit in den Mittelpunkt stellt.',
+    'ingredients.desc': 'SENOA verbindet ausgewählte Nährstoffe, Pflanzenextrakte und eine warme Geschmackswelt zu einem Ritual, das du jeden Abend wiederholen möchtest.',
     
     // Ingredients descriptions (German)
     'ing.mag_bis': 'Unterstützt Entspannung & Muskelregeneration',
@@ -97,13 +98,14 @@ const translations: Record<Language, Record<string, string>> = {
     // Hero
     'hero.slogan': 'Not for sleep. But for the moment before.',
     'hero.title': 'Evening starts in your mind.',
-    'hero.desc': 'SENOA is a conscious evening ritual for anyone who wants to return to themselves after a full day. Your daily transition into true stillness.',
+    'hero.desc': 'SENOA is your daily evening ritual — a conscious transition from performance mode into true stillness.\n\nNot for sleep. But for the moment before.',
     'hero.cta': 'BECOME PART OF SENOA',
     'hero.benefit1': 'Mental Unwinding',
     'hero.benefit2': 'Regeneration',
     'hero.benefit3': 'Inner Stillness',
 
     // BenefitStrip
+    'benefits.tag': 'The Inner Transition',
     'benefits.title1': 'Unwind',
     'benefits.text1': 'Consciously leave the workday behind.',
     'benefits.title2': 'Arrive',
@@ -119,7 +121,7 @@ const translations: Record<Language, Record<string, string>> = {
     'philosophy.tag': 'The Philosophy',
     'philosophy.title': 'Reclaim your evening.',
     'philosophy.text1': 'Between meetings, messages, and thoughts that never quite rest, many lose the moment when the day truly ends.',
-    'philosophy.text2': 'SENOA creates space for exactly this transition.',
+    'philosophy.text2': 'SENOA creates space for exactly this transition — before functioning becomes arriving again.',
 
     // EditorialPause
     'pause.line1': 'Less doing.',
@@ -129,18 +131,18 @@ const translations: Record<Language, Record<string, string>> = {
     'ritual.tag': 'The Ritual',
     'ritual.title': 'A small moment. Deep impact.',
     'ritual.desc': 'One scoop. A quiet moment. A conscious signal to yourself: the day is allowed to end.',
-    'ritual.step1_tag': 'ARRIVAL',
-    'ritual.step1_text': 'Add one scoop (7g) to 200 ml of water. Let the day begin to fade.',
-    'ritual.step2_tag': 'PRESENCE',
-    'ritual.step2_text': 'Stir well and take a moment for yourself. Take a deep breath.',
-    'ritual.step3_tag': 'STILLNESS',
-    'ritual.step3_text': 'Enjoy your evening ritual 30–60 minutes before sleeping.',
+    'ritual.step1_tag': 'Arrive',
+    'ritual.step1_text': 'One scoop in your glass. A first moment that belongs only to you.',
+    'ritual.step2_tag': 'Let Go',
+    'ritual.step2_text': 'Stir. Breathe. Slowly letting the day leave your mind.',
+    'ritual.step3_tag': 'Slow Down',
+    'ritual.step3_text': 'Drink your ritual before evening transitions into the night.',
     'ritual.alt': 'SENOA evening ritual preparation step',
 
     // Ingredients
-    'ingredients.tag': 'The Formula',
+    'ingredients.tag': 'Formula',
     'ingredients.title': 'Carefully selected. For your evening.',
-    'ingredients.desc': 'Selected nutrients and plant extracts — consciously combined for an evening ritual that centers on peace, tolerability, and daily ease.',
+    'ingredients.desc': 'SENOA combines selected nutrients, plant extracts, and a warm world of flavor into a ritual you will want to repeat every evening.',
     
     // Ingredients descriptions (English)
     'ing.mag_bis': 'Supports relaxation & muscle recovery',

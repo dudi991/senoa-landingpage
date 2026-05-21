@@ -81,7 +81,7 @@ const Ritual = () => {
               onClick={() => setActiveStep(0)}
             >
               <div className="text-primary mt-1 flex-shrink-0">
-                <Droplet className="w-8 h-8" strokeWidth={1} />
+                <Droplet className="w-10 h-10" strokeWidth={1} />
               </div>
               <div className="flex flex-col text-left">
                 <div className="flex items-center gap-2 mb-2">
@@ -90,7 +90,7 @@ const Ritual = () => {
                     {t('ritual.step1_tag')}
                   </h4>
                 </div>
-                <p className="text-sm lg:text-[15px] text-primary/70 leading-relaxed font-light max-w-sm">
+                <p className="text-base lg:text-lg text-primary/70 leading-relaxed font-light max-w-sm">
                   {t('ritual.step1_text')}
                 </p>
               </div>
@@ -105,7 +105,7 @@ const Ritual = () => {
               onClick={() => setActiveStep(1)}
             >
               <div className="text-primary mt-1 flex-shrink-0">
-                <RefreshCw className="w-8 h-8" strokeWidth={1} />
+                <RefreshCw className="w-10 h-10" strokeWidth={1} />
               </div>
               <div className="flex flex-col text-left">
                 <div className="flex items-center gap-2 mb-2">
@@ -114,7 +114,7 @@ const Ritual = () => {
                     {t('ritual.step2_tag')}
                   </h4>
                 </div>
-                <p className="text-sm lg:text-[15px] text-primary/70 leading-relaxed font-light max-w-sm">
+                <p className="text-base lg:text-lg text-primary/70 leading-relaxed font-light max-w-sm">
                   {t('ritual.step2_text')}
                 </p>
               </div>
@@ -129,7 +129,7 @@ const Ritual = () => {
               onClick={() => setActiveStep(2)}
             >
               <div className="text-primary mt-1 flex-shrink-0">
-                <Moon className="w-8 h-8" strokeWidth={1} />
+                <Moon className="w-10 h-10" strokeWidth={1} />
               </div>
               <div className="flex flex-col text-left">
                 <div className="flex items-center gap-2 mb-2">
@@ -138,7 +138,7 @@ const Ritual = () => {
                     {t('ritual.step3_tag')}
                   </h4>
                 </div>
-                <p className="text-sm lg:text-[15px] text-primary/70 leading-relaxed font-light max-w-sm">
+                <p className="text-base lg:text-lg text-primary/70 leading-relaxed font-light max-w-sm">
                   {t('ritual.step3_text')}
                 </p>
               </div>

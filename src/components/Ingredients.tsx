@@ -60,14 +60,15 @@ const Ingredients = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="ingredients" className="pt-12 pb-14 lg:pt-16 lg:pb-16 px-8 bg-white relative z-20">
+    <section id="ingredients" className="pt-6 pb-14 lg:pt-8 lg:pb-16 px-8 bg-white relative z-20">
       <div className="max-w-[1800px] mx-auto">
         
         {/* Section Header */}
         <div className="text-center mb-12 md:mb-16">
-          <span className="font-sans text-[10px] tracking-[0.3em] font-semibold text-primary/40 uppercase mb-4 block">
+          <span className="font-sans text-[10px] tracking-[0.3em] font-semibold text-primary/40 uppercase mb-3 block">
             {t('ingredients.tag')}
           </span>
+          <div className="w-12 h-[1px] bg-midnight/80 mx-auto mb-8"></div>
           <h2 className="font-serif text-4xl md:text-5xl lg:text-[3.25rem] text-primary leading-[1.25] max-w-4xl mx-auto font-light mb-4">
             {t('ingredients.title').split('\n').map((line, i) => (
               <span key={i}>

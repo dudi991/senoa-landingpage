@@ -1,4 +1,3 @@
-import { Brain, Sun } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -45,11 +44,6 @@ const Hero = () => {
       <div className="relative z-10 w-full px-8 pt-32 lg:pt-24 pb-4">
         <div className="max-w-[1600px] mx-auto">
           <div className="flex flex-col justify-center max-w-2xl">
-            {/* 1. Slogan (Hook at Top) */}
-            <span className="font-serif italic text-lg lg:text-xl text-primary/60 mb-4 block">
-              {t('hero.slogan')}
-            </span>
-            
             {/* 2. Headline H1 */}
             <h1 className="text-5xl lg:text-[4.75rem] leading-[1.1] mb-16 font-serif text-primary">
               {t('hero.title').split('\n').map((line, i) => (
@@ -61,29 +55,9 @@ const Hero = () => {
             </h1>
 
             {/* 4. Description */}
-            <p className="text-primary/80 text-base lg:text-lg mb-10 max-w-md leading-relaxed font-light">
+            <p className="text-primary/80 text-base lg:text-lg mb-16 max-w-md leading-relaxed font-light whitespace-pre-line">
               {t('hero.desc')}
             </p>
-
-            {/* 5. Icons */}
-            <div className="flex flex-wrap gap-x-16 lg:gap-x-20 gap-y-6 mb-12">
-              <div className="flex flex-col items-start">
-                <Brain className="w-8 h-8 mb-4 text-primary" strokeWidth={1} />
-                <span className="text-[10px] tracking-widest font-semibold uppercase leading-tight">
-                  {t('hero.benefit1').split(' ').map((word, i) => (
-                    <span key={i} className="block">{word}</span>
-                  ))}
-                </span>
-              </div>
-              <div className="flex flex-col items-start">
-                <Sun className="w-8 h-8 mb-4 text-primary" strokeWidth={1} />
-                <span className="text-[10px] tracking-widest font-semibold uppercase leading-tight">
-                  {t('hero.benefit3').split(' ').map((word, i) => (
-                    <span key={i} className="block">{word}</span>
-                  ))}
-                </span>
-              </div>
-            </div>
 
             {/* 6. CTA */}
             <div>

@@ -13,8 +13,16 @@ const BenefitStrip = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="bg-white pt-16 pb-4 px-8 relative z-20">
+    <section className="bg-white pt-20 pb-4 px-8 relative z-20">
       <div className="max-w-[1800px] mx-auto">
+        {/* Section Header */}
+        <div className="mb-16 text-center">
+          <span className="font-sans text-[10px] tracking-[0.3em] font-semibold text-primary/40 uppercase mb-3 block">
+            {t('benefits.tag')}
+          </span>
+          <div className="w-12 h-[1px] bg-midnight/80 mx-auto"></div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-y-12 lg:gap-y-0">
           {benefits.map((benefit, index) => {
             const Icon = benefit.icon;

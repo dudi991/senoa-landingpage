@@ -34,7 +34,7 @@ const CustomerStory = () => {
               <p>
                 {t('philosophy.text1')}
               </p>
-              <p className="font-light text-primary/95 text-[18px] lg:text-[20px] pt-4 border-t border-primary/10 leading-relaxed">
+              <p>
                 {t('philosophy.text2')}
               </p>
             </div>
