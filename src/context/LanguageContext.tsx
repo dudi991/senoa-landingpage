@@ -61,17 +61,39 @@ const translations: Record<Language, Record<string, string>> = {
     'ingredients.title': 'Sorgfältig ausgewählt. Für deinen Abend.',
     'ingredients.desc': 'SENOA verbindet ausgewählte Nährstoffe, Pflanzenextrakte und eine warme Geschmackswelt zu einem Ritual, das du jeden Abend wiederholen möchtest.',
     
+    // Ingredients Groups (German)
+    'ing.group_ruhe_tag': 'FÜR INNERE STILLE',
+    'ing.group_ruhe_title': 'Ruhe',
+    'ing.group_ruhe_desc': 'Nährstoffe, die dich unterstützen herunterzukommen und den Geist zur Ruhe zu bringen.',
+    
+    'ing.group_balance_tag': 'FÜR EMOTIONALE AUSGEGLICHENHEIT',
+    'ing.group_balance_title': 'Balance',
+    'ing.group_balance_desc': 'Pflanzenextrakte und Mikronährstoffe, die dich dabei unterstützen, Stress loszulassen und in Balance zu bleiben.',
+    
+    'ing.group_ritual_tag': 'FÜR GESCHMACK & MOMENT',
+    'ing.group_ritual_title': 'Ritual',
+    'ing.group_ritual_desc': 'Sorgfältig ausgewählte Zutaten für ein angenehmes Geschmackserlebnis und einen bewussten Moment.',
+
     // Ingredients descriptions (German)
-    'ing.mag_bis': 'Unterstützt Entspannung & Muskelregeneration',
-    'ing.mag_thre': 'Unterstützt die kognitive Regeneration',
-    'ing.theanine': 'Fördert Ruhe ohne Schläfrigkeit',
-    'ing.ashwa': 'Reduziert Stress & unterstützt die Belastbarkeit',
-    'ing.saffron': 'Unterstützt Stimmung & emotional Balance',
-    'ing.phosph': 'Unterstützt Cortisol-Balance & kognitive Leistung',
-    'ing.reishi': 'Unterstützt Immunabwehr & Regeneration',
-    'ing.apigenin': 'Fördert Entspannung & Schlafqualität',
-    'ing.glycine': 'Unterstützt tiefere Erholung & Schlafqualität',
-    'ing.vanilla': 'Bietet natürliches Aroma & wohltuenden Duft',
+    'ing.mag_combined': 'Zwei Premium-Magnesiumformen, die Muskelentspannung, Nervensystem und kognitive Regeneration am Abend unterstützen.',
+    'ing.theanine': 'Aminosäure, die natürlicherweise in grünem Tee vorkommt und Entspannung fördern kann.',
+    'ing.apigenin': 'Pflanzenstoff, der natürlicherweise in Kamille vorkommt und für seine entspannenden Eigenschaften bekannt ist.',
+    'ing.ashwa': 'Adaptogen, das dem Körper hilft, mit Stress umzugehen und innere Balance zu unterstützen.',
+    'ing.saffron': 'Pflanzenextrakt, der traditionell für sein Wohlbefinden und seine positive Wirkung auf die Stimmung geschätzt wird.',
+    'ing.phosph': 'Phospholipid, das Bestandteil von Zellmembranen ist und eine Rolle für kognitive Funktionen spielt.',
+    'ing.reishi': 'Traditionell verwendeter Vitalpilz in der asiatischen Kultur, geschätzt für seine Inhaltsstoffe.',
+    'ing.glycine': 'Aminosäure, die eine wichtige Rolle im Körper spielt und natürlicherweise im Kollagen vorkommt.',
+    'ing.vanilla': 'Für eine warme, natürliche Süße und ein vollmundiges, harmonisches Geschmackserlebnis.',
+
+    // Trust elements (German)
+    'ing.trust1_title': 'HOCHWERTIGE ROHSTOFFE',
+    'ing.trust1_desc': 'Sorgfältig ausgewählt.',
+    'ing.trust2_title': 'OHNE UNNÖTIGE ZUSÄTZE',
+    'ing.trust2_desc': 'Frei von künstlichen Aromen, Farbstoffen & Süßstoffen.',
+    'ing.trust3_title': 'PERFEKT KOMBINIERT',
+    'ing.trust3_desc': 'Durchdachte Synergien für dein Abendritual.',
+    'ing.trust4_title': 'MIT EXPERTISE ENTWICKELT',
+    'ing.trust4_desc': 'Entwickelt von Experten für dein Wohlbefinden.',
 
     // Gallery
     'gallery.tag': 'Evening Culture',
@@ -144,17 +166,39 @@ const translations: Record<Language, Record<string, string>> = {
     'ingredients.title': 'Carefully selected. For your evening.',
     'ingredients.desc': 'SENOA combines selected nutrients, plant extracts, and a warm world of flavor into a ritual you will want to repeat every evening.',
     
+    // Ingredients Groups (English)
+    'ing.group_ruhe_tag': 'FOR INNER STILLNESS',
+    'ing.group_ruhe_title': 'Stillness',
+    'ing.group_ruhe_desc': 'Nutrients that support you in calming down and bringing peace to your mind.',
+    
+    'ing.group_balance_tag': 'FOR EMOTIONAL BALANCE',
+    'ing.group_balance_title': 'Balance',
+    'ing.group_balance_desc': 'Plant extracts and micronutrients that support you in letting go of stress and staying balanced.',
+    
+    'ing.group_ritual_tag': 'FOR TASTE & MOMENT',
+    'ing.group_ritual_title': 'Ritual',
+    'ing.group_ritual_desc': 'Carefully selected ingredients for a pleasant taste experience and a conscious moment.',
+
     // Ingredients descriptions (English)
-    'ing.mag_bis': 'Supports relaxation & muscle recovery',
-    'ing.mag_thre': 'Supports cognitive recovery',
-    'ing.theanine': 'Promotes calm without drowsiness',
-    'ing.ashwa': 'Reduces stress & supports resilience',
-    'ing.saffron': 'Supports mood & emotional balance',
-    'ing.phosph': 'Supports cortisol balance & cognitive performance',
-    'ing.reishi': 'Supports immune health & recovery',
-    'ing.apigenin': 'Promotes relaxation & sleep quality',
-    'ing.glycine': 'Supports deeper recovery & sleep quality',
-    'ing.vanilla': 'Supports natural flavor & aromatic comfort',
+    'ing.mag_combined': 'Two premium magnesium forms supporting muscle relaxation, the nervous system, and cognitive recovery in the evening.',
+    'ing.theanine': 'Amino acid naturally occurring in green tea, which can promote relaxation.',
+    'ing.apigenin': 'Plant compound naturally occurring in chamomile, known for its relaxing properties.',
+    'ing.ashwa': 'Adaptogen that helps the body manage stress and supports inner balance.',
+    'ing.saffron': 'Plant extract traditionally valued for its well-being and positive effect on mood.',
+    'ing.phosph': 'Phospholipid that is a component of cell membranes and plays a role in cognitive functions.',
+    'ing.reishi': 'Traditionally used vital mushroom in Asian culture, valued for its ingredients.',
+    'ing.glycine': 'Amino acid that plays an important role in the body and naturally occurs in collagen.',
+    'ing.vanilla': 'For a warm, natural sweetness and a full-bodied, harmonious taste experience.',
+
+    // Trust elements (English)
+    'ing.trust1_title': 'HIGH-QUALITY INGREDIENTS',
+    'ing.trust1_desc': 'Carefully selected.',
+    'ing.trust2_title': 'NO UNNECESSARY ADDITIVES',
+    'ing.trust2_desc': 'Free from artificial flavors, colorants & sweeteners.',
+    'ing.trust3_title': 'PERFECTLY COMBINED',
+    'ing.trust3_desc': 'Thoughtful synergies for your evening ritual.',
+    'ing.trust4_title': 'DEVELOPED WITH EXPERTISE',
+    'ing.trust4_desc': 'Developed by experts for your well-being.',
 
     // Gallery
     'gallery.tag': 'Evening Culture',
