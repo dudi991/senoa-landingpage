@@ -67,8 +67,8 @@ const Ingredients = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="ingredients" className="pt-6 pb-16 lg:pt-8 lg:pb-20 px-8 lg:px-16 xl:px-24 bg-white relative z-20">
-      <div className="max-w-[1300px] mx-auto">
+    <section id="ingredients" className="pt-6 pb-16 lg:pt-8 lg:pb-20 bg-white relative z-20">
+      <div className="max-w-[1800px] mx-auto px-8 lg:px-12">
         
         {/* Section Header */}
         <div className="text-center mb-12 lg:mb-16">
@@ -96,8 +96,8 @@ const Ingredients = () => {
             return (
               <div 
                 key={gIdx} 
-                className={`grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 pb-10 lg:pb-12 ${
-                  gIdx < groups.length - 1 ? 'border-b border-primary/10' : ''
+                className={`grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 ${
+                  gIdx < groups.length - 1 ? 'pb-10 lg:pb-12' : ''
                 }`}
               >
                 {/* Left Column: Group Hero Card */}
@@ -117,15 +117,20 @@ const Ingredients = () => {
                 </div>
 
                 {/* Right Column: Ingredients Grid */}
-                <div className="lg:col-span-9 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10 items-center">
+                <div className="lg:col-span-9 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10 items-start">
                   {group.ingredients.map((ing, iIdx) => {
                     const IngIcon = ing.icon;
                     return (
-                      <div key={iIdx} className="flex flex-col items-center text-center px-4">
+                      <div 
+                        key={iIdx} 
+                        className={`flex flex-col items-center text-center px-4 md:px-6 xl:px-8 ${
+                          iIdx < 2 ? 'md:border-r border-primary/10' : ''
+                        }`}
+                      >
                         <div className="w-16 h-16 flex items-center justify-center text-primary/60 mb-5">
                           <IngIcon className="w-9 h-9" strokeWidth={1} />
                         </div>
-                        <h4 className="font-sans text-[12px] tracking-[0.15em] font-bold uppercase text-primary mb-3 min-h-[32px] flex items-center justify-center">
+                        <h4 className="font-sans text-[12px] tracking-[0.15em] font-bold uppercase text-primary mb-3 min-h-[36px] flex items-center justify-center">
                           {ing.name}
                         </h4>
                         <p className="text-sm text-primary/60 leading-relaxed font-light max-w-[240px]">
