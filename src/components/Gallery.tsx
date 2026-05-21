@@ -10,9 +10,9 @@ const Gallery = () => {
   ];
 
   return (
-    <section className="w-full bg-white pt-6 lg:pt-8 pb-0 overflow-hidden">
+    <section className="w-full bg-white pt-10 lg:pt-16 pb-3 lg:pb-4 overflow-hidden">
       {/* Header Container (remains centered and bounded) */}
-      <div className="max-w-[1800px] mx-auto px-8 lg:px-12 mb-16">
+      <div className="max-w-[1800px] mx-auto px-8 lg:px-12 mb-16 lg:mb-20">
         <div className="text-center">
           <span className="font-sans text-[11px] tracking-[0.3em] font-semibold text-primary/40 uppercase mb-3 block">
             {t('gallery.tag')}
