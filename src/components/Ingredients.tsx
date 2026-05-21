@@ -90,14 +90,14 @@ const Ingredients = () => {
         </div>
 
         {/* Curated Groups */}
-        <div className="space-y-10 lg:space-y-12">
+        <div className="space-y-6 lg:space-y-8">
           {groups.map((group, gIdx) => {
             const GroupIcon = group.icon;
             return (
               <div 
                 key={gIdx} 
                 className={`grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 ${
-                  gIdx < groups.length - 1 ? 'pb-10 lg:pb-12' : ''
+                  gIdx < groups.length - 1 ? 'pb-6 lg:pb-8' : ''
                 }`}
               >
                 {/* Left Column: Group Hero Card */}
@@ -111,7 +111,7 @@ const Ingredients = () => {
                   <h3 className="font-serif text-3xl lg:text-[2.25rem] text-primary font-light mb-4 leading-tight">
                     {t(group.titleKey)}
                   </h3>
-                  <p className="font-sans text-sm text-primary/60 leading-relaxed font-light max-w-[220px]">
+                  <p className="font-sans text-sm text-primary/60 leading-normal font-light max-w-[220px]">
                     {t(group.descKey)}
                   </p>
                 </div>
@@ -133,7 +133,7 @@ const Ingredients = () => {
                         <h4 className="font-sans text-[13px] tracking-[0.15em] font-bold uppercase text-primary mb-3 min-h-[40px] flex items-center justify-center">
                           {ing.name}
                         </h4>
-                        <p className="text-[15px] text-primary/60 leading-relaxed font-light max-w-[240px]">
+                        <p className="text-[15px] text-primary/60 leading-normal font-light max-w-[240px]">
                           {t(`ing.${ing.key}`)}
                         </p>
                       </div>
@@ -163,7 +163,7 @@ const Ingredients = () => {
                   <h5 className="font-sans text-[12px] tracking-[0.15em] font-bold uppercase text-primary mb-2">
                     {t(item.titleKey)}
                   </h5>
-                  <p className="text-[13px] text-primary/60 leading-relaxed font-light max-w-[200px]">
+                  <p className="text-[13px] text-primary/60 leading-normal font-light max-w-[200px]">
                     {t(item.descKey)}
                   </p>
                 </div>
