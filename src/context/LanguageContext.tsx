@@ -98,7 +98,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Gallery
     'gallery.tag': 'Evening Culture',
     'gallery.title': 'Moderne Abende brauchen neue Rituale.',
-    'gallery.desc': 'SENOA wurde für Menschen entwickelt, die tagsüber viel leisten — und abends bewusst zurück zu Ruhe, Klarheit und echten Momenten finden möchten.',
+    'gallery.desc': 'Wir leben in Tagen voller Reize, Termine und Entscheidungen. SENOA steht für den bewussten Gegenpol: weniger Funktionieren, mehr Ankommen. Weniger Optimierung, mehr echter Abend.',
 
     // Waitlist
     'waitlist.title': 'Für das, was nach dem Arbeitstag kommt. Dein Abend. Dein Ritual.',
@@ -203,7 +203,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Gallery
     'gallery.tag': 'Evening Culture',
     'gallery.title': 'Modern evenings require new rituals.',
-    'gallery.desc': 'SENOA was developed for people who achieve a lot during the day — and want to consciously return to peace, clarity, and genuine moments in the evening.',
+    'gallery.desc': 'We live in days full of stimuli, deadlines and decisions. SENOA stands for the conscious antipode: less functioning, more arriving. Less optimization, more genuine evening.',
 
     // Waitlist
     'waitlist.title': 'For what comes after the workday. Your evening. Your ritual.',
