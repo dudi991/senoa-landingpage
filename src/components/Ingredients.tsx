@@ -105,13 +105,13 @@ const Ingredients = () => {
                   <div className="w-14 h-14 rounded-full border border-primary/10 bg-white flex items-center justify-center text-primary/70 mb-5 shadow-sm">
                     <GroupIcon className="w-6 h-6" strokeWidth={1} />
                   </div>
-                  <span className="font-sans text-[9px] tracking-[0.25em] font-bold text-primary/40 uppercase mb-2">
+                  <span className="font-sans text-[10px] tracking-[0.25em] font-bold text-primary/40 uppercase mb-2">
                     {t(group.tagKey)}
                   </span>
-                  <h3 className="font-serif text-2xl lg:text-3xl text-primary font-light mb-4">
+                  <h3 className="font-serif text-3xl lg:text-[2.25rem] text-primary font-light mb-4 leading-tight">
                     {t(group.titleKey)}
                   </h3>
-                  <p className="font-sans text-[13px] text-primary/60 leading-relaxed font-light max-w-[220px]">
+                  <p className="font-sans text-sm text-primary/60 leading-relaxed font-light max-w-[220px]">
                     {t(group.descKey)}
                   </p>
                 </div>
@@ -130,10 +130,10 @@ const Ingredients = () => {
                         <div className="w-16 h-16 flex items-center justify-center text-primary/60 mb-5">
                           <IngIcon className="w-9 h-9" strokeWidth={1} />
                         </div>
-                        <h4 className="font-sans text-[12px] tracking-[0.15em] font-bold uppercase text-primary mb-3 min-h-[36px] flex items-center justify-center">
+                        <h4 className="font-sans text-[13px] tracking-[0.15em] font-bold uppercase text-primary mb-3 min-h-[40px] flex items-center justify-center">
                           {ing.name}
                         </h4>
-                        <p className="text-sm text-primary/60 leading-relaxed font-light max-w-[240px]">
+                        <p className="text-[15px] text-primary/60 leading-relaxed font-light max-w-[240px]">
                           {t(`ing.${ing.key}`)}
                         </p>
                       </div>
@@ -160,10 +160,10 @@ const Ingredients = () => {
                   <div className="text-primary/70 mb-4">
                     <TrustIcon className="w-8 h-8" strokeWidth={1} />
                   </div>
-                  <h5 className="font-sans text-[11px] tracking-[0.15em] font-bold uppercase text-primary mb-2">
+                  <h5 className="font-sans text-[12px] tracking-[0.15em] font-bold uppercase text-primary mb-2">
                     {t(item.titleKey)}
                   </h5>
-                  <p className="text-[12px] text-primary/60 leading-relaxed font-light max-w-[200px]">
+                  <p className="text-[13px] text-primary/60 leading-relaxed font-light max-w-[200px]">
                     {t(item.descKey)}
                   </p>
                 </div>
