@@ -1,4 +1,4 @@
-import { Moon, Shield, Leaf, Atom, Sprout, Flower2, Sun, Layers, Heart, Sparkle, Sparkles, Brain } from 'lucide-react';
+import { Moon, Compass, GlassWater, Atom, Sprout, Flower2, Shield, Sun, Brain, Heart, Layers, Sparkle, Star, Leaf, Infinity, Award } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 const groups = [
@@ -19,11 +19,11 @@ const groups = [
     tagKey: "ing.group_balance_tag",
     titleKey: "ing.group_balance_title",
     descKey: "ing.group_balance_desc",
-    icon: Shield,
+    icon: Compass,
     ingredients: [
       { name: "Ashwagandha (Shoden®)", icon: Shield, key: "ashwa" },
       { name: "Safran", icon: Sun, key: "saffron" },
-      { name: "Phosphatidylserin", icon: Layers, key: "phosph" }
+      { name: "Phosphatidylserin", icon: Brain, key: "phosph" }
     ]
   },
   {
@@ -31,10 +31,10 @@ const groups = [
     tagKey: "ing.group_ritual_tag",
     titleKey: "ing.group_ritual_title",
     descKey: "ing.group_ritual_desc",
-    icon: Leaf,
+    icon: GlassWater,
     ingredients: [
       { name: "Reishi", icon: Heart, key: "reishi" },
-      { name: "Glycin", icon: Moon, key: "glycine" },
+      { name: "Glycin", icon: Layers, key: "glycine" },
       { name: "Vanilla & Tonka Bean", icon: Sparkle, key: "vanilla" }
     ]
   }
@@ -44,22 +44,22 @@ const trustItems = [
   {
     titleKey: "ing.trust1_title",
     descKey: "ing.trust1_desc",
-    icon: Leaf
+    icon: Star
   },
   {
     titleKey: "ing.trust2_title",
     descKey: "ing.trust2_desc",
-    icon: Shield
+    icon: Leaf
   },
   {
     titleKey: "ing.trust3_title",
     descKey: "ing.trust3_desc",
-    icon: Sparkles
+    icon: Infinity
   },
   {
     titleKey: "ing.trust4_title",
     descKey: "ing.trust4_desc",
-    icon: Brain
+    icon: Award
   }
 ];
 

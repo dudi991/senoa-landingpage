@@ -25,9 +25,9 @@ const ImprintModal = ({ isOpen, onClose }: ImprintModalProps) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[9999] bg-white overflow-y-auto animate-fade-in">
+    <div className="fixed inset-0 z-[9999] bg-white overflow-y-auto overflow-x-hidden animate-fade-in">
       {/* Top Navigation / Close Bar */}
-      <div className="w-full px-8 py-8 flex justify-between items-center fixed top-0 left-0 bg-white/95 backdrop-blur-sm z-[10000] border-b border-primary/5">
+      <div className="w-full px-6 sm:px-8 py-6 sm:py-8 flex justify-between items-center fixed top-0 left-0 bg-white/95 backdrop-blur-sm z-[10000] border-b border-primary/5">
         <span className="font-sans text-xl tracking-[0.15em] font-bold text-primary">
           SENOA
         </span>
@@ -41,13 +41,13 @@ const ImprintModal = ({ isOpen, onClose }: ImprintModalProps) => {
       </div>
 
       {/* Content Container */}
-      <div className="max-w-2xl mx-auto px-8 pt-32 pb-24 font-sans text-primary">
+      <div className="max-w-2xl mx-auto px-6 sm:px-8 pt-28 sm:pt-32 pb-16 sm:pb-24 font-sans text-primary break-words">
         <span className="font-sans text-[11px] tracking-[0.3em] font-semibold text-primary/40 uppercase mb-3 block">
           {language === 'de' ? 'Rechtliches' : 'Legal'}
         </span>
         <div className="w-12 h-[1px] bg-primary/20 mb-8"></div>
         
-        <h1 className="font-serif text-4xl lg:text-5xl font-light text-primary mb-12">
+        <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-light text-primary mb-12">
           {language === 'de' ? 'Impressum' : 'Imprint'}
         </h1>
 

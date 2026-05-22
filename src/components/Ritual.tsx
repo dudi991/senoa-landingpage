@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { Droplet, RefreshCw, Moon } from 'lucide-react';
+import { GlassWater, Wind, Moon } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 const stepImages = [
-  "images/kleinerMoment.png",
-  "images/ritual.png",
-  "images/derAbend.png"
+  "images/sonea_ankunft.webp",
+  "images/senoa_praesens.webp",
+  "images/derAbend.webp"
 ];
 
 const Ritual = () => {
@@ -81,7 +81,7 @@ const Ritual = () => {
               onClick={() => setActiveStep(0)}
             >
               <div className="text-primary mt-1 flex-shrink-0">
-                <Droplet className="w-10 h-10" strokeWidth={1} />
+                <GlassWater className="w-10 h-10" strokeWidth={1} />
               </div>
               <div className="flex flex-col text-left">
                 <div className="flex items-center gap-2 mb-2">
@@ -105,7 +105,7 @@ const Ritual = () => {
               onClick={() => setActiveStep(1)}
             >
               <div className="text-primary mt-1 flex-shrink-0">
-                <RefreshCw className="w-10 h-10" strokeWidth={1} />
+                <Wind className="w-10 h-10" strokeWidth={1} />
               </div>
               <div className="flex flex-col text-left">
                 <div className="flex items-center gap-2 mb-2">

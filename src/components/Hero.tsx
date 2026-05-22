@@ -1,6 +1,10 @@
 import { useLanguage } from '../context/LanguageContext';
 
-const Hero = () => {
+interface HeroProps {
+  isCalm: boolean;
+}
+
+const Hero = ({ isCalm }: HeroProps) => {
   const { t } = useLanguage();
 
   return (
@@ -12,8 +16,18 @@ const Hero = () => {
           alt="SENOA Night Reset Background" 
           className="w-full h-full object-cover object-[center_35%] opacity-85 saturate-[1.12] contrast-[1.04] brightness-[0.93] animate-ken-burns"
         />
-        {/* Subtle gradient to ensure text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white/75 via-white/30 to-transparent lg:from-white/50 calm-gradient-overlay" />
+        
+        {/* --- Hero Gradient Overlays (Horizontal) --- */}
+        {/* Day Mode Horizontal Overlay */}
+        <div className={`absolute inset-0 bg-gradient-to-b from-white/80 via-white/40 to-white/75 lg:bg-gradient-to-r lg:from-white/75 lg:via-white/35 lg:to-transparent lg:from-white/55 transition-opacity duration-[2500ms] ease-in-out ${isCalm ? 'opacity-0' : 'opacity-100'}`} />
+        {/* Calm Mode Horizontal Overlay */}
+        <div className={`absolute inset-0 bg-gradient-to-b from-[#0B0D14]/90 via-[#0B0D14]/65 to-[#0B0D14]/85 lg:bg-gradient-to-r lg:from-[#0B0D14]/94 lg:via-[#0B0D14]/60 lg:to-transparent lg:from-[#0B0D14]/94 transition-opacity duration-[2500ms] ease-in-out ${isCalm ? 'opacity-100' : 'opacity-0'}`} />
+
+        {/* --- Top Navbar Gradient Overlays (Vertical) --- */}
+        {/* Day Mode Top Navbar Overlay */}
+        <div className={`absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-white/80 via-white/30 to-transparent transition-opacity duration-[2500ms] ease-in-out ${isCalm ? 'opacity-0' : 'opacity-100'}`} />
+        {/* Calm Mode Top Navbar Overlay */}
+        <div className={`absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[#0B0D14]/85 via-[#0B0D14]/30 to-transparent transition-opacity duration-[2500ms] ease-in-out ${isCalm ? 'opacity-100' : 'opacity-0'}`} />
       </div>
 
       {/* Lunar Monogram Watermark (Signature Element) */}

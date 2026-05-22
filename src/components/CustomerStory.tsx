@@ -43,7 +43,7 @@ const CustomerStory = () => {
           {/* Right Column - Large Widescreen Editorial Image */}
           <div className="lg:col-span-7 relative min-h-[400px] lg:min-h-[500px] rounded-sm overflow-hidden shadow-sm">
             <img 
-              src="images/derAbend.png" 
+              src="images/derAbend.webp" 
               alt={t('philosophy.title')} 
               className="absolute inset-0 w-full h-full object-cover"
             />

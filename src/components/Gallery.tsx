@@ -3,10 +3,10 @@ import { useLanguage } from '../context/LanguageContext';
 const Gallery = () => {
   const { t } = useLanguage();
   const images = [
-    "images/gallery1.png",
-    "images/gallery2.png",
-    "images/gallery3.png",
-    "images/gallery4.png"
+    "images/abend1.webp",
+    "images/abend2.webp",
+    "images/abend3.webp",
+    "images/abend4.webp"
   ];
 
   return (

@@ -1,10 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
   body {
     @apply bg-background text-primary font-sans antialiased;
   }
@@ -76,16 +80,7 @@
     border-color: rgba(243, 244, 246, 0.08) !important;
   }
   
-  /* Hero dark gradient overlay for optimal readability in calm mode */
-  .calm-mode .calm-gradient-overlay {
-    background-image: linear-gradient(to right, rgba(11, 13, 20, 0.94) 0%, rgba(11, 13, 20, 0.6) 60%, rgba(11, 13, 20, 0.25) 100%) !important;
-  }
-  
-  @media (max-width: 1023px) {
-    .calm-mode .calm-gradient-overlay {
-      background-image: linear-gradient(to bottom, rgba(11, 13, 20, 0.9) 0%, rgba(11, 13, 20, 0.65) 60%, rgba(11, 13, 20, 0.85) 100%) !important;
-    }
-  }
+
   
   .calm-mode .text-primary,
   .calm-mode h1,
@@ -104,14 +99,16 @@
   }
   
   .calm-mode .text-primary\/40 {
-    color: rgba(243, 244, 246, 0.45) !important;
+    color: rgba(243, 244, 246, 0.75) !important;
   }
 
-  /* Make all ingredients and trust icons crisp and visible in calm mode */
+  /* Make all Lucide icons crisp, bright, and perfectly balanced in calm mode */
+  .calm-mode svg.lucide,
   .calm-mode #ingredients svg {
-    color: #F3F4F6 !important;
-    stroke: #F3F4F6 !important;
-    opacity: 0.85 !important;
+    color: #FFFFFF !important;
+    stroke: #FFFFFF !important;
+    stroke-width: 1.4px !important;
+    opacity: 0.95 !important;
   }
   
   .calm-mode .border-primary\/10,
@@ -156,8 +153,8 @@
   textarea,
   button,
   a {
-    transition: background-color 1.2s cubic-bezier(0.16, 1, 0.3, 1), 
-                color 1.2s cubic-bezier(0.16, 1, 0.3, 1), 
-                border-color 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: background-color 2.5s cubic-bezier(0.16, 1, 0.3, 1), 
+                color 2.5s cubic-bezier(0.16, 1, 0.3, 1), 
+                border-color 2.5s cubic-bezier(0.16, 1, 0.3, 1);
   }
 }

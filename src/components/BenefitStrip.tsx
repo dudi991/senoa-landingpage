@@ -1,10 +1,10 @@
-import { Sunset, Compass, Leaf, Sparkles, Waves } from 'lucide-react';
+import { Sunset, Anchor, Feather, Sparkles, Waves } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 const benefits = [
   { icon: Sunset, key: "1" },
-  { icon: Compass, key: "2" },
-  { icon: Leaf, key: "3" },
+  { icon: Anchor, key: "2" },
+  { icon: Feather, key: "3" },
   { icon: Sparkles, key: "4" },
   { icon: Waves, key: "5" }
 ];

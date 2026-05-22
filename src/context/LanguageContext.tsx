@@ -64,26 +64,26 @@ const translations: Record<Language, Record<string, string>> = {
     // Ingredients Groups (German)
     'ing.group_ruhe_tag': 'FÜR INNERE STILLE',
     'ing.group_ruhe_title': 'Ruhe',
-    'ing.group_ruhe_desc': 'Nährstoffe, die dich unterstützen herunterzukommen und den Geist zur Ruhe zu bringen.',
+    'ing.group_ruhe_desc': 'Ausgewählte Nährstoffe für den Moment, in dem der Tag leiser werden darf.',
     
     'ing.group_balance_tag': 'FÜR EMOTIONALE AUSGEGLICHENHEIT',
     'ing.group_balance_title': 'Balance',
-    'ing.group_balance_desc': 'Pflanzenextrakte und Mikronährstoffe, die dich dabei unterstützen, Stress loszulassen und in Balance zu bleiben.',
+    'ing.group_balance_desc': 'Pflanzenextrakte und Mikronährstoffe für einen Abend, der sich ausgeglichener anfühlt.',
     
     'ing.group_ritual_tag': 'FÜR GESCHMACK & MOMENT',
     'ing.group_ritual_title': 'Ritual',
-    'ing.group_ritual_desc': 'Sorgfältig ausgewählte Zutaten für ein angenehmes Geschmackserlebnis und einen bewussten Moment.',
+    'ing.group_ritual_desc': 'Sorgfältig ausgewählte Aromen und Essenzen für ein sinnliches Geschmackserlebnis und einen bewussten Moment des Ankommens.',
 
     // Ingredients descriptions (German)
-    'ing.mag_combined': 'Zwei Premium-Magnesiumformen, die Muskelentspannung, Nervensystem und kognitive Regeneration am Abend unterstützen.',
-    'ing.theanine': 'Aminosäure, die natürlicherweise in grünem Tee vorkommt und Entspannung fördern kann.',
-    'ing.apigenin': 'Pflanzenstoff, der natürlicherweise in Kamille vorkommt und für seine entspannenden Eigenschaften bekannt ist.',
-    'ing.ashwa': 'Adaptogen, das dem Körper hilft, mit Stress umzugehen und innere Balance zu unterstützen.',
-    'ing.saffron': 'Pflanzenextrakt, der traditionell für sein Wohlbefinden und seine positive Wirkung auf die Stimmung geschätzt wird.',
-    'ing.phosph': 'Phospholipid, das Bestandteil von Zellmembranen ist und eine Rolle für kognitive Funktionen spielt.',
-    'ing.reishi': 'Traditionell verwendeter Vitalpilz in der asiatischen Kultur, geschätzt für seine Inhaltsstoffe.',
-    'ing.glycine': 'Aminosäure, die eine wichtige Rolle im Körper spielt und natürlicherweise im Kollagen vorkommt.',
-    'ing.vanilla': 'Für eine warme, natürliche Süße und ein vollmundiges, harmonisches Geschmackserlebnis.',
+    'ing.mag_combined': 'Zwei Premium-Magnesiumformen, die deinen Körper am Abend sanft auf Entlastung und Regeneration einstimmen.',
+    'ing.theanine': 'Eine feine Aminosäure aus grünem Tee, die hilft, kreisende Gedanken sanft zur Ruhe fließen zu lassen.',
+    'ing.apigenin': 'Das wertvolle Herzstück der Kamille, traditionell geschätzt für ein Gefühl von tiefer, warmer Gelassenheit.',
+    'ing.ashwa': 'Ein bewährtes Adaptogen, das dem überreizten Geist hilft, sanft zurück in seine natürliche Mitte zu finden.',
+    'ing.saffron': 'Kostbarer Safranextrakt, der am Abend eine warme, harmonische Gestimmtheit fördert.',
+    'ing.phosph': 'Ein natürlicher Baustein der Zellmembranen, der den Kopf leise auf die nächtliche Regeneration vorbereitet.',
+    'ing.reishi': 'Der legendäre Pilz des friedvollen Geistes, geschätzt für seine erdende und ausgleichende Natur.',
+    'ing.glycine': 'Eine sanfte Aminosäure, die den biologischen Übergang in die abendliche Ruhephase natürlich begleitet.',
+    'ing.vanilla': 'Warme, echte Bourbon-Vanille und Tonkabohne für ein tiefes, wohlig-harmonisches Geschmackserlebnis.',
 
     // Trust elements (German)
     'ing.trust1_title': 'HOCHWERTIGE ROHSTOFFE',
@@ -96,7 +96,7 @@ const translations: Record<Language, Record<string, string>> = {
     'ing.trust4_desc': 'Entwickelt von Experten für dein Wohlbefinden.',
 
     // Gallery
-    'gallery.tag': 'Evening Culture',
+    'gallery.tag': 'Abendkultur',
     'gallery.title': 'Moderne Abende brauchen neue Rituale.',
     'gallery.desc': 'Wir leben in Tagen voller Reize, Termine und Entscheidungen. SENOA steht für den bewussten Gegenpol: weniger Funktionieren, mehr Ankommen. Weniger Optimierung, mehr echter Abend.',
 
@@ -174,26 +174,26 @@ const translations: Record<Language, Record<string, string>> = {
     // Ingredients Groups (English)
     'ing.group_ruhe_tag': 'FOR INNER STILLNESS',
     'ing.group_ruhe_title': 'Stillness',
-    'ing.group_ruhe_desc': 'Nutrients that support you in calming down and bringing peace to your mind.',
+    'ing.group_ruhe_desc': 'Selected nutrients for the moment when the day is allowed to grow quiet.',
     
     'ing.group_balance_tag': 'FOR EMOTIONAL BALANCE',
     'ing.group_balance_title': 'Balance',
-    'ing.group_balance_desc': 'Plant extracts and micronutrients that support you in letting go of stress and staying balanced.',
+    'ing.group_balance_desc': 'Botanicals and micronutrients for an evening that feels more centered and balanced.',
     
     'ing.group_ritual_tag': 'FOR TASTE & MOMENT',
     'ing.group_ritual_title': 'Ritual',
-    'ing.group_ritual_desc': 'Carefully selected ingredients for a pleasant taste experience and a conscious moment.',
+    'ing.group_ritual_desc': 'Carefully selected aromas and essences for a sensory taste experience and a conscious moment of arriving.',
 
     // Ingredients descriptions (English)
-    'ing.mag_combined': 'Two premium magnesium forms supporting muscle relaxation, the nervous system, and cognitive recovery in the evening.',
-    'ing.theanine': 'Amino acid naturally occurring in green tea, which can promote relaxation.',
-    'ing.apigenin': 'Plant compound naturally occurring in chamomile, known for its relaxing properties.',
-    'ing.ashwa': 'Adaptogen that helps the body manage stress and supports inner balance.',
-    'ing.saffron': 'Plant extract traditionally valued for its well-being and positive effect on mood.',
-    'ing.phosph': 'Phospholipid that is a component of cell membranes and plays a role in cognitive functions.',
-    'ing.reishi': 'Traditionally used vital mushroom in Asian culture, valued for its ingredients.',
-    'ing.glycine': 'Amino acid that plays an important role in the body and naturally occurs in collagen.',
-    'ing.vanilla': 'For a warm, natural sweetness and a full-bodied, harmonious taste experience.',
+    'ing.mag_combined': 'Two premium magnesium forms that gently prepare your body for ease and recovery.',
+    'ing.theanine': 'A delicate amino acid from green tea that helps busy thoughts flow into quiet stillness.',
+    'ing.apigenin': 'The precious essence of chamomile, traditionally cherished for a feeling of warm, deep serenity.',
+    'ing.ashwa': 'A time-honored adaptogen that helps an overstimulated mind gently return to its natural center.',
+    'ing.saffron': 'Precious saffron extract, traditionally valued for fostering a warm, harmonious evening mood.',
+    'ing.phosph': 'A natural building block of cell membranes, quietly preparing the mind for nightly regeneration.',
+    'ing.reishi': 'The legendary mushroom of peace, revered for its grounding and balancing nature.',
+    'ing.glycine': 'A gentle amino acid that naturally accompanies your body\'s transition into evening rest.',
+    'ing.vanilla': 'Warm, authentic Bourbon vanilla and tonka bean for a comforting, harmonious taste experience.',
 
     // Trust elements (English)
     'ing.trust1_title': 'HIGH-QUALITY INGREDIENTS',

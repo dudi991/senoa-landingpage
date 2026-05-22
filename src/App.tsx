@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import Lenis from 'lenis';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -11,10 +11,12 @@ import Gallery from './components/Gallery';
 import Waitlist from './components/Waitlist';
 import Footer from './components/Footer';
 import ScrollReveal from './components/ScrollReveal';
-import ImprintModal from './components/ImprintModal';
-import ContactModal from './components/ContactModal';
-import AboutModal from './components/AboutModal';
-import PrivacyModal from './components/PrivacyModal';
+
+// Lazy load heavy components (Modals) to dramatically reduce initial JS bundle size
+const ImprintModal = lazy(() => import('./components/ImprintModal'));
+const ContactModal = lazy(() => import('./components/ContactModal'));
+const AboutModal = lazy(() => import('./components/AboutModal'));
+const PrivacyModal = lazy(() => import('./components/PrivacyModal'));
 
 function App() {
   const [showImprint, setShowImprint] = useState(false);
@@ -67,7 +69,7 @@ function App() {
   return (
     <div className={`min-h-screen font-sans overflow-x-hidden selection:bg-primary selection:text-white ${isCalm ? 'calm-mode bg-[#0B0D14] text-[#F3F4F6]' : 'bg-white text-primary'}`}>
       <Navbar isCalm={isCalm} onToggleCalm={() => setIsCalm(!isCalm)} />
-      <Hero />
+      <Hero isCalm={isCalm} />
       
       <ScrollReveal>
         <BenefitStrip />
@@ -104,10 +106,26 @@ function App() {
         onShowPrivacy={() => setShowPrivacy(true)} 
       />
 
-      <ImprintModal isOpen={showImprint} onClose={() => setShowImprint(false)} />
-      <ContactModal isOpen={showContact} onClose={() => setShowContact(false)} />
-      <AboutModal isOpen={showAbout} onClose={() => setShowAbout(false)} />
-      <PrivacyModal isOpen={showPrivacy} onClose={() => setShowPrivacy(false)} />
+      {showImprint && (
+        <Suspense fallback={null}>
+          <ImprintModal isOpen={showImprint} onClose={() => setShowImprint(false)} />
+        </Suspense>
+      )}
+      {showContact && (
+        <Suspense fallback={null}>
+          <ContactModal isOpen={showContact} onClose={() => setShowContact(false)} />
+        </Suspense>
+      )}
+      {showAbout && (
+        <Suspense fallback={null}>
+          <AboutModal isOpen={showAbout} onClose={() => setShowAbout(false)} />
+        </Suspense>
+      )}
+      {showPrivacy && (
+        <Suspense fallback={null}>
+          <PrivacyModal isOpen={showPrivacy} onClose={() => setShowPrivacy(false)} />
+        </Suspense>
+      )}
     </div>
   );
 }
