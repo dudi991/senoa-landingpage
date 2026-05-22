@@ -16,6 +16,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
   
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [subscribeWaitlist, setSubscribeWaitlist] = useState(false);
   const [error, setError] = useState('');
 
   // Prevent background scroll when modal is open
@@ -38,6 +39,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
       setMessage('');
       setIsSubmitted(false);
       setIsSubmitting(false);
+      setSubscribeWaitlist(false);
       setError('');
     }
   }, [isOpen]);
@@ -69,6 +71,26 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
       });
 
       if (response.ok) {
+        // If the user opted in to the waitlist, subscribe them to MailerLite in the background
+        if (subscribeWaitlist) {
+          const accountId = import.meta.env.VITE_MAILERLITE_ACCOUNT_ID || '1288289';
+          const formId = import.meta.env.VITE_MAILERLITE_FORM_ID || '141014169';
+
+          const formData = new FormData();
+          formData.append('fields[email]', email);
+          formData.append('fields[name]', name);
+          formData.append('ajax', '1');
+
+          try {
+            await fetch(`https://assets.mailerlite.com/jsonp/${accountId}/forms/${formId}/subscribe`, {
+              method: 'POST',
+              body: formData,
+            });
+          } catch (mlErr) {
+            console.error('MailerLite background subscription failed:', mlErr);
+            // We do not fail the contact form submission if MailerLite fails to avoid disrupting user experience
+          }
+        }
         setIsSubmitted(true);
       } else {
         throw new Error('Submission failed');
@@ -187,6 +209,25 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                 {error}
               </p>
             )}
+
+            {/* Waitlist Subscription Checkbox */}
+            <div className="flex items-start gap-3 pt-2">
+              <input
+                type="checkbox"
+                id="subscribeWaitlist"
+                checked={subscribeWaitlist}
+                onChange={(e) => setSubscribeWaitlist(e.target.checked)}
+                className="mt-0.5 w-4 h-4 accent-primary cursor-pointer border border-primary/20 bg-transparent rounded focus:ring-0"
+              />
+              <label 
+                htmlFor="subscribeWaitlist" 
+                className="font-sans text-xs tracking-wide text-primary/70 cursor-pointer font-light select-none leading-normal"
+              >
+                {language === 'de' 
+                  ? 'Informiere mich über den Start von SENOA.' 
+                  : 'Inform me about the launch of SENOA.'}
+              </label>
+            </div>
 
             <div className="pt-4">
               <button
