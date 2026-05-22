@@ -135,14 +135,14 @@ const Ingredients = () => {
                     return (
                       <div 
                         key={iIdx} 
-                        className={`flex flex-col items-center justify-center text-center px-4 md:px-6 xl:px-8 h-full ${
+                        className={`flex flex-col items-center justify-start text-center px-4 md:px-6 xl:px-8 h-full pt-4 lg:pt-8 pb-4 lg:pb-8 ${
                           group.ingredients.length === 3 && iIdx < 2 ? 'md:border-r border-primary/10' : ''
                         }`}
                       >
                         <div className="w-16 h-16 flex items-center justify-center text-primary/60 mb-2">
                           <IngIcon className="w-9 h-9" strokeWidth={1} />
                         </div>
-                        <h4 className="font-sans text-[13px] tracking-[0.15em] font-bold uppercase text-primary mb-2 min-h-[40px] flex items-center justify-center">
+                        <h4 className="font-sans text-[13px] tracking-[0.15em] font-bold uppercase text-primary mb-2 min-h-[40px] flex items-start justify-center">
                           {t(ing.nameKey)}
                         </h4>
                         <p className="text-[15px] text-primary/60 leading-snug font-light max-w-[240px]">

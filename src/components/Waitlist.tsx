@@ -40,7 +40,7 @@ const Waitlist = () => {
             
             {submitted ? (
               <div className="bg-white border border-primary/10 px-8 py-8 rounded-sm w-full max-w-[320px] shadow-sm flex flex-col items-center justify-center">
-                <svg className="w-8 h-8 text-midnight mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                <svg className="w-8 h-8 text-primary mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
                 <p className="text-primary text-xs font-semibold tracking-[0.2em] uppercase text-center">
