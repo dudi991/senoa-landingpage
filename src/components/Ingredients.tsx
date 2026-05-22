@@ -75,7 +75,15 @@ const Ingredients = () => {
           <span className="font-sans text-[11px] tracking-[0.3em] font-semibold text-primary/40 uppercase mb-3 block">
             {t('ingredients.tag')}
           </span>
-          <div className="w-12 h-[1px] bg-midnight/80 mx-auto mb-8"></div>
+          <div className="flex items-center justify-center gap-2 mt-4 mb-8 select-none text-primary/30">
+            <div className="w-8 h-[1px] bg-primary/10"></div>
+            <img 
+              src="images/logo1.webp" 
+              alt="SENOA Hallmark" 
+              className="h-3.5 w-auto opacity-40"
+            />
+            <div className="w-8 h-[1px] bg-primary/10"></div>
+          </div>
           <h2 className="font-serif text-4xl md:text-5xl lg:text-[3.25rem] text-primary leading-[1.25] max-w-4xl mx-auto font-light mb-4">
             {t('ingredients.title').split('\n').map((line, i) => (
               <span key={i}>

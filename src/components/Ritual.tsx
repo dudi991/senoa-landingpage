@@ -25,7 +25,15 @@ const Ritual = () => {
               <span className="font-sans text-[11px] tracking-[0.3em] font-semibold text-primary/40 uppercase mb-4 block">
                 {t('ritual.tag')}
               </span>
-              <div className="w-12 h-[1px] bg-midnight/80"></div>
+              <div className="flex items-center gap-2 mt-4 select-none text-primary/30">
+                <div className="w-8 h-[1px] bg-primary/10"></div>
+                <img 
+                  src="images/logo1.webp" 
+                  alt="SENOA Hallmark" 
+                  className="h-3.5 w-auto opacity-40"
+                />
+                <div className="w-8 h-[1px] bg-primary/10"></div>
+              </div>
             </div>
 
             {/* Middle block (vertically centered next to the image, grouped with description) */}

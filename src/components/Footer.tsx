@@ -16,10 +16,15 @@ const Footer = ({ onShowImprint, onShowContact, onShowAbout, onShowPrivacy }: Fo
       <div className="w-full px-8 lg:px-12">
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-6 lg:gap-0">
           
-          {/* Left Column: Brand Logo */}
-          <div className="flex justify-center lg:justify-start">
-            <span className="font-sans text-[26px] tracking-[0.2em] font-bold text-primary">
-              SENOA
+          {/* Left Column: Brand Logo & Celestial Hallmark */}
+          <div className="flex justify-center lg:justify-start items-center">
+            <span className="font-sans text-[26px] tracking-[0.2em] font-bold text-primary flex items-center select-none">
+              <span>SENOA</span>
+              <img 
+                src="images/logo1.webp" 
+                alt="SENOA Celestial Mark" 
+                className="h-5 w-auto ml-2.5 transition-all duration-[2.5s] ease-in-out hover:rotate-[360deg] cursor-pointer"
+              />
             </span>
           </div>
 
