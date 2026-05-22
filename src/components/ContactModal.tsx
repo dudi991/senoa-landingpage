@@ -129,8 +129,10 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
         </span>
         <div className="w-12 h-[1px] bg-primary/20 mb-8"></div>
         
-        <p className="text-primary/70 text-lg font-light leading-relaxed mb-12">
-          We’d love to hear from you – we reply as quickly as possible.
+        <p className="text-primary/80 text-lg font-light leading-relaxed mb-12">
+          {language === 'de' 
+            ? 'Wir freuen uns, von dir zu hören – wir antworten so schnell wie möglich.' 
+            : 'We’d love to hear from you – we reply as quickly as possible.'}
         </p>
 
         {isSubmitted ? (
@@ -221,7 +223,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
               />
               <label 
                 htmlFor="subscribeWaitlist" 
-                className="font-sans text-xs tracking-wide text-primary/70 cursor-pointer font-light select-none leading-normal"
+                className="font-sans text-sm tracking-wide text-primary/80 cursor-pointer font-light select-none leading-normal"
               >
                 {language === 'de' 
                   ? 'Informiere mich über den Start von SENOA.' 
