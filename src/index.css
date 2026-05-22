@@ -152,6 +152,37 @@
   .calm-mode textarea:focus {
     border-color: #F3F4F6 !important;
   }
+
+  /* Modal navigation close bar background override in calm mode */
+  .calm-mode .bg-white\/95 {
+    background-color: rgba(11, 13, 20, 0.95) !important;
+  }
+
+  /* Specific modal introductory text readability fix in calm mode */
+  .calm-mode .text-primary\/95 {
+    color: rgba(243, 244, 246, 0.95) !important;
+  }
+
+  /* Buttons and CTAs in Calm Mode */
+  .calm-mode .bg-primary {
+    background-color: #F3F4F6 !important;
+    color: #0B0D14 !important;
+  }
+  
+  .calm-mode .bg-accent {
+    background-color: #F3F4F6 !important;
+    color: #0B0D14 !important;
+  }
+
+  .calm-mode .border-primary {
+    border-color: #F3F4F6 !important;
+    color: #F3F4F6 !important;
+  }
+
+  .calm-mode .border-primary:hover {
+    background-color: #F3F4F6 !important;
+    color: #0B0D14 !important;
+  }
   
   /* Gallery image borders and background override in calm mode */
   .calm-mode .border-white {
