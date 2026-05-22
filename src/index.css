@@ -99,7 +99,7 @@
   }
   
   .calm-mode .text-primary\/40 {
-    color: rgba(243, 244, 246, 0.75) !important;
+    color: rgba(243, 244, 246, 0.5) !important; /* Soft, slightly darkened kicker text in Calm Mode */
   }
 
   /* Make all Lucide icons crisp, bright, and perfectly balanced in calm mode */
@@ -117,6 +117,29 @@
   .calm-mode .divide-primary\/10 > :not([hidden]) ~ :not([hidden]),
   .calm-mode .md\:border-r {
     border-color: rgba(243, 244, 246, 0.08) !important;
+  }
+
+  .calm-mode .bg-primary\/10 {
+    background-color: rgba(243, 244, 246, 0.2) !important; /* Soft, slightly darkened underlines under kickers */
+  }
+
+  /* Key out the white background rectangle of the ritual symbol logo in calm-mode */
+  .calm-mode img[src*="logo1"],
+  .calm-mode nav img {
+    filter: contrast(200%) invert(1) !important;
+    mix-blend-mode: screen !important;
+    background-color: transparent !important;
+    opacity: 1 !important;
+  }
+
+  /* Apply mix-blend-mode to nav container to key out the logo's black background rectangle in the absolute positioning stacking context */
+  .calm-mode nav {
+    mix-blend-mode: screen !important;
+  }
+
+  /* Slightly darken the kicker ritual symbols in sections */
+  .calm-mode section img[src*="logo1"] {
+    opacity: 0.45 !important;
   }
   
   .calm-mode input,

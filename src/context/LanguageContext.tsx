@@ -72,18 +72,29 @@ const translations: Record<Language, Record<string, string>> = {
     
     'ing.group_ritual_tag': 'FÜR GESCHMACK & MOMENT',
     'ing.group_ritual_title': 'Ritual',
-    'ing.group_ritual_desc': 'Sorgfältig ausgewählte Aromen und Essenzen für ein sinnliches Geschmackserlebnis und einen bewussten Moment des Ankommens.',
+    'ing.group_ritual_desc': 'Warme Geschmacksnoten und ausgewählte Zutaten, die aus einer Routine ein Ritual machen.',
 
     // Ingredients descriptions (German)
-    'ing.mag_combined': 'Zwei Premium-Magnesiumformen, die deinen Körper am Abend sanft auf Entlastung und Regeneration einstimmen.',
-    'ing.theanine': 'Eine feine Aminosäure aus grünem Tee, die hilft, kreisende Gedanken sanft zur Ruhe fließen zu lassen.',
-    'ing.apigenin': 'Das wertvolle Herzstück der Kamille, traditionell geschätzt für ein Gefühl von tiefer, warmer Gelassenheit.',
-    'ing.ashwa': 'Ein bewährtes Adaptogen, das dem überreizten Geist hilft, sanft zurück in seine natürliche Mitte zu finden.',
-    'ing.saffron': 'Kostbarer Safranextrakt, der am Abend eine warme, harmonische Gestimmtheit fördert.',
-    'ing.phosph': 'Ein natürlicher Baustein der Zellmembranen, der den Kopf leise auf die nächtliche Regeneration vorbereitet.',
-    'ing.reishi': 'Der legendäre Pilz des friedvollen Geistes, geschätzt für seine erdende und ausgleichende Natur.',
-    'ing.glycine': 'Eine sanfte Aminosäure, die den biologischen Übergang in die abendliche Ruhephase natürlich begleitet.',
-    'ing.vanilla': 'Warme, echte Bourbon-Vanille und Tonkabohne für ein tiefes, wohlig-harmonisches Geschmackserlebnis.',
+    'ing.mag_bis': 'Sanfte Magnesiumbasis für den Abend.',
+    'ing.theanine': 'Klar, mild, aus grünem Tee.',
+    'ing.apigenin': 'Pflanzenstoff aus der Kamille.',
+    'ing.ashwa': 'Traditioneller Pflanzenextrakt.',
+    'ing.saffron': 'Hochwertiger Extrakt mit Charakter.',
+    'ing.phosph': 'Natürliches Phospholipid.',
+    'ing.reishi': 'Erdig, tief, traditionell geschätzt.',
+    'ing.glycine': 'Sanft und leicht süßlich.',
+    'ing.vanilla': 'Warm, weich, ritualhaft.',
+
+    // Ingredients Names (German)
+    'ing.name_mag_bis': 'Magnesium Bisglycinat & L-Threonat',
+    'ing.name_theanine': 'L-Theanin',
+    'ing.name_apigenin': 'Apigenin',
+    'ing.name_ashwa': 'Ashwagandha',
+    'ing.name_saffron': 'Safran',
+    'ing.name_phosph': 'Phosphatidylserin',
+    'ing.name_reishi': 'Reishi',
+    'ing.name_glycine': 'Glycin',
+    'ing.name_vanilla': 'Vanille & Tonka',
 
     // Trust elements (German)
     'ing.trust1_title': 'HOCHWERTIGE ROHSTOFFE',
@@ -182,18 +193,29 @@ const translations: Record<Language, Record<string, string>> = {
     
     'ing.group_ritual_tag': 'FOR TASTE & MOMENT',
     'ing.group_ritual_title': 'Ritual',
-    'ing.group_ritual_desc': 'Carefully selected aromas and essences for a sensory taste experience and a conscious moment of arriving.',
+    'ing.group_ritual_desc': 'Warm flavors and selected ingredients that turn a routine into a ritual.',
 
     // Ingredients descriptions (English)
-    'ing.mag_combined': 'Two premium magnesium forms that gently prepare your body for ease and recovery.',
-    'ing.theanine': 'A delicate amino acid from green tea that helps busy thoughts flow into quiet stillness.',
-    'ing.apigenin': 'The precious essence of chamomile, traditionally cherished for a feeling of warm, deep serenity.',
-    'ing.ashwa': 'A time-honored adaptogen that helps an overstimulated mind gently return to its natural center.',
-    'ing.saffron': 'Precious saffron extract, traditionally valued for fostering a warm, harmonious evening mood.',
-    'ing.phosph': 'A natural building block of cell membranes, quietly preparing the mind for nightly regeneration.',
-    'ing.reishi': 'The legendary mushroom of peace, revered for its grounding and balancing nature.',
-    'ing.glycine': 'A gentle amino acid that naturally accompanies your body\'s transition into evening rest.',
-    'ing.vanilla': 'Warm, authentic Bourbon vanilla and tonka bean for a comforting, harmonious taste experience.',
+    'ing.mag_bis': 'Gentle magnesium base for the evening.',
+    'ing.theanine': 'Clear, mild, from green tea.',
+    'ing.apigenin': 'Botanical compound from chamomile.',
+    'ing.ashwa': 'Traditional botanical extract.',
+    'ing.saffron': 'Premium extract with character.',
+    'ing.phosph': 'Natural phospholipid.',
+    'ing.reishi': 'Earthy, deep, traditionally valued.',
+    'ing.glycine': 'Gentle and subtly sweet.',
+    'ing.vanilla': 'Warm, soft, ritualistic.',
+
+    // Ingredients Names (English)
+    'ing.name_mag_bis': 'Magnesium Bisglycinate & L-Threonate',
+    'ing.name_theanine': 'L-Theanine',
+    'ing.name_apigenin': 'Apigenin',
+    'ing.name_ashwa': 'Ashwagandha',
+    'ing.name_saffron': 'Saffron',
+    'ing.name_phosph': 'Phosphatidylserine',
+    'ing.name_reishi': 'Reishi',
+    'ing.name_glycine': 'Glycine',
+    'ing.name_vanilla': 'Vanilla & Tonka',
 
     // Trust elements (English)
     'ing.trust1_title': 'HIGH-QUALITY INGREDIENTS',

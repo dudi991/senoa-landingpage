@@ -9,9 +9,9 @@ const groups = [
     descKey: "ing.group_ruhe_desc",
     icon: Moon,
     ingredients: [
-      { name: "Magnesium Bisglycinat & L-Threonat", icon: Atom, key: "mag_combined" },
-      { name: "L-Theanin", icon: Sprout, key: "theanine" },
-      { name: "Apigenin", icon: Flower2, key: "apigenin" }
+      { nameKey: "ing.name_mag_bis", icon: Atom, key: "mag_bis" },
+      { nameKey: "ing.name_theanine", icon: Sprout, key: "theanine" },
+      { nameKey: "ing.name_apigenin", icon: Flower2, key: "apigenin" }
     ]
   },
   {
@@ -21,9 +21,9 @@ const groups = [
     descKey: "ing.group_balance_desc",
     icon: Compass,
     ingredients: [
-      { name: "Ashwagandha (Shoden®)", icon: Shield, key: "ashwa" },
-      { name: "Safran", icon: Sun, key: "saffron" },
-      { name: "Phosphatidylserin", icon: Brain, key: "phosph" }
+      { nameKey: "ing.name_ashwa", icon: Shield, key: "ashwa" },
+      { nameKey: "ing.name_saffron", icon: Sun, key: "saffron" },
+      { nameKey: "ing.name_phosph", icon: Brain, key: "phosph" }
     ]
   },
   {
@@ -33,9 +33,9 @@ const groups = [
     descKey: "ing.group_ritual_desc",
     icon: GlassWater,
     ingredients: [
-      { name: "Reishi", icon: Heart, key: "reishi" },
-      { name: "Glycin", icon: Layers, key: "glycine" },
-      { name: "Vanilla & Tonka Bean", icon: Sparkle, key: "vanilla" }
+      { nameKey: "ing.name_reishi", icon: Heart, key: "reishi" },
+      { nameKey: "ing.name_glycine", icon: Layers, key: "glycine" },
+      { nameKey: "ing.name_vanilla", icon: Sparkle, key: "vanilla" }
     ]
   }
 ];
@@ -125,21 +125,25 @@ const Ingredients = () => {
                 </div>
 
                 {/* Right Column: Ingredients Grid */}
-                <div className="lg:col-span-9 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10 items-start">
+                <div className={`lg:col-span-9 grid gap-6 lg:gap-10 items-stretch ${
+                  group.ingredients.length === 4 
+                    ? 'grid-cols-1 sm:grid-cols-2 xl:grid-cols-4' 
+                    : 'grid-cols-1 sm:grid-cols-3'
+                }`}>
                   {group.ingredients.map((ing, iIdx) => {
                     const IngIcon = ing.icon;
                     return (
                       <div 
                         key={iIdx} 
-                        className={`flex flex-col items-center text-center px-4 md:px-6 xl:px-8 ${
-                          iIdx < 2 ? 'md:border-r border-primary/10' : ''
+                        className={`flex flex-col items-center justify-center text-center px-4 md:px-6 xl:px-8 h-full ${
+                          group.ingredients.length === 3 && iIdx < 2 ? 'md:border-r border-primary/10' : ''
                         }`}
                       >
                         <div className="w-16 h-16 flex items-center justify-center text-primary/60 mb-2">
                           <IngIcon className="w-9 h-9" strokeWidth={1} />
                         </div>
                         <h4 className="font-sans text-[13px] tracking-[0.15em] font-bold uppercase text-primary mb-2 min-h-[40px] flex items-center justify-center">
-                          {ing.name}
+                          {t(ing.nameKey)}
                         </h4>
                         <p className="text-[15px] text-primary/60 leading-snug font-light max-w-[240px]">
                           {t(`ing.${ing.key}`)}
