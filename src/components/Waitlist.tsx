@@ -5,13 +5,58 @@ import { useLanguage } from '../context/LanguageContext';
 const Waitlist = () => {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
-  const { t } = useLanguage();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
+  const { t, language } = useLanguage();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) {
-      setSubmitted(true);
-      setEmail('');
+    if (!email) return;
+
+    setIsSubmitting(true);
+    setError('');
+
+    // MailerLite account and form IDs from Vite environment variables (or fallbacks)
+    const accountId = import.meta.env.VITE_MAILERLITE_ACCOUNT_ID || '1288289'; // REPLACE WITH YOUR MAILERLITE ACCOUNT ID
+    const formId = import.meta.env.VITE_MAILERLITE_FORM_ID || '141014169';     // REPLACE WITH YOUR MAILERLITE FORM ID
+
+    try {
+      const formData = new FormData();
+      formData.append('fields[email]', email);
+      formData.append('ajax', '1');
+
+      const response = await fetch(`https://assets.mailerlite.com/jsonp/${accountId}/forms/${formId}/subscribe`, {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (!response.ok) {
+        throw new Error('Subscription failed');
+      }
+
+      let isSuccess = false;
+      try {
+        const data = await response.json();
+        isSuccess = data && (data.success === true || data.success === 'true');
+      } catch (parseError) {
+        // Fallback: If JSON parsing fails but HTTP status is 200 OK, treat it as successful
+        isSuccess = response.ok;
+      }
+
+      if (isSuccess) {
+        setSubmitted(true);
+        setEmail('');
+      } else {
+        throw new Error('Subscription failed');
+      }
+    } catch (err) {
+      setError(
+        language === 'de'
+          ? 'Es gab ein Problem beim Eintragen in die Warteliste. Bitte versuche es noch einmal.'
+          : 'There was a problem joining the waitlist. Please try again.'
+      );
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -57,16 +102,25 @@ const Waitlist = () => {
                   placeholder={t('waitlist.placeholder')} 
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full bg-white border border-primary/20 text-primary px-6 py-3.5 text-xs focus:outline-none focus:border-primary/50 transition-colors font-light placeholder-primary/40 rounded-sm text-center"
+                  disabled={isSubmitting}
+                  className="w-full bg-white border border-primary/20 text-primary px-6 py-3.5 text-xs focus:outline-none focus:border-primary/50 transition-colors font-light placeholder-primary/40 rounded-sm text-center disabled:opacity-50 disabled:cursor-not-allowed"
                   required
                   autoComplete="off"
                 />
                 <button 
                   type="submit" 
-                  className="bg-primary text-white w-full py-4 text-xs font-semibold tracking-widest uppercase hover:bg-opacity-90 transition-opacity rounded-sm"
+                  disabled={isSubmitting}
+                  className="bg-primary text-white w-full py-4 text-xs font-semibold tracking-widest uppercase hover:bg-opacity-90 transition-opacity rounded-sm disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
                 >
-                  {t('waitlist.submit')}
+                  {isSubmitting 
+                    ? (language === 'de' ? 'WIRD GESENDET...' : 'SENDING...') 
+                    : t('waitlist.submit')}
                 </button>
+                {error && (
+                  <p className="text-[11px] font-sans text-red-500 mt-1 tracking-wide animate-fade-in text-center leading-normal">
+                    {error}
+                  </p>
+                )}
               </form>
             )}
           </div>
