@@ -93,7 +93,7 @@ const Ritual = () => {
               </div>
               <div className="flex flex-col text-left">
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xs font-sans font-normal text-primary/30 tracking-widest">I.</span>
+                  <span className="text-xs font-sans font-normal text-primary tracking-widest">I.</span>
                   <h4 className="font-sans text-[13px] tracking-[0.2em] font-bold uppercase leading-none text-primary">
                     {t('ritual.step1_tag')}
                   </h4>
@@ -117,7 +117,7 @@ const Ritual = () => {
               </div>
               <div className="flex flex-col text-left">
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xs font-sans font-normal text-primary/30 tracking-widest">II.</span>
+                  <span className="text-xs font-sans font-normal text-primary tracking-widest">II.</span>
                   <h4 className="font-sans text-[13px] tracking-[0.2em] font-bold uppercase leading-none text-primary">
                     {t('ritual.step2_tag')}
                   </h4>
@@ -141,7 +141,7 @@ const Ritual = () => {
               </div>
               <div className="flex flex-col text-left">
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xs font-sans font-normal text-primary/30 tracking-widest">III.</span>
+                  <span className="text-xs font-sans font-normal text-primary tracking-widest">III.</span>
                   <h4 className="font-sans text-[13px] tracking-[0.2em] font-bold uppercase leading-none text-primary">
                     {t('ritual.step3_tag')}
                   </h4>
