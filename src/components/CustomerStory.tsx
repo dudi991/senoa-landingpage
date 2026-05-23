@@ -12,11 +12,11 @@ const CustomerStory = () => {
           <div className="lg:col-span-5 flex flex-col justify-center py-0 relative lg:min-h-[500px]">
             
             {/* Elegant category label - Pinned to the top on desktop */}
-            <div className="text-left mb-8 lg:mb-0 lg:absolute lg:top-0 lg:left-0">
+            <div className="text-center lg:text-left mb-8 lg:mb-0 lg:absolute lg:top-0 lg:left-0">
               <span className="font-sans text-[11px] tracking-[0.3em] font-semibold text-primary/40 uppercase mb-3 block">
                 {t('philosophy.tag')}
               </span>
-              <div className="flex items-center gap-2 mt-4 select-none text-primary/30">
+              <div className="flex items-center justify-center lg:justify-start gap-2 mt-4 select-none text-primary/30">
                 <div className="w-8 h-[1px] bg-primary/10"></div>
                 <img 
                   src="images/logo1.webp" 

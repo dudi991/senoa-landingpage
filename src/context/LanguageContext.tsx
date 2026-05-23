@@ -118,7 +118,7 @@ const translations: Record<Language, Record<string, string>> = {
     'waitlist.submit': 'DABEI SEIN',
     'waitlist.success': 'Du bist Teil von SENOA.',
     'waitlist.benefit1_title': 'Früher Zugang',
-    'waitlist.benefit1_desc': 'Als Erste:r erfahren, wenn SENOA startet.',
+    'waitlist.benefit1_desc': 'Als Erster erfahren, wenn SENOA startet.',
     'waitlist.benefit2_title': 'Ritual-Impulse',
     'waitlist.benefit2_desc': 'Gedanken, Bilder und kleine Abendmomente.',
     'waitlist.benefit3_title': 'Launch-Vorteile',
