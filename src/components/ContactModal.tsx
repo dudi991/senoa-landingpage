@@ -73,8 +73,8 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
       if (response.ok) {
         // If the user opted in to the waitlist, subscribe them to MailerLite in the background
         if (subscribeWaitlist) {
-          const accountId = import.meta.env.VITE_MAILERLITE_ACCOUNT_ID || '1288289';
-          const formId = import.meta.env.VITE_MAILERLITE_FORM_ID || '141014169';
+          const accountId = import.meta.env.VITE_MAILERLITE_ACCOUNT_ID || '2372265';
+          const formId = import.meta.env.VITE_MAILERLITE_FORM_ID || '188201569953514830';
 
           const formData = new FormData();
           formData.append('fields[email]', email);

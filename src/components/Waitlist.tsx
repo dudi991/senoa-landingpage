@@ -17,8 +17,8 @@ const Waitlist = () => {
     setError('');
 
     // MailerLite account and form IDs from Vite environment variables (or fallbacks)
-    const accountId = import.meta.env.VITE_MAILERLITE_ACCOUNT_ID || '1288289'; // REPLACE WITH YOUR MAILERLITE ACCOUNT ID
-    const formId = import.meta.env.VITE_MAILERLITE_FORM_ID || '141014169';     // REPLACE WITH YOUR MAILERLITE FORM ID
+    const accountId = import.meta.env.VITE_MAILERLITE_ACCOUNT_ID || '2372265';
+    const formId = import.meta.env.VITE_MAILERLITE_FORM_ID || '188201569953514830';
 
     try {
       const formData = new FormData();
