@@ -72,17 +72,17 @@ const Ingredients = () => {
         
         {/* Section Header */}
         <div className="text-center mb-12 lg:mb-16">
-          <span className="font-sans text-[11px] tracking-[0.3em] font-semibold text-primary/40 uppercase mb-3 block">
+          <span className="font-sans text-[11px] tracking-[0.3em] font-semibold text-primary/60 uppercase mb-3 block">
             {t('ingredients.tag')}
           </span>
-          <div className="flex items-center justify-center gap-2 mt-4 mb-8 select-none text-primary/30">
-            <div className="w-8 h-[1px] bg-primary/10"></div>
+          <div className="flex items-center justify-center gap-2 mt-4 mb-8 select-none text-primary/50">
+            <div className="w-8 h-[1px] bg-primary/25"></div>
             <img 
               src="images/logo1.webp" 
-              alt="SENOA Hallmark" 
-              className="h-3.5 w-auto opacity-40"
+              alt="HESPYRA Hallmark" 
+              className="h-[18px] w-auto opacity-70"
             />
-            <div className="w-8 h-[1px] bg-primary/10"></div>
+            <div className="w-8 h-[1px] bg-primary/25"></div>
           </div>
           <h2 className="font-serif text-4xl md:text-5xl lg:text-[3.25rem] text-primary leading-[1.25] max-w-4xl mx-auto font-light mb-4">
             {t('ingredients.title').split('\n').map((line, i) => (
@@ -113,7 +113,7 @@ const Ingredients = () => {
                   <div className="w-14 h-14 rounded-full border border-primary/10 bg-white flex items-center justify-center text-primary/70 mb-3 shadow-sm">
                     <GroupIcon className="w-6 h-6" strokeWidth={1} />
                   </div>
-                  <span className="font-sans text-[11px] tracking-[0.25em] font-bold text-primary/40 uppercase mb-2">
+                  <span className="font-sans text-[11px] tracking-[0.25em] font-bold text-primary/60 uppercase mb-2">
                     {t(group.tagKey)}
                   </span>
                   <h3 className="font-serif text-3xl lg:text-[2.25rem] text-primary font-light mb-2 leading-tight">

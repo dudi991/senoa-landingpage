@@ -129,7 +129,7 @@ const Waitlist = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4 lg:gap-6 text-center items-start">
             {/* Item 1 */}
             <div className="flex flex-col items-center max-w-[200px] mx-auto">
-              <Star className="w-10 h-10 text-primary/40 mb-5" strokeWidth={1} />
+              <Star className="w-10 h-10 text-primary/60 mb-5" strokeWidth={1} />
               <h4 className="font-sans text-[13px] tracking-[0.15em] font-bold text-primary uppercase mb-2 leading-snug">
                 {t('waitlist.benefit1_title')}
               </h4>
@@ -139,7 +139,7 @@ const Waitlist = () => {
             </div>
             {/* Item 2 */}
             <div className="flex flex-col items-center max-w-[200px] mx-auto">
-              <Mail className="w-10 h-10 text-primary/40 mb-5" strokeWidth={1} />
+              <Mail className="w-10 h-10 text-primary/60 mb-5" strokeWidth={1} />
               <h4 className="font-sans text-[13px] tracking-[0.15em] font-bold text-primary uppercase mb-2 leading-snug">
                 {t('waitlist.benefit2_title')}
               </h4>
@@ -149,7 +149,7 @@ const Waitlist = () => {
             </div>
             {/* Item 3 */}
             <div className="flex flex-col items-center max-w-[200px] mx-auto">
-              <Gift className="w-10 h-10 text-primary/40 mb-5" strokeWidth={1} />
+              <Gift className="w-10 h-10 text-primary/60 mb-5" strokeWidth={1} />
               <h4 className="font-sans text-[13px] tracking-[0.15em] font-bold text-primary uppercase mb-2 leading-snug">
                 {t('waitlist.benefit3_title')}
               </h4>

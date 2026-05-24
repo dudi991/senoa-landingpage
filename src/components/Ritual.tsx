@@ -3,8 +3,8 @@ import { GlassWater, Wind, Moon } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 const stepImages = [
-  "images/sonea_ankunft.webp",
-  "images/senoa_praesens.webp",
+  "images/hespyra_ankunft.webp",
+  "images/hespyra_praesens.webp",
   "images/derAbend.webp"
 ];
 
@@ -22,17 +22,17 @@ const Ritual = () => {
           <div className="lg:col-span-4 flex flex-col justify-between h-full py-1">
             {/* Top block */}
             <div className="text-center lg:text-left">
-              <span className="font-sans text-[11px] tracking-[0.3em] font-semibold text-primary/40 uppercase mb-4 block">
+              <span className="font-sans text-[11px] tracking-[0.3em] font-semibold text-primary/60 uppercase mb-4 block">
                 {t('ritual.tag')}
               </span>
-              <div className="flex items-center justify-center lg:justify-start gap-2 mt-4 select-none text-primary/30">
-                <div className="w-8 h-[1px] bg-primary/10"></div>
+              <div className="flex items-center justify-center lg:justify-start gap-2 mt-4 select-none text-primary/50">
+                <div className="w-8 h-[1px] bg-primary/25"></div>
                 <img 
                   src="images/logo1.webp" 
-                  alt="SENOA Hallmark" 
-                  className="h-3.5 w-auto opacity-40"
+                  alt="HESPYRA Hallmark" 
+                  className="h-[18px] w-auto opacity-70"
                 />
-                <div className="w-8 h-[1px] bg-primary/10"></div>
+                <div className="w-8 h-[1px] bg-primary/25"></div>
               </div>
             </div>
 
@@ -82,13 +82,13 @@ const Ritual = () => {
             
             {/* Step I */}
             <div 
-              className={`flex flex-row items-start gap-6 cursor-pointer transition-all duration-500 ${
+              className={`flex flex-row items-center gap-6 cursor-pointer transition-all duration-500 ${
                 activeStep === 0 ? 'opacity-100 translate-x-1' : 'opacity-40 hover:opacity-75'
               }`}
               onMouseEnter={() => setActiveStep(0)}
               onClick={() => setActiveStep(0)}
             >
-              <div className="text-primary mt-1 flex-shrink-0">
+              <div className="text-primary flex-shrink-0">
                 <GlassWater className="w-10 h-10" strokeWidth={1} />
               </div>
               <div className="flex flex-col text-left">
@@ -106,13 +106,13 @@ const Ritual = () => {
 
             {/* Step II */}
             <div 
-              className={`flex flex-row items-start gap-6 cursor-pointer transition-all duration-500 ${
+              className={`flex flex-row items-center gap-6 cursor-pointer transition-all duration-500 ${
                 activeStep === 1 ? 'opacity-100 translate-x-1' : 'opacity-40 hover:opacity-75'
               }`}
               onMouseEnter={() => setActiveStep(1)}
               onClick={() => setActiveStep(1)}
             >
-              <div className="text-primary mt-1 flex-shrink-0">
+              <div className="text-primary flex-shrink-0">
                 <Wind className="w-10 h-10" strokeWidth={1} />
               </div>
               <div className="flex flex-col text-left">
@@ -130,13 +130,13 @@ const Ritual = () => {
 
             {/* Step III */}
             <div 
-              className={`flex flex-row items-start gap-6 cursor-pointer transition-all duration-500 ${
+              className={`flex flex-row items-center gap-6 cursor-pointer transition-all duration-500 ${
                 activeStep === 2 ? 'opacity-100 translate-x-1' : 'opacity-40 hover:opacity-75'
               }`}
               onMouseEnter={() => setActiveStep(2)}
               onClick={() => setActiveStep(2)}
             >
-              <div className="text-primary mt-1 flex-shrink-0">
+              <div className="text-primary flex-shrink-0">
                 <Moon className="w-10 h-10" strokeWidth={1} />
               </div>
               <div className="flex flex-col text-left">

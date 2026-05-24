@@ -29,7 +29,7 @@ const ImprintModal = ({ isOpen, onClose }: ImprintModalProps) => {
       {/* Top Navigation / Close Bar */}
       <div className="w-full px-6 sm:px-8 py-6 sm:py-8 flex justify-between items-center fixed top-0 left-0 bg-white/95 backdrop-blur-sm z-[10000] border-b border-primary/5">
         <span className="font-sans text-xl tracking-[0.15em] font-bold text-primary">
-          SENOA
+          HESPYRA
         </span>
         <button 
           onClick={onClose}
@@ -42,7 +42,7 @@ const ImprintModal = ({ isOpen, onClose }: ImprintModalProps) => {
 
       {/* Content Container */}
       <div className="max-w-2xl mx-auto px-6 sm:px-8 pt-28 sm:pt-32 pb-16 sm:pb-24 font-sans text-primary break-words">
-        <span className="font-sans text-[11px] tracking-[0.3em] font-semibold text-primary/40 uppercase mb-3 block">
+        <span className="font-sans text-[11px] tracking-[0.3em] font-semibold text-primary/60 uppercase mb-3 block">
           {language === 'de' ? 'Rechtliches' : 'Legal'}
         </span>
         <div className="w-12 h-[1px] bg-primary/20 mb-8"></div>
@@ -59,7 +59,7 @@ const ImprintModal = ({ isOpen, onClose }: ImprintModalProps) => {
                 Angaben gemäß § 5 DDG
               </h2>
               <p className="mt-1">
-                SENOA<br />
+                HESPYRA<br />
                 Dominik Schwab<br />
                 Einzelunternehmen
               </p>
@@ -123,7 +123,7 @@ const ImprintModal = ({ isOpen, onClose }: ImprintModalProps) => {
                 Information according to § 5 DDG
               </h2>
               <p className="mt-1">
-                SENOA<br />
+                HESPYRA<br />
                 Dominik Schwab<br />
                 Sole Proprietorship
               </p>

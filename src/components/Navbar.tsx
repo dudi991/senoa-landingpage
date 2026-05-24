@@ -12,10 +12,10 @@ const Navbar = ({ isCalm, onToggleCalm }: NavbarProps) => {
     <nav className="w-full bg-transparent flex items-start justify-between px-4 sm:px-8 py-4 sm:py-8 absolute top-0 left-0 z-50">
       {/* Brand Logo & Celestial Hallmark */}
       <div className={`flex items-center text-2xl sm:text-3xl tracking-[0.15em] font-sans leading-none select-none ${isCalm ? 'text-white' : 'text-primary'}`}>
-        <span>SENOA</span>
+        <span>HESPYRA</span>
         <img 
           src="images/logo1.webp" 
-          alt="SENOA Celestial Mark" 
+          alt="HESPYRA Celestial Mark" 
           className={`h-5 sm:h-6 w-auto ml-2.5 transition-all duration-[2.5s] ease-in-out hover:rotate-[360deg] cursor-pointer ${isCalm ? 'invert' : ''}`}
         />
       </div>

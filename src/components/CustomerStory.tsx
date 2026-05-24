@@ -13,17 +13,17 @@ const CustomerStory = () => {
             
             {/* Elegant category label - Pinned to the top on desktop */}
             <div className="text-center lg:text-left mb-8 lg:mb-0 lg:absolute lg:top-0 lg:left-0">
-              <span className="font-sans text-[11px] tracking-[0.3em] font-semibold text-primary/40 uppercase mb-3 block">
+              <span className="font-sans text-[11px] tracking-[0.3em] font-semibold text-primary/60 uppercase mb-3 block">
                 {t('philosophy.tag')}
               </span>
-              <div className="flex items-center justify-center lg:justify-start gap-2 mt-4 select-none text-primary/30">
-                <div className="w-8 h-[1px] bg-primary/10"></div>
+              <div className="flex items-center justify-center lg:justify-start gap-2 mt-4 select-none text-primary/50">
+                <div className="w-8 h-[1px] bg-primary/25"></div>
                 <img 
                   src="images/logo1.webp" 
-                  alt="SENOA Hallmark" 
-                  className="h-3.5 w-auto opacity-40"
+                  alt="HESPYRA Hallmark" 
+                  className="h-[18px] w-auto opacity-70"
                 />
-                <div className="w-8 h-[1px] bg-primary/10"></div>
+                <div className="w-8 h-[1px] bg-primary/25"></div>
               </div>
             </div>
             

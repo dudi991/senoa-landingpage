@@ -13,7 +13,7 @@ const Hero = ({ isCalm }: HeroProps) => {
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img 
           src="images/hero.webp" 
-          alt="SENOA Night Reset Background" 
+          alt="HESPYRA Night Reset Background" 
           className="w-full h-full object-cover object-[center_35%] opacity-85 saturate-[1.12] contrast-[1.04] brightness-[0.93] animate-ken-burns"
         />
         
@@ -47,26 +47,18 @@ const Hero = ({ isCalm }: HeroProps) => {
       <div className="relative z-10 w-full px-8 pt-32 lg:pt-24 pb-4">
         <div className="max-w-[1600px] mx-auto">
           <div className="flex flex-col justify-center max-w-2xl">
+            {/* Elegant Sub-headline/Slogan Tag */}
+            <span className="font-sans text-[12px] sm:text-[14px] tracking-[0.3em] font-semibold text-primary/60 uppercase mb-8 block whitespace-pre-line leading-relaxed">{t('hero.slogan')}</span>
+
             {/* 2. Headline H1 */}
-            <h1 className="text-5xl lg:text-[4.75rem] leading-[1.1] mb-16 font-serif text-primary">
-              {t('hero.title').split('\n').map((line, i) => (
-                <span key={i}>
-                  {line}
-                  {i < t('hero.title').split('\n').length - 1 && <br />}
-                </span>
-              ))}
-            </h1>
+            <h1 className="text-5xl sm:text-6xl lg:text-[5.25rem] leading-[1.08] mb-16 font-serif text-primary">{t('hero.title').split('\n').map((line, i) => (<span key={i}>{line}{i < t('hero.title').split('\n').length - 1 && <br />}</span>))}</h1>
 
             {/* 4. Description */}
-            <p className="text-primary/80 text-base lg:text-lg mb-16 max-w-md leading-relaxed font-light whitespace-pre-line">
-              {t('hero.desc')}
-            </p>
+            <p className="text-primary/80 text-lg lg:text-xl mb-24 max-w-lg leading-relaxed font-light whitespace-pre-line">{t('hero.desc')}</p>
 
             {/* 6. CTA */}
             <div>
-              <a href="#waitlist" className="inline-block text-center bg-accent px-12 w-full max-w-[320px] py-4 text-xs tracking-widest font-semibold uppercase mb-4 text-white hover:bg-opacity-80 transition-opacity">
-                {t('hero.cta')}
-              </a>
+              <a href="#waitlist" className="inline-block text-center bg-accent px-12 w-full max-w-[320px] py-4 text-xs tracking-widest font-semibold uppercase mb-4 text-white hover:bg-opacity-80 transition-opacity">{t('hero.cta')}</a>
             </div>
           </div>
         </div>

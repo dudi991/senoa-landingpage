@@ -19,10 +19,10 @@ const Footer = ({ onShowImprint, onShowContact, onShowAbout, onShowPrivacy }: Fo
           {/* Left Column: Brand Logo & Celestial Hallmark */}
           <div className="flex justify-center lg:justify-start items-center">
             <span className="font-sans text-[26px] tracking-[0.2em] font-bold text-primary flex items-center select-none">
-              <span>SENOA</span>
+              <span>HESPYRA</span>
               <img 
                 src="images/logo1.webp" 
-                alt="SENOA Celestial Mark" 
+                alt="HESPYRA Celestial Mark" 
                 className="h-5 w-auto ml-2.5 transition-all duration-[2.5s] ease-in-out hover:rotate-[360deg] cursor-pointer"
               />
             </span>
@@ -73,14 +73,14 @@ const Footer = ({ onShowImprint, onShowContact, onShowAbout, onShowPrivacy }: Fo
             <a 
               href="#" 
               aria-label="Instagram"
-              className="text-primary/40 hover:text-primary transition-colors duration-200"
+              className="text-primary/60 hover:text-primary transition-colors duration-200"
             >
               <Camera className="w-10 h-10" strokeWidth={1} />
             </a>
             <a 
               href="#" 
               aria-label="Share"
-              className="text-primary/40 hover:text-primary transition-colors duration-200"
+              className="text-primary/60 hover:text-primary transition-colors duration-200"
             >
               <LinkIcon className="w-10 h-10" strokeWidth={1} />
             </a>

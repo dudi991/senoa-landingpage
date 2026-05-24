@@ -8,7 +8,7 @@ const Philosophy = () => {
           
           {/* Left Column - Text */}
           <div className="lg:col-span-5 px-8 lg:px-12 py-12">
-            <span className="text-[10px] tracking-[0.3em] font-semibold text-primary/40 uppercase mb-6 block">The Philosophy</span>
+            <span className="text-[10px] tracking-[0.3em] font-semibold text-primary/60 uppercase mb-6 block">The Philosophy</span>
             <div className="w-12 h-[1px] bg-primary/20 mb-8"></div>
             <h2 className="text-4xl lg:text-5xl mb-8 leading-[1.1]">
               A new standard for <br/>

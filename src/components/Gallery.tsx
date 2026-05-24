@@ -14,17 +14,17 @@ const Gallery = () => {
       {/* Header Container (remains centered and bounded) */}
       <div className="max-w-[1800px] mx-auto px-8 lg:px-12 mb-16 lg:mb-20">
         <div className="text-center">
-          <span className="font-sans text-[11px] tracking-[0.3em] font-semibold text-primary/40 uppercase mb-3 block">
+          <span className="font-sans text-[11px] tracking-[0.3em] font-semibold text-primary/60 uppercase mb-3 block">
             {t('gallery.tag')}
           </span>
-          <div className="flex items-center justify-center gap-2 mt-4 mb-6 select-none text-primary/30">
-            <div className="w-8 h-[1px] bg-primary/10"></div>
+          <div className="flex items-center justify-center gap-2 mt-4 mb-6 select-none text-primary/50">
+            <div className="w-8 h-[1px] bg-primary/25"></div>
             <img 
               src="images/logo1.webp" 
-              alt="SENOA Hallmark" 
-              className="h-3.5 w-auto opacity-40"
+              alt="HESPYRA Hallmark" 
+              className="h-[18px] w-auto opacity-70"
             />
-            <div className="w-8 h-[1px] bg-primary/10"></div>
+            <div className="w-8 h-[1px] bg-primary/25"></div>
           </div>
           <h2 className="font-serif text-4xl md:text-5xl lg:text-[3.25rem] text-primary leading-[1.25] max-w-4xl mx-auto font-light mb-6">
             {t('gallery.title').split('\n').map((line, i) => (

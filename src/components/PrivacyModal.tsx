@@ -29,7 +29,7 @@ const PrivacyModal = ({ isOpen, onClose }: PrivacyModalProps) => {
       {/* Top Navigation / Close Bar */}
       <div className="w-full px-6 sm:px-8 py-6 sm:py-8 flex justify-between items-center fixed top-0 left-0 bg-white/95 backdrop-blur-sm z-[10000] border-b border-primary/5">
         <span className="font-sans text-xl tracking-[0.15em] font-bold text-primary">
-          SENOA
+          HESPYRA
         </span>
         <button 
           onClick={onClose}
@@ -42,7 +42,7 @@ const PrivacyModal = ({ isOpen, onClose }: PrivacyModalProps) => {
 
       {/* Content Container */}
       <div className="max-w-2xl mx-auto px-6 sm:px-8 pt-28 sm:pt-32 pb-16 sm:pb-24 font-sans text-primary break-words">
-        <span className="font-sans text-[11px] tracking-[0.3em] font-semibold text-primary/40 uppercase mb-3 block">
+        <span className="font-sans text-[11px] tracking-[0.3em] font-semibold text-primary/60 uppercase mb-3 block">
           {language === 'de' ? 'Rechtliches' : 'Legal'}
         </span>
         <div className="w-12 h-[1px] bg-primary/20 mb-8"></div>
@@ -61,7 +61,7 @@ const PrivacyModal = ({ isOpen, onClose }: PrivacyModalProps) => {
               </h2>
               <p className="mt-1">
                 Verantwortlich für die Datenverarbeitung auf dieser Website ist:<br /><br />
-                <strong>SENOA</strong><br />
+                <strong>HESPYRA</strong><br />
                 Dominik Schwab<br />
                 Wegäcker 11<br />
                 91301 Forchheim<br />
@@ -111,7 +111,7 @@ const PrivacyModal = ({ isOpen, onClose }: PrivacyModalProps) => {
                 5. Waitlist / E-Mail-Anmeldung
               </h2>
               <p className="mt-1">
-                Auf unserer Website kannst du dich für die SENOA-Waitlist eintragen. Dabei verarbeiten wir deine E-Mail-Adresse, um dich über den Launch von SENOA, relevante Updates und ausgewählte Informationen rund um SENOA zu informieren.<br /><br />
+                Auf unserer Website kannst du dich für die HESPYRA-Waitlist eintragen. Dabei verarbeiten wir deine E-Mail-Adresse, um dich über den Launch von HESPYRA, relevante Updates und ausgewählte Informationen rund um HESPYRA zu informieren.<br /><br />
                 Die Anmeldung zur Waitlist erfolgt freiwillig.<br /><br />
                 Rechtsgrundlage für die Verarbeitung ist deine Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO.<br /><br />
                 Du kannst deine Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen. Nutze dafür bitte die Kontaktseite dieser Website. Nach deinem Widerruf löschen wir deine E-Mail-Adresse aus der Waitlist, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.
@@ -212,7 +212,7 @@ const PrivacyModal = ({ isOpen, onClose }: PrivacyModalProps) => {
               </h2>
               <p className="mt-1">
                 The controller responsible for data processing on this website is:<br /><br />
-                <strong>SENOA</strong><br />
+                <strong>HESPYRA</strong><br />
                 Dominik Schwab<br />
                 Wegäcker 11<br />
                 91301 Forchheim<br />
@@ -262,7 +262,7 @@ const PrivacyModal = ({ isOpen, onClose }: PrivacyModalProps) => {
                 5. Waitlist / Email Sign-up
               </h2>
               <p className="mt-1">
-                You can sign up for the SENOA waitlist on our website. We process your email address to inform you about the launch of SENOA, relevant updates, and selected information about SENOA.<br /><br />
+                You can sign up for the HESPYRA waitlist on our website. We process your email address to inform you about the launch of HESPYRA, relevant updates, and selected information about HESPYRA.<br /><br />
                 Signing up for the waitlist is voluntary.<br /><br />
                 The legal basis for processing is your consent pursuant to Art. 6 para. 1 lit. a GDPR.<br /><br />
                 You can withdraw your consent at any time with future effect. Please use the contact page of this website for this purpose. Upon withdrawal, we will delete your email address from the waitlist, unless statutory retention obligations apply.

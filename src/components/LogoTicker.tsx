@@ -3,7 +3,7 @@
 const LogoTicker = () => {
   return (
     <section className="w-full bg-white border-b border-primary/10 pt-6 pb-4 flex flex-col items-center justify-center">
-      <p className="text-[12px] tracking-[0.3em] font-semibold text-primary/40 mb-6 uppercase">
+      <p className="text-[12px] tracking-[0.3em] font-semibold text-primary/60 mb-6 uppercase">
         Built on science. Made for real life.
       </p>
       

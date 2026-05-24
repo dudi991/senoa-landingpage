@@ -94,12 +94,14 @@
     color: rgba(243, 244, 246, 0.8) !important;
   }
   
-  .calm-mode .text-primary\/60 {
-    color: rgba(243, 244, 246, 0.65) !important;
+  .calm-mode .text-primary\/60,
+  .calm-mode [class*="text-primary/60"] {
+    color: rgba(243, 244, 246, 0.82) !important; /* Brighter kicker text for enhanced night mode contrast */
   }
   
-  .calm-mode .text-primary\/40 {
-    color: rgba(243, 244, 246, 0.5) !important; /* Soft, slightly darkened kicker text in Calm Mode */
+  .calm-mode .text-primary\/40,
+  .calm-mode [class*="text-primary/40"] {
+    color: rgba(243, 244, 246, 0.55) !important; /* Soft, slightly darkened kicker text in Calm Mode */
   }
 
   /* Make all Lucide icons crisp, bright, and perfectly balanced in calm mode */
@@ -113,20 +115,31 @@
   
   .calm-mode .border-primary\/10,
   .calm-mode .border-primary\/5,
-  .calm-mode border-t,
+  .calm-mode .border-t,
   .calm-mode .divide-primary\/10 > :not([hidden]) ~ :not([hidden]),
-  .calm-mode .md\:border-r {
-    border-color: rgba(243, 244, 246, 0.08) !important;
+  .calm-mode .md\:border-r,
+  .calm-mode [class*="border-primary/10"],
+  .calm-mode [class*="border-primary/5"],
+  .calm-mode [class*="divide-primary/10"] > :not([hidden]) ~ :not([hidden]) {
+    border-color: rgba(243, 244, 246, 0.25) !important; /* Restored contrast for separators in night mode */
   }
 
-  .calm-mode .bg-primary\/10 {
-    background-color: rgba(243, 244, 246, 0.2) !important; /* Soft, slightly darkened underlines under kickers */
+  .calm-mode .bg-primary\/25,
+  .calm-mode [class*="bg-primary/25"] {
+    background-color: rgba(243, 244, 246, 0.45) !important; /* Brighter kicker lines in night mode */
+  }
+
+  .calm-mode .bg-primary\/10,
+  .calm-mode .bg-primary\/20,
+  .calm-mode [class*="bg-primary/10"],
+  .calm-mode [class*="bg-primary/20"] {
+    background-color: rgba(243, 244, 246, 0.32) !important; /* Restored contrast for fine dividers in night mode */
   }
 
   /* Key out the white background rectangle of the ritual symbol logo in calm-mode */
   .calm-mode img[src*="logo1"],
   .calm-mode nav img {
-    filter: contrast(200%) invert(1) !important;
+    filter: invert(1) !important; /* Removed contrast filter to preserve anti-aliasing and prevent line-thinning */
     mix-blend-mode: screen !important;
     background-color: transparent !important;
     opacity: 1 !important;
@@ -139,7 +152,9 @@
 
   /* Slightly darken the kicker ritual symbols in sections */
   .calm-mode section img[src*="logo1"] {
-    opacity: 0.45 !important;
+    opacity: 0.9 !important; /* Brighter and clearer for excellent night-mode visibility */
+    height: 22px !important; /* Slightly larger to compensate for optical illusion on dark background */
+    width: auto !important;
   }
   
   .calm-mode input,
