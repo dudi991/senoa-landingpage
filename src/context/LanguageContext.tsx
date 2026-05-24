@@ -54,8 +54,8 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Ingredients
     'ingredients.tag': 'Rezeptur',
-    'ingredients.title': 'Sorgfältig ausgewählt. Für deinen Abend.',
-    'ingredients.desc': 'HESPYRA verbindet ausgewählte Nährstoffe, Pflanzenextrakte und eine warme Geschmackswelt zu einem Ritual, das du jeden Abend wiederholen möchtest.',
+    'ingredients.title': 'Eine Komposition für den Abend.',
+    'ingredients.desc': 'Ausgewählte Mineralien, Pflanzenextrakte und warme Geschmacksnoten verbinden sich zu einem Ritual, das nicht drängt — sondern begleitet.',
     
     // Ingredients Groups (German)
     'ing.group_ruhe_tag': 'FÜR INNERE STILLE',
@@ -171,8 +171,8 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Ingredients
     'ingredients.tag': 'Formula',
-    'ingredients.title': 'Carefully selected. For your evening.',
-    'ingredients.desc': 'HESPYRA combines selected nutrients, plant extracts, and a warm world of flavor into a ritual you will want to repeat every evening.',
+    'ingredients.title': 'A composition for the evening.',
+    'ingredients.desc': 'Selected minerals, plant extracts, and warm flavor notes combine to create a ritual that does not rush — but accompanies.',
     
     // Ingredients Groups (English)
     'ing.group_ruhe_tag': 'FOR INNER STILLNESS',
