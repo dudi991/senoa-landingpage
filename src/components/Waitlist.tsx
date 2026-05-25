@@ -80,7 +80,12 @@ const Waitlist = () => {
           {/* Column 2 - Middle: Description & Clean Form */}
           <div className="flex flex-col items-center justify-center text-center">
             <p className="text-primary/70 text-sm md:text-base font-light leading-relaxed max-w-[280px] mx-auto mb-8">
-              {t('waitlist.desc')}
+              {t('waitlist.desc').split('\n').map((line, i) => (
+                <span key={i}>
+                  {line}
+                  {i < t('waitlist.desc').split('\n').length - 1 && <br />}
+                </span>
+              ))}
             </p>
             
             {submitted ? (
@@ -88,7 +93,7 @@ const Waitlist = () => {
                 <svg className="w-8 h-8 text-primary mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
-                <p className="text-primary text-xs font-semibold tracking-[0.2em] uppercase text-center">
+                <p className="text-primary text-sm font-light text-center">
                   {t('waitlist.success')}
                 </p>
               </div>
