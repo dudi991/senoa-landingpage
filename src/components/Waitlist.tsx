@@ -79,7 +79,7 @@ const Waitlist = () => {
           
           {/* Column 2 - Middle: Description & Clean Form */}
           <div className="flex flex-col items-center justify-center text-center">
-            <p className="text-primary/70 text-sm md:text-base font-light leading-relaxed max-w-[280px] mx-auto mb-8">
+            <p className="text-primary/70 text-sm md:text-base font-light leading-relaxed max-w-[320px] mx-auto mb-8">
               {t('waitlist.desc').split('\n').map((line, i) => (
                 <span key={i}>
                   {line}

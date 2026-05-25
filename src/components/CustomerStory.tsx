@@ -27,24 +27,25 @@ const CustomerStory = () => {
               </div>
             </div>
             
-            {/* Elegant Grand Typographic Headline */}
-            <h2 className="text-4xl lg:text-[3.25rem] leading-[1.15] font-serif text-primary tracking-tight mb-6 lg:mb-8">
-              {t('philosophy.title').split('\n').map((line, i) => (
-                <span key={i}>
-                  {line}
-                  {i < t('philosophy.title').split('\n').length - 1 && <br />}
-                </span>
-              ))}
-            </h2>
-            
-            {/* Story Paragraphs beautifully coupled with Headline */}
-            <div className="space-y-6 text-base lg:text-[17px] text-primary/70 leading-relaxed font-light max-w-md">
-              <p>
-                {t('philosophy.text1')}
-              </p>
-              <p>
-                {t('philosophy.text2')}
-              </p>
+            {/* Elegant Grand Typographic Headline & Story Paragraphs aligned perfectly */}
+            <div className="w-full max-w-[320px] mx-auto lg:max-w-none lg:mx-0 flex flex-col items-start text-left">
+              <h2 className="text-4xl lg:text-[3.25rem] leading-[1.15] font-serif text-primary tracking-tight mb-6 lg:mb-8">
+                {t('philosophy.title').split('\n').map((line, i) => (
+                  <span key={i}>
+                    {line}
+                    {i < t('philosophy.title').split('\n').length - 1 && <br />}
+                  </span>
+                ))}
+              </h2>
+              
+              <div className="space-y-6 text-base lg:text-[17px] text-primary/70 leading-relaxed font-light">
+                <p>
+                  {t('philosophy.text1')}
+                </p>
+                <p>
+                  {t('philosophy.text2')}
+                </p>
+              </div>
             </div>
           </div>
 

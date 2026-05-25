@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Camera, Link as LinkIcon } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -9,7 +10,16 @@ interface FooterProps {
 }
 
 const Footer = ({ onShowImprint, onShowContact, onShowAbout, onShowPrivacy }: FooterProps) => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const [activeTooltip, setActiveTooltip] = useState<'instagram' | 'share' | null>(null);
+
+  const triggerTooltip = (type: 'instagram' | 'share') => {
+    setActiveTooltip(type);
+    const timer = setTimeout(() => {
+      setActiveTooltip(null);
+    }, 2000);
+    return () => clearTimeout(timer);
+  };
 
   return (
     <footer className="w-full bg-white border-t border-primary/10 py-8 lg:py-6 relative z-20">
@@ -68,22 +78,49 @@ const Footer = ({ onShowImprint, onShowContact, onShowAbout, onShowPrivacy }: Fo
             </button>
           </div>
 
-          {/* Right Column: Social / Share Icons */}
-          <div className="flex flex-row justify-center lg:justify-end items-center gap-6">
-            <a 
-              href="#" 
-              aria-label="Instagram"
-              className="text-primary/60 hover:text-primary transition-colors duration-200"
-            >
-              <Camera className="w-10 h-10" strokeWidth={1} />
-            </a>
-            <a 
-              href="#" 
-              aria-label="Share"
-              className="text-primary/60 hover:text-primary transition-colors duration-200"
-            >
-              <LinkIcon className="w-10 h-10" strokeWidth={1} />
-            </a>
+          {/* Right Column: Social / Share Icons with Interactive Tooltips */}
+          <div className="flex flex-row justify-center lg:justify-end items-center gap-6 relative">
+            
+            {/* Instagram Link Container */}
+            <div className="relative">
+              {activeTooltip === 'instagram' && (
+                <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-primary text-white text-[11px] font-sans tracking-wider py-1.5 px-3 rounded-sm whitespace-nowrap shadow-md animate-fade-in z-50">
+                  {language === 'de' ? 'Bald hier' : 'Coming soon'}
+                  <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-primary rotate-45"></div>
+                </div>
+              )}
+              <button 
+                onClick={(e) => {
+                  e.preventDefault();
+                  triggerTooltip('instagram');
+                }}
+                aria-label="Instagram"
+                className="text-primary/60 hover:text-primary transition-colors duration-200 focus:outline-none cursor-pointer flex items-center justify-center"
+              >
+                <Camera className="w-10 h-10" strokeWidth={1} />
+              </button>
+            </div>
+
+            {/* Share Link Container */}
+            <div className="relative">
+              {activeTooltip === 'share' && (
+                <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-primary text-white text-[11px] font-sans tracking-wider py-1.5 px-3 rounded-sm whitespace-nowrap shadow-md animate-fade-in z-50">
+                  {language === 'de' ? 'Bald hier' : 'Coming soon'}
+                  <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-primary rotate-45"></div>
+                </div>
+              )}
+              <button 
+                onClick={(e) => {
+                  e.preventDefault();
+                  triggerTooltip('share');
+                }}
+                aria-label="Share"
+                className="text-primary/60 hover:text-primary transition-colors duration-200 focus:outline-none cursor-pointer flex items-center justify-center"
+              >
+                <LinkIcon className="w-10 h-10" strokeWidth={1} />
+              </button>
+            </div>
+
           </div>
         </div>
       </div>

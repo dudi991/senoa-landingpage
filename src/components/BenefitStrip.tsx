@@ -30,7 +30,7 @@ const BenefitStrip = () => {
               className="px-6 md:px-12 lg:px-16 py-8 md:py-0"
             >
               {/* Centered content wrapper that is internally left-aligned */}
-              <div className="flex flex-col items-start text-left w-fit mx-auto">
+              <div className="flex flex-col items-start text-left w-full max-w-[320px] mx-auto">
                 {/* Number - Slightly darker (text-primary/60) and with more vertical distance (mb-10) */}
                 <span className="font-sans text-xs tracking-[0.2em] font-semibold text-primary/60 mb-10 block select-none">
                   {String(num).padStart(2, '0')}
@@ -45,7 +45,7 @@ const BenefitStrip = () => {
                 <div className="w-10 h-[1px] bg-primary/20 mb-6"></div>
                 
                 {/* Description sentence */}
-                <p className="font-sans text-base lg:text-[17px] leading-relaxed font-light text-primary/70 max-w-[260px]">
+                <p className="font-sans text-base lg:text-[17px] leading-relaxed font-light text-primary/70">
                   {t(`benefits.desc${num}`)}
                 </p>
               </div>

@@ -65,7 +65,7 @@ const Ingredients = () => {
             return (
               <div 
                 key={`mobile-${group.key}`}
-                className="pt-12 first:pt-0 flex flex-col items-start text-left w-full max-w-[280px] mx-auto"
+                className="pt-12 first:pt-0 flex flex-col items-start text-left w-full max-w-[320px] mx-auto"
               >
                 {/* Number */}
                 <span className="font-sans text-xs tracking-[0.2em] font-semibold text-primary/60 mb-6 block select-none">

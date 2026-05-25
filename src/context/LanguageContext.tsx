@@ -109,7 +109,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Waitlist
     'waitlist.title': 'Die erste Edition von HESPYRA.',
-    'waitlist.desc': 'Wir öffnen HESPYRA in kleinen Schritten.\nTrage dich ein, wenn du erfahren möchtest, wann das erste Ritual erhältlich ist.',
+    'waitlist.desc': 'Wir öffnen HESPYRA in kleinen Schritten.\nTrage dich ein, um zu erfahren, wann das erste Ritual erhältlich ist.',
     'waitlist.placeholder': 'E-Mail-Adresse',
     'waitlist.submit': 'Einladung erhalten',
     'waitlist.success': 'Danke. Wir melden uns leise.',
@@ -226,7 +226,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Waitlist
     'waitlist.title': 'The first edition of HESPYRA.',
-    'waitlist.desc': 'We open HESPYRA in small steps.\nJoin if you would like to know when the first ritual is available.',
+    'waitlist.desc': 'We open HESPYRA in small steps.\nJoin to know when the first ritual is available.',
     'waitlist.placeholder': 'Email address',
     'waitlist.submit': 'Receive invitation',
     'waitlist.success': 'Thank you. We will reach out quietly.',

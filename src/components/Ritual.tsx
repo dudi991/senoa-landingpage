@@ -4,7 +4,7 @@ import { useLanguage } from '../context/LanguageContext';
 
 const stepImages = [
   "images/hespyra_ankunft.webp",
-  "images/hespyra_praesens.webp",
+  "images/HESPYRA_SCOOP.webp",
   "images/derAbend.webp"
 ];
 
@@ -37,7 +37,7 @@ const Ritual = () => {
             </div>
 
             {/* Middle block (vertically centered next to the image, grouped with description) */}
-            <div className="text-left py-6 lg:py-0 my-auto flex flex-col justify-center">
+            <div className="text-left py-6 lg:py-0 my-auto flex flex-col justify-center w-full max-w-[320px] mx-auto lg:max-w-none lg:mx-0">
               <h2 className="text-4xl lg:text-5xl leading-[1.15] font-serif text-primary tracking-tight">
                 {t('ritual.title').split('\n').map((line, i) => (
                   <span key={i}>
@@ -78,7 +78,7 @@ const Ritual = () => {
           </div>
 
           {/* Right Column - Typographic Steps with Left Icons spanning the full height of the middle image */}
-          <div className="lg:col-span-4 flex flex-col gap-10 lg:gap-0 lg:justify-between lg:h-full lg:pl-8 py-1">
+          <div className="lg:col-span-4 flex flex-col gap-10 lg:gap-0 lg:justify-between lg:h-full lg:pl-8 py-1 w-full max-w-[320px] mx-auto lg:max-w-none lg:mx-0">
             
             {/* Step I */}
             <div 

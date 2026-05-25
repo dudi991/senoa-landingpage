@@ -49,40 +49,82 @@ const AboutModal = ({ isOpen, onClose }: AboutModalProps) => {
 
         {language === 'de' ? (
           /* German content */
-          <div className="space-y-8 text-[15px] text-primary/80 leading-relaxed font-light">
-            <p className="text-[17px] lg:text-[19px] text-primary/95 leading-relaxed font-normal">
-              HESPYRA entsteht aus einem einfachen Gedanken: Gute Produkte sollten nicht nur funktionieren — sie sollten einen echten Unterschied im Alltag machen.
+          <div className="space-y-6 text-[16px] lg:text-[17px] text-primary/80 leading-relaxed font-light">
+            <p>
+              HESPYRA entstand aus der Beobachtung, dass der Tag oft äußerlich endet, bevor er innerlich wirklich vorbei ist.
             </p>
 
             <p>
-              Wir sind ein kleines Team, das an Themen arbeiten möchte, die uns selbst bewegen: Ruhe, bewusste Routinen, hochwertige Produkte und die Frage, wie moderne Menschen nach einem vollen Tag wieder bei sich ankommen können.
+              Der letzte Termin ist vorüber. Der Laptop ist geschlossen. Die Wohnung wird stiller. Und doch läuft etwas weiter: Gedanken, Entscheidungen, Gespräche, ein Rest von Tempo.
             </p>
 
             <p>
-              Dabei geht es uns nicht darum, möglichst laut zu sein oder möglichst viel zu versprechen. Wir möchten Dinge entwickeln, die sich sinnvoll anfühlen. Mit Menschen, die wir mögen. Für Menschen, die sich nach mehr Ruhe, Klarheit und echten Momenten sehnen.
+              Wir wollten diesem Moment mehr Aufmerksamkeit schenken.
             </p>
 
-            <p className="pt-6 border-t border-primary/5 font-medium text-primary">
-              HESPYRA ist unser Anfang: ein Abendritual für den Übergang aus dem Leistungsmodus in echte Ruhe.
+            <p>
+              Nicht, weil der Abend optimiert werden muss.<br />
+              Sondern weil er einen bewussten Anfang verdient.
+            </p>
+
+            <p>
+              HESPYRA ist eine moderne Evening Ritual Brand aus Deutschland. Wir entwickeln Produkte für den Übergang vom Tag in echte Ruhe — ruhig, sinnlich und ohne laute Versprechen.
+            </p>
+
+            <p>
+              Unser erstes Ritual ist eine trinkbare Komposition für den Abend: ausgewählte Mineralien, Pflanzenextrakte und warme Geschmacksnoten, verbunden mit einer einfachen Handlung. Ein Scoop. Ein Glas. Ein Moment, in dem der Tag leiser werden darf.
+            </p>
+
+            <div className="pl-4 border-l border-primary/20 py-1 space-y-2">
+              <p>Wir glauben an Produkte, die nicht drängen.</p>
+              <p>An Rituale statt Routinen.</p>
+              <p>An Ruhe statt Optimierung.</p>
+              <p>An Qualität, die nicht laut werden muss.</p>
+            </div>
+
+            <p className="pt-6 border-t border-primary/10">
+              HESPYRA ist unser Anfang.<br />
+              Für den Moment, in dem der Abend wirklich beginnt.
             </p>
           </div>
         ) : (
           /* English content */
-          <div className="space-y-8 text-[15px] text-primary/80 leading-relaxed font-light">
-            <p className="text-[17px] lg:text-[19px] text-primary/95 leading-relaxed font-normal">
-              HESPYRA originates from a simple thought: Good products shouldn't just function — they should make a real difference in daily life.
+          <div className="space-y-6 text-[16px] lg:text-[17px] text-primary/80 leading-relaxed font-light">
+            <p>
+              HESPYRA was born from the observation that the day often ends outwardly before it is truly over inwardly.
             </p>
 
             <p>
-              We are a small team that wants to work on topics that move us personally: peace, conscious routines, premium products, and the question of how modern people can return to themselves after a full day.
+              The last appointment is done. The laptop is closed. The apartment grows quieter. And yet, something continues to run: thoughts, decisions, conversations, a residue of pace.
             </p>
 
             <p>
-              For us, it's not about being as loud as possible or promising the most. We want to develop things that feel meaningful. With people we like. For people who long for more peace, clarity, and genuine moments.
+              We wanted to give this moment more attention.
             </p>
 
-            <p className="pt-6 border-t border-primary/5 font-medium text-primary">
-              HESPYRA is our beginning: an evening ritual for the transition from performance mode into true stillness.
+            <p>
+              Not because the evening needs to be optimized.<br />
+              But because it deserves a conscious beginning.
+            </p>
+
+            <p>
+              HESPYRA is a modern evening ritual brand from Germany. We develop products for the transition from the day into true stillness — quiet, sensory, and without loud promises.
+            </p>
+
+            <p>
+              Our first ritual is a drinkable composition for the evening: selected minerals, plant extracts, and warm flavor notes, combined with a simple action. A scoop. A glass. A moment in which the day is allowed to grow quieter.
+            </p>
+
+            <div className="pl-4 border-l border-primary/20 py-1 space-y-2">
+              <p>We believe in products that do not rush.</p>
+              <p>In rituals instead of routines.</p>
+              <p>In stillness instead of optimization.</p>
+              <p>In quality that does not need to get loud.</p>
+            </div>
+
+            <p className="pt-6 border-t border-primary/10">
+              HESPYRA is our beginning.<br />
+              For the moment when the evening truly starts.
             </p>
           </div>
         )}
