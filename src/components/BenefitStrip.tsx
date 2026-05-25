@@ -4,7 +4,7 @@ const BenefitStrip = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="bg-white pt-24 pb-20 px-8 lg:px-12 relative z-20">
+    <section className="bg-white pt-24 pb-12 md:pb-20 px-8 lg:px-12 relative z-20">
       <div className="max-w-[1800px] mx-auto">
         {/* Centered Section Header formatted exactly like other sections */}
         <div className="mb-16 lg:mb-24 text-center">

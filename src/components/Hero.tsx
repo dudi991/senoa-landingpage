@@ -8,7 +8,7 @@ const Hero = ({ isCalm }: HeroProps) => {
   const { t } = useLanguage();
 
   return (
-    <section className="relative w-full min-h-[80vh] lg:h-[90vh] flex items-center overflow-hidden bg-white py-24 lg:py-0">
+    <section className="relative w-full min-h-[80vh] lg:h-[90vh] flex items-center overflow-hidden bg-white pt-16 pb-12 lg:py-0">
       {/* Background Image */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img 
@@ -44,7 +44,7 @@ const Hero = ({ isCalm }: HeroProps) => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 w-full px-6 sm:px-8 pt-24 xs:pt-28 sm:pt-32 lg:pt-24 pb-4">
+      <div className="relative z-10 w-full px-6 sm:px-8 pt-12 xs:pt-16 sm:pt-32 lg:pt-24 pb-4">
         <div className="max-w-[1600px] mx-auto">
           <div className="flex flex-col justify-center max-w-2xl">
             {/* Elegant Sub-headline/Slogan Tag */}
@@ -54,7 +54,7 @@ const Hero = ({ isCalm }: HeroProps) => {
             <h1 className="text-4xl sm:text-6xl lg:text-[5.25rem] leading-[1.12] sm:leading-[1.08] mb-10 sm:mb-16 font-serif text-primary">{t('hero.title').split('\n').map((line, i) => (<span key={i}>{line}{i < t('hero.title').split('\n').length - 1 && <br />}</span>))}</h1>
 
             {/* 4. Description */}
-            <p className="text-primary/80 text-base sm:text-lg lg:text-xl mb-12 sm:mb-24 max-w-lg leading-relaxed font-light whitespace-pre-line">{t('hero.desc')}</p>
+            <p className="text-primary/80 text-base sm:text-lg lg:text-xl mb-20 sm:mb-24 max-w-lg leading-relaxed font-light whitespace-pre-line">{t('hero.desc')}</p>
 
             {/* 6. CTA */}
             <div>

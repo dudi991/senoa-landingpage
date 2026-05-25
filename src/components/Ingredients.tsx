@@ -40,7 +40,7 @@ const Ingredients = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="ingredients" className="bg-white pt-4 md:pt-16 pb-16 md:pb-20 px-8 lg:px-12 relative z-20">
+    <section id="ingredients" className="bg-white pt-16 md:pt-16 pb-16 md:pb-20 px-8 lg:px-12 relative z-20">
       <div className="max-w-[1800px] mx-auto">
         {/* Centered Section Header formatted exactly like other sections */}
         <div className="mb-12 md:mb-16 lg:mb-24 text-center">

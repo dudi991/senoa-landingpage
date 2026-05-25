@@ -4,7 +4,7 @@ const CustomerStory = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="philosophy" className="w-full bg-white pt-10 lg:pt-14 pb-12 lg:pb-16 overflow-hidden">
+    <section id="philosophy" className="w-full bg-white pt-6 lg:pt-14 pb-12 lg:pb-16 overflow-hidden">
       <div className="max-w-[1800px] mx-auto px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-stretch">
           
