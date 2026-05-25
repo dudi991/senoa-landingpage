@@ -126,7 +126,8 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.privacy': 'DATENSCHUTZ',
     'footer.imprint': 'IMPRESSUM',
     'navbar.calm_active': 'TAGESMODUS',
-    'navbar.calm_inactive': 'ABENDMODUS'
+    'navbar.calm_inactive': 'ABENDMODUS',
+    'preloader.subtitle': 'Der Tag darf leiser werden.'
   },
   en: {
     // Hero
@@ -243,7 +244,8 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.privacy': 'PRIVACY',
     'footer.imprint': 'IMPRINT',
     'navbar.calm_active': 'DAY MODE',
-    'navbar.calm_inactive': 'EVENING MODE'
+    'navbar.calm_inactive': 'EVENING MODE',
+    'preloader.subtitle': 'May the day become quieter.'
   }
 };
 

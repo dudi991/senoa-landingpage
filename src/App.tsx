@@ -11,6 +11,7 @@ import Gallery from './components/Gallery';
 import Waitlist from './components/Waitlist';
 import Footer from './components/Footer';
 import ScrollReveal from './components/ScrollReveal';
+import Preloader from './components/Preloader';
 
 // Lazy load heavy components (Modals) to dramatically reduce initial JS bundle size
 const ImprintModal = lazy(() => import('./components/ImprintModal'));
@@ -68,6 +69,7 @@ function App() {
 
   return (
     <div className={`min-h-screen font-sans overflow-x-hidden selection:bg-primary selection:text-white ${isCalm ? 'calm-mode bg-[#0B0D14] text-[#F3F4F6]' : 'bg-white text-primary'}`}>
+      <Preloader />
       <Navbar isCalm={isCalm} onToggleCalm={() => setIsCalm(!isCalm)} />
       <Hero isCalm={isCalm} />
       
