@@ -35,7 +35,12 @@ const Gallery = () => {
             ))}
           </h2>
           <p className="text-primary/70 text-base md:text-lg font-light leading-relaxed max-w-2xl mx-auto">
-            {t('gallery.desc')}
+            {t('gallery.desc').split('\n').map((line, i) => (
+              <span key={i}>
+                {line}
+                {i < t('gallery.desc').split('\n').length - 1 && <br />}
+              </span>
+            ))}
           </p>
         </div>
       </div>

@@ -58,25 +58,25 @@ const translations: Record<Language, Record<string, string>> = {
     'ingredients.desc': 'Ausgewählte Mineralien, Pflanzenextrakte und warme Geschmacksnoten verbinden sich zu einem Ritual, das nicht drängt — sondern begleitet.',
     
     // Ingredients Groups (German)
-    'ing.group_ruhe_tag': 'FÜR INNERE STILLE',
+    'ing.group_ruhe_tag': 'Mineralische Basis',
     'ing.group_ruhe_title': 'Ruhe',
-    'ing.group_ruhe_desc': 'Ausgewählte Nährstoffe für den Moment, in dem der Tag leiser werden darf.',
+    'ing.group_ruhe_desc': 'Eine ruhige Basis für den Übergang in den Abend.',
     
-    'ing.group_balance_tag': 'FÜR EMOTIONALE AUSGEGLICHENHEIT',
+    'ing.group_balance_tag': 'Pflanzliche Tiefe',
     'ing.group_balance_title': 'Balance',
-    'ing.group_balance_desc': 'Pflanzenextrakte und Mikronährstoffe für einen Abend, der sich ausgeglichener anfühlt.',
+    'ing.group_balance_desc': 'Pflanzliche Tiefe für einen Abend, der sich gesammelter anfühlt.',
     
-    'ing.group_ritual_tag': 'FÜR GESCHMACK & MOMENT',
+    'ing.group_ritual_tag': 'Geschmack & Ritual',
     'ing.group_ritual_title': 'Ritual',
-    'ing.group_ritual_desc': 'Warme Geschmacksnoten und ausgewählte Zutaten, die aus einer Routine ein Ritual machen.',
+    'ing.group_ritual_desc': 'Warme Noten und vertraute Zutaten, die aus Zubereitung ein Ritual machen.',
 
     // Ingredients descriptions (German)
-    'ing.mag_bis': 'Sanfte Magnesiumbasis für den Abend.',
-    'ing.theanine': 'Klar, mild, aus grünem Tee.',
-    'ing.apigenin': 'Pflanzenstoff aus der Kamille.',
-    'ing.ashwa': 'Traditioneller Pflanzenextrakt.',
-    'ing.saffron': 'Hochwertiger Extrakt mit Charakter.',
-    'ing.phosph': 'Natürliches Phospholipid.',
+    'ing.mag_bis': 'Eine mineralische Basis für den Abend.',
+    'ing.theanine': 'Aus grünem Tee. Klar, mild, zurückhaltend.',
+    'ing.apigenin': 'Ein Pflanzenstoff aus der Kamille.',
+    'ing.ashwa': 'Eine Wurzel mit langer Tradition.',
+    'ing.saffron': 'Ein Extrakt mit warmer Tiefe.',
+    'ing.phosph': 'Ein natürlicher Bestandteil pflanzlicher Lecithine.',
     'ing.reishi': 'Erdig, tief, traditionell geschätzt.',
     'ing.glycine': 'Sanft und leicht süßlich.',
     'ing.vanilla': 'Warm, weich, ritualhaft.',
@@ -104,8 +104,8 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Gallery
     'gallery.tag': 'Abendkultur',
-    'gallery.title': 'Moderne Abende brauchen neue Rituale.',
-    'gallery.desc': 'Wir leben in Tagen voller Reize, Termine und Entscheidungen. HESPYRA steht für den bewussten Gegenpol: weniger Funktionieren, mehr Ankommen. Weniger Optimierung, mehr echter Abend.',
+    'gallery.title': 'Abendkultur, neu gedacht.',
+    'gallery.desc': 'Nicht als Rückzug.\nSondern als bewusster Übergang in das, was nach dem Tag beginnt.',
 
     // Waitlist
     'waitlist.title': 'Werde Teil von HESPYRA.',
@@ -175,25 +175,25 @@ const translations: Record<Language, Record<string, string>> = {
     'ingredients.desc': 'Selected minerals, plant extracts, and warm flavor notes combine to create a ritual that does not rush — but accompanies.',
     
     // Ingredients Groups (English)
-    'ing.group_ruhe_tag': 'FOR INNER STILLNESS',
+    'ing.group_ruhe_tag': 'Mineral Base',
     'ing.group_ruhe_title': 'Stillness',
-    'ing.group_ruhe_desc': 'Selected nutrients for the moment when the day is allowed to grow quiet.',
+    'ing.group_ruhe_desc': 'A quiet base for the transition into the evening.',
     
-    'ing.group_balance_tag': 'FOR EMOTIONAL BALANCE',
+    'ing.group_balance_tag': 'Botanical Depth',
     'ing.group_balance_title': 'Balance',
-    'ing.group_balance_desc': 'Botanicals and micronutrients for an evening that feels more centered and balanced.',
+    'ing.group_balance_desc': 'Botanical depth for an evening that feels more centered.',
     
-    'ing.group_ritual_tag': 'FOR TASTE & MOMENT',
+    'ing.group_ritual_tag': 'Flavor & Ritual',
     'ing.group_ritual_title': 'Ritual',
-    'ing.group_ritual_desc': 'Warm flavors and selected ingredients that turn a routine into a ritual.',
+    'ing.group_ritual_desc': 'Warm notes and familiar ingredients that turn preparation into a ritual.',
 
     // Ingredients descriptions (English)
-    'ing.mag_bis': 'Gentle magnesium base for the evening.',
-    'ing.theanine': 'Clear, mild, from green tea.',
-    'ing.apigenin': 'Botanical compound from chamomile.',
-    'ing.ashwa': 'Traditional botanical extract.',
-    'ing.saffron': 'Premium extract with character.',
-    'ing.phosph': 'Natural phospholipid.',
+    'ing.mag_bis': 'A mineral base for the evening.',
+    'ing.theanine': 'From green tea. Clear, mild, reserved.',
+    'ing.apigenin': 'A botanical compound from chamomile.',
+    'ing.ashwa': 'A root with a long tradition.',
+    'ing.saffron': 'An extract with warm depth.',
+    'ing.phosph': 'A natural component of plant lecithines.',
     'ing.reishi': 'Earthy, deep, traditionally valued.',
     'ing.glycine': 'Gentle and subtly sweet.',
     'ing.vanilla': 'Warm, soft, ritualistic.',
@@ -221,8 +221,8 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Gallery
     'gallery.tag': 'Evening Culture',
-    'gallery.title': 'Modern evenings require new rituals.',
-    'gallery.desc': 'We live in days full of stimuli, deadlines and decisions. HESPYRA stands for the conscious antipode: less functioning, more arriving. Less optimization, more genuine evening.',
+    'gallery.title': 'Evening culture, reimagined.',
+    'gallery.desc': 'Not as a retreat.\nBut as a conscious transition into what begins after the day.',
 
     // Waitlist
     'waitlist.title': 'Become part of HESPYRA.',

@@ -13,7 +13,7 @@ const Ritual = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="ritual" className="w-full bg-white pt-10 pb-12 lg:pt-12 lg:pb-14">
+    <section id="ritual" className="w-full bg-white pt-10 pb-4 lg:pt-12 lg:pb-14">
       <div className="max-w-[1800px] mx-auto px-8 lg:px-12">
         {/* items-stretch ensures the middle column (image) and columns share the exact same height on desktop */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-stretch">

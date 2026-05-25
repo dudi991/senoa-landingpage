@@ -1,4 +1,3 @@
-import { Moon, Compass, GlassWater, Atom, Sprout, Flower2, Shield, Sun, Brain, Heart, Layers, Sparkle, Star, Leaf, Infinity, Award } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 const groups = [
@@ -7,11 +6,10 @@ const groups = [
     tagKey: "ing.group_ruhe_tag",
     titleKey: "ing.group_ruhe_title",
     descKey: "ing.group_ruhe_desc",
-    icon: Moon,
     ingredients: [
-      { nameKey: "ing.name_mag_bis", icon: Atom, key: "mag_bis" },
-      { nameKey: "ing.name_theanine", icon: Sprout, key: "theanine" },
-      { nameKey: "ing.name_apigenin", icon: Flower2, key: "apigenin" }
+      { nameKey: "ing.name_mag_bis", key: "mag_bis" },
+      { nameKey: "ing.name_theanine", key: "theanine" },
+      { nameKey: "ing.name_apigenin", key: "apigenin" }
     ]
   },
   {
@@ -19,11 +17,10 @@ const groups = [
     tagKey: "ing.group_balance_tag",
     titleKey: "ing.group_balance_title",
     descKey: "ing.group_balance_desc",
-    icon: Compass,
     ingredients: [
-      { nameKey: "ing.name_ashwa", icon: Shield, key: "ashwa" },
-      { nameKey: "ing.name_saffron", icon: Sun, key: "saffron" },
-      { nameKey: "ing.name_phosph", icon: Brain, key: "phosph" }
+      { nameKey: "ing.name_ashwa", key: "ashwa" },
+      { nameKey: "ing.name_saffron", key: "saffron" },
+      { nameKey: "ing.name_phosph", key: "phosph" }
     ]
   },
   {
@@ -31,35 +28,11 @@ const groups = [
     tagKey: "ing.group_ritual_tag",
     titleKey: "ing.group_ritual_title",
     descKey: "ing.group_ritual_desc",
-    icon: GlassWater,
     ingredients: [
-      { nameKey: "ing.name_reishi", icon: Heart, key: "reishi" },
-      { nameKey: "ing.name_glycine", icon: Layers, key: "glycine" },
-      { nameKey: "ing.name_vanilla", icon: Sparkle, key: "vanilla" }
+      { nameKey: "ing.name_reishi", key: "reishi" },
+      { nameKey: "ing.name_glycine", key: "glycine" },
+      { nameKey: "ing.name_vanilla", key: "vanilla" }
     ]
-  }
-];
-
-const trustItems = [
-  {
-    titleKey: "ing.trust1_title",
-    descKey: "ing.trust1_desc",
-    icon: Star
-  },
-  {
-    titleKey: "ing.trust2_title",
-    descKey: "ing.trust2_desc",
-    icon: Leaf
-  },
-  {
-    titleKey: "ing.trust3_title",
-    descKey: "ing.trust3_desc",
-    icon: Infinity
-  },
-  {
-    titleKey: "ing.trust4_title",
-    descKey: "ing.trust4_desc",
-    icon: Award
   }
 ];
 
@@ -67,15 +40,14 @@ const Ingredients = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="ingredients" className="pt-6 pb-4 lg:pt-8 lg:pb-6 bg-white relative z-20">
-      <div className="max-w-[1800px] mx-auto px-8 lg:px-12">
-        
-        {/* Section Header */}
-        <div className="text-center mb-12 lg:mb-16">
+    <section id="ingredients" className="bg-white pt-4 md:pt-16 pb-16 md:pb-20 px-8 lg:px-12 relative z-20">
+      <div className="max-w-[1800px] mx-auto">
+        {/* Centered Section Header formatted exactly like other sections */}
+        <div className="mb-12 md:mb-16 lg:mb-24 text-center">
           <span className="font-sans text-[11px] tracking-[0.3em] font-semibold text-primary/60 uppercase mb-3 block">
             {t('ingredients.tag')}
           </span>
-          <div className="flex items-center justify-center gap-2 mt-4 mb-8 select-none text-primary/50">
+          <div className="flex items-center justify-center gap-2 mt-4 select-none text-primary/50">
             <div className="w-8 h-[1px] bg-primary/25"></div>
             <img 
               src="images/logo1.webp" 
@@ -84,106 +56,146 @@ const Ingredients = () => {
             />
             <div className="w-8 h-[1px] bg-primary/25"></div>
           </div>
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-[3.25rem] text-primary leading-[1.25] max-w-4xl mx-auto font-light mb-4">
-            {t('ingredients.title').split('\n').map((line, i) => (
-              <span key={i}>
-                {line}
-                {i < t('ingredients.title').split('\n').length - 1 && <br />}
-              </span>
-            ))}
-          </h2>
-          <p className="text-primary/70 text-base md:text-lg font-light leading-relaxed max-w-2xl mx-auto">
-            {t('ingredients.desc')}
-          </p>
         </div>
 
-        {/* Curated Groups */}
-        <div className="space-y-4 lg:space-y-5">
-          {groups.map((group, gIdx) => {
-            const GroupIcon = group.icon;
+        {/* MOBILE VIEWPORT LAYOUT: Stacked chapters (Chapter 1 + ingredients, Chapter 2 + ingredients, etc.) */}
+        <div className="md:hidden flex flex-col space-y-16 divide-y divide-primary/10">
+          {groups.map((group, idx) => {
+            const num = idx + 1;
             return (
               <div 
-                key={gIdx} 
-                className={`grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 ${
-                  gIdx < groups.length - 1 ? 'pb-4 lg:pb-5' : ''
-                }`}
+                key={`mobile-${group.key}`}
+                className="pt-12 first:pt-0 flex flex-col items-start text-left w-full max-w-[280px] mx-auto"
               >
-                {/* Left Column: Group Hero Card */}
-                <div className="lg:col-span-3 bg-[#FAF9F6] border border-primary/10 rounded-sm p-5 lg:p-6 flex flex-col items-center text-center justify-center">
-                  <div className="w-14 h-14 rounded-full border border-primary/10 bg-white flex items-center justify-center text-primary/70 mb-3 shadow-sm">
-                    <GroupIcon className="w-6 h-6" strokeWidth={1} />
-                  </div>
-                  <span className="font-sans text-[11px] tracking-[0.25em] font-bold text-primary/60 uppercase mb-2">
-                    {t(group.tagKey)}
-                  </span>
-                  <h3 className="font-serif text-3xl lg:text-[2.25rem] text-primary font-light mb-2 leading-tight">
-                    {t(group.titleKey)}
-                  </h3>
-                  <p className="font-sans text-sm text-primary/60 leading-snug font-light max-w-[220px]">
-                    {t(group.descKey)}
-                  </p>
-                </div>
+                {/* Number */}
+                <span className="font-sans text-xs tracking-[0.2em] font-semibold text-primary/60 mb-6 block select-none">
+                  {String(num).padStart(2, '0')}
+                </span>
 
-                {/* Right Column: Ingredients Grid */}
-                <div className={`lg:col-span-9 grid gap-6 lg:gap-10 items-stretch ${
-                  group.ingredients.length === 4 
-                    ? 'grid-cols-1 sm:grid-cols-2 xl:grid-cols-4' 
-                    : 'grid-cols-1 sm:grid-cols-3'
-                }`}>
-                  {group.ingredients.map((ing, iIdx) => {
-                    const IngIcon = ing.icon;
-                    return (
-                      <div 
-                        key={iIdx} 
-                        className={`flex flex-col items-center justify-start text-center px-4 md:px-6 xl:px-8 h-full pt-4 lg:pt-8 pb-4 lg:pb-8 ${
-                          group.ingredients.length === 3 && iIdx < 2 ? 'md:border-r border-primary/10' : ''
-                        }`}
-                      >
-                        <div className="w-16 h-16 flex items-center justify-center text-primary/60 mb-2">
-                          <IngIcon className="w-9 h-9" strokeWidth={1} />
-                        </div>
-                        <h4 className="font-sans text-[13px] tracking-[0.15em] font-bold uppercase text-primary mb-2 min-h-[40px] flex items-start justify-center">
-                          {t(ing.nameKey)}
-                        </h4>
-                        <p className="text-[15px] text-primary/60 leading-snug font-light max-w-[240px]">
-                          {t(`ing.${ing.key}`)}
-                        </p>
-                      </div>
-                    );
-                  })}
+                {/* Massive Serif Title */}
+                <h3 className="font-serif text-5xl tracking-tight text-primary mb-4 whitespace-nowrap">
+                  {t(group.titleKey)}
+                </h3>
+                
+                {/* Thin subtle horizontal divider line */}
+                <div className="w-10 h-[1px] bg-primary/20 mb-4"></div>
+                
+                {/* Description sentence */}
+                <p className="font-sans text-base leading-relaxed font-light text-primary/70 mb-8">
+                  {t(group.descKey)}
+                </p>
+
+                {/* Ingredients List */}
+                <div className="space-y-8 w-full mt-2">
+                  {group.ingredients.map((ing, iIdx) => (
+                    <div key={iIdx} className="flex flex-col items-start text-left">
+                      <h4 className="font-sans text-[16px] font-semibold tracking-wide text-primary mb-1.5">
+                        {t(ing.nameKey)}
+                      </h4>
+                      <p className="font-sans text-base leading-relaxed font-light text-primary/70">
+                        {t(`ing.${ing.key}`)}
+                      </p>
+                    </div>
+                  ))}
                 </div>
               </div>
             );
           })}
         </div>
 
-        {/* Bottom Trust Strip */}
-        <div className="mt-8 lg:mt-10 bg-[#FAF9F6] border border-primary/10 rounded-sm p-5 lg:p-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4 divide-y md:divide-y-0 md:divide-x divide-primary/10">
-            {trustItems.map((item, idx) => {
-              const TrustIcon = item.icon;
-              return (
-                <div 
-                  key={idx} 
-                  className={`flex flex-col items-center text-center px-4 ${
-                    idx > 0 ? 'pt-6 md:pt-0 md:pl-6' : ''
-                  }`}
-                >
-                  <div className="text-primary/70 mb-2">
-                    <TrustIcon className="w-8 h-8" strokeWidth={1} />
-                  </div>
-                  <h5 className="font-sans text-[12px] tracking-[0.15em] font-bold uppercase text-primary mb-2">
-                    {t(item.titleKey)}
-                  </h5>
-                  <p className="text-[13px] text-primary/60 leading-snug font-light max-w-[200px]">
-                    {t(item.descKey)}
+        {/* DESKTOP VIEWPORT LAYOUT: Pure Grid Rows to guarantee perfect horizontal alignment across columns */}
+        <div className="hidden md:grid grid-cols-3 max-w-[1500px] mx-auto">
+          {/* Row 1: Chapters Headers & Descriptions */}
+          {groups.map((group, idx) => {
+            const num = idx + 1;
+            return (
+              <div 
+                key={`desktop-head-${group.key}`}
+                className={`px-6 md:px-12 lg:px-16 pb-12 flex justify-center ${idx < 2 ? 'border-r border-primary/10' : ''}`}
+              >
+                <div className="flex flex-col items-start text-left w-full max-w-[280px]">
+                  {/* Number */}
+                  <span className="font-sans text-xs tracking-[0.2em] font-semibold text-primary/60 mb-10 block select-none">
+                    {String(num).padStart(2, '0')}
+                  </span>
+
+                  {/* Massive Serif Title */}
+                  <h3 className="font-serif text-5xl lg:text-6xl tracking-tight text-primary mb-6 whitespace-nowrap">
+                    {t(group.titleKey)}
+                  </h3>
+                  
+                  {/* Thin subtle horizontal divider line */}
+                  <div className="w-10 h-[1px] bg-primary/20 mb-6"></div>
+                  
+                  {/* Description sentence */}
+                  <p className="font-sans text-base lg:text-[17px] leading-relaxed font-light text-primary/70">
+                    {t(group.descKey)}
                   </p>
                 </div>
-              );
-            })}
-          </div>
-        </div>
+              </div>
+            );
+          })}
 
+          {/* Row 2: First Ingredients */}
+          {groups.map((group, idx) => {
+            const ing = group.ingredients[0];
+            return (
+              <div 
+                key={`desktop-ing-0-${group.key}`}
+                className={`px-6 md:px-12 lg:px-16 py-8 flex justify-center ${idx < 2 ? 'border-r border-primary/10' : ''}`}
+              >
+                <div className="flex flex-col items-start text-left w-full max-w-[280px]">
+                  <h4 className="font-sans text-[16px] lg:text-[17px] font-semibold tracking-wide text-primary mb-1.5">
+                    {t(ing.nameKey)}
+                  </h4>
+                  <p className="font-sans text-base lg:text-[17px] leading-relaxed font-light text-primary/70">
+                    {t(`ing.${ing.key}`)}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
+
+          {/* Row 3: Second Ingredients */}
+          {groups.map((group, idx) => {
+            const ing = group.ingredients[1];
+            return (
+              <div 
+                key={`desktop-ing-1-${group.key}`}
+                className={`px-6 md:px-12 lg:px-16 py-8 flex justify-center ${idx < 2 ? 'border-r border-primary/10' : ''}`}
+              >
+                <div className="flex flex-col items-start text-left w-full max-w-[280px]">
+                  <h4 className="font-sans text-[16px] lg:text-[17px] font-semibold tracking-wide text-primary mb-1.5">
+                    {t(ing.nameKey)}
+                  </h4>
+                  <p className="font-sans text-base lg:text-[17px] leading-relaxed font-light text-primary/70">
+                    {t(`ing.${ing.key}`)}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
+
+          {/* Row 4: Third Ingredients */}
+          {groups.map((group, idx) => {
+            const ing = group.ingredients[2];
+            return (
+              <div 
+                key={`desktop-ing-2-${group.key}`}
+                className={`px-6 md:px-12 lg:px-16 pt-8 pb-4 flex justify-center ${idx < 2 ? 'border-r border-primary/10' : ''}`}
+              >
+                <div className="flex flex-col items-start text-left w-full max-w-[280px]">
+                  <h4 className="font-sans text-[16px] lg:text-[17px] font-semibold tracking-wide text-primary mb-1.5">
+                    {t(ing.nameKey)}
+                  </h4>
+                  <p className="font-sans text-base lg:text-[17px] leading-relaxed font-light text-primary/70">
+                    {t(`ing.${ing.key}`)}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
