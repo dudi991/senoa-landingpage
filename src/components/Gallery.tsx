@@ -5,6 +5,8 @@ const Gallery = () => {
   const images = [
     "images/abend1.webp",
     "images/abend2.webp",
+    "images/HESPYRA_candle.webp",
+    "images/HESPYRA_Gruppe.webp",
     "images/abend3.webp",
     "images/abend4.webp"
   ];
