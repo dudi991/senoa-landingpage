@@ -64,7 +64,7 @@ const Ritual = () => {
 
 
           {/* Middle Column - Clean Square Image with Apple-style fluid crossfade */}
-          <div className="lg:col-span-4 aspect-square bg-primary/5 overflow-hidden rounded-sm shadow-sm relative">
+          <div className="w-full max-w-[320px] mx-auto lg:max-w-none lg:mx-0 lg:col-span-4 aspect-square bg-primary/5 overflow-hidden rounded-sm shadow-sm relative">
             {stepImages.map((src, idx) => (
               <img 
                 key={idx}
