@@ -16,15 +16,15 @@ const Preloader = () => {
     // Mark as shown in sessionStorage so it doesn't appear on reloads in the same session
     sessionStorage.setItem('hespyra_preloader_shown', 'true');
 
-    // 800ms visible, then start the 400ms fade-out transition (total ~1.2s lifecycle)
+    // Keep fully visible for 2000ms (2.0 seconds) to ensure comfortable reading of both lines
     const fadeTimer = setTimeout(() => {
       setVisible(false);
-    }, 800);
+    }, 2000);
 
-    // Completely unmount/remove the component from DOM after the transition finishes
+    // Completely unmount/remove the component from DOM after the 1500ms fade-out transition finishes (total 3500ms)
     const destroyTimer = setTimeout(() => {
       setRender(false);
-    }, 1200);
+    }, 3500);
 
     return () => {
       clearTimeout(fadeTimer);
@@ -36,11 +36,11 @@ const Preloader = () => {
 
   return (
     <div
-      className={`fixed inset-0 z-[99999] bg-[#0B0D14] flex flex-col items-center justify-center transition-opacity duration-500 ease-out select-none pointer-events-none ${
+      className={`fixed inset-0 z-[99999] bg-[#0B0D14] flex flex-col items-center justify-center preloader-transition select-none pointer-events-none ${
         visible ? 'opacity-100' : 'opacity-0'
       }`}
     >
-      {/* Self-contained CSS for the slow breathing animation */}
+      {/* Self-contained CSS for the slow breathing and elegant slow fade-out */}
       <style>{`
         @keyframes slow-breath {
           0%, 100% { opacity: 0.65; }
@@ -48,6 +48,9 @@ const Preloader = () => {
         }
         .animate-slow-breath {
           animation: slow-breath 4.5s ease-in-out infinite;
+        }
+        .preloader-transition {
+          transition: opacity 1500ms cubic-bezier(0.25, 1, 0.5, 1);
         }
       `}</style>
 
@@ -67,3 +70,4 @@ const Preloader = () => {
 };
 
 export default Preloader;
+
