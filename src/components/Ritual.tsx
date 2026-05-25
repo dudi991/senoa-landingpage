@@ -16,7 +16,7 @@ const Ritual = () => {
     <section id="ritual" className="w-full bg-white pt-10 pb-4 lg:pt-12 lg:pb-14">
       <div className="max-w-[1800px] mx-auto px-8 lg:px-12">
         {/* items-stretch ensures the middle column (image) and columns share the exact same height on desktop */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-24 items-stretch">
           
           {/* Left Column - Clean, full-height alignment */}
           <div className="lg:col-span-4 flex flex-col justify-between h-full py-1">
@@ -37,7 +37,7 @@ const Ritual = () => {
             </div>
 
             {/* Middle block (vertically centered next to the image, grouped with description) */}
-            <div className="text-left py-6 lg:py-0 my-auto flex flex-col justify-center w-full max-w-[320px] mx-auto lg:max-w-none lg:mx-0">
+            <div className="text-left pt-6 pb-2 lg:py-0 my-auto flex flex-col justify-center w-full max-w-[320px] mx-auto lg:max-w-none lg:mx-0">
               <h2 className="text-4xl lg:text-5xl leading-[1.15] font-serif text-primary tracking-tight">
                 {t('ritual.title').split('\n').map((line, i) => (
                   <span key={i}>

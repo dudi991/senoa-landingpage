@@ -167,7 +167,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                 required
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                placeholder={language === 'de' ? 'Dominik Schwab' : 'Dominik Schwab'}
+                placeholder={language === 'de' ? 'Anna Schmidt' : 'Anna Smith'}
                 className="w-full border-b border-primary/20 bg-transparent py-3 focus:border-primary focus:outline-none transition-colors duration-300 font-light text-[15px] placeholder-primary/20"
               />
             </div>
@@ -182,7 +182,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="dominik@example.com"
+                placeholder="anna@example.com"
                 className="w-full border-b border-primary/20 bg-transparent py-3 focus:border-primary focus:outline-none transition-colors duration-300 font-light text-[15px] placeholder-primary/20"
               />
             </div>
