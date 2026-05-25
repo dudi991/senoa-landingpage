@@ -28,7 +28,7 @@ const CustomerStory = () => {
             </div>
             
             {/* Elegant Grand Typographic Headline & Story Paragraphs aligned perfectly */}
-            <div className="w-full max-w-[320px] mx-auto lg:max-w-none lg:mx-0 flex flex-col items-start text-left">
+            <div className="w-full max-w-[320px] mx-auto lg:max-w-none lg:mx-0 flex flex-col items-center lg:items-start text-center lg:text-left">
               <h2 className="text-4xl lg:text-[3.25rem] leading-[1.15] font-serif text-primary tracking-tight mb-6 lg:mb-8">
                 {t('philosophy.title').split('\n').map((line, i) => (
                   <span key={i}>
