@@ -66,8 +66,8 @@ const Waitlist = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8 lg:gap-12 items-center">
           
           {/* Column 1 - Left: Serif Headline */}
-          <div className="text-left">
-            <h2 className="text-4xl lg:text-5xl leading-[1.15] font-serif text-primary tracking-tight max-w-xs">
+          <div className="text-center md:text-left">
+            <h2 className="text-4xl lg:text-5xl leading-[1.15] font-serif text-primary tracking-tight max-w-xs mx-auto md:mx-0">
               {t('waitlist.title').split('\n').map((line, i) => (
                 <span key={i}>
                   {line}

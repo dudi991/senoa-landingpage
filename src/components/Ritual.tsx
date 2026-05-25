@@ -37,7 +37,7 @@ const Ritual = () => {
             </div>
 
             {/* Middle block (vertically centered next to the image, grouped with description) */}
-            <div className="text-left pt-6 pb-2 lg:py-0 my-auto flex flex-col justify-center w-full max-w-[320px] mx-auto lg:max-w-none lg:mx-0">
+            <div className="text-center lg:text-left pt-6 pb-2 lg:py-0 my-auto flex flex-col items-center lg:items-start justify-center w-full max-w-[320px] mx-auto lg:max-w-none lg:mx-0">
               <h2 className="text-4xl lg:text-5xl leading-[1.15] font-serif text-primary tracking-tight">
                 {t('ritual.title').split('\n').map((line, i) => (
                   <span key={i}>
@@ -46,7 +46,7 @@ const Ritual = () => {
                   </span>
                 ))}
               </h2>
-              <p className="text-base lg:text-lg text-primary/70 leading-relaxed font-light max-w-sm mt-6 lg:mt-8">
+              <p className="text-base lg:text-lg text-primary/70 leading-relaxed font-light max-w-sm mt-6 lg:mt-8 mx-auto lg:mx-0">
                 {t('ritual.desc').split('\n').map((line, i) => (
                   <span key={i}>
                     {line}

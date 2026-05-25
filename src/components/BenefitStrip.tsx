@@ -37,7 +37,7 @@ const BenefitStrip = () => {
                 </span>
 
                 {/* Massive Serif Title */}
-                <h3 className="font-serif text-5xl lg:text-6xl tracking-tight text-primary mb-6 whitespace-nowrap">
+                <h3 className="font-serif text-4xl md:text-5xl lg:text-6xl tracking-tight text-primary mb-6 md:whitespace-nowrap">
                   {t(`benefits.title${num}`)}
                 </h3>
                 
