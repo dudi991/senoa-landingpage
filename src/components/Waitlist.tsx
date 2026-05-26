@@ -4,7 +4,6 @@ import { useLanguage } from '../context/LanguageContext';
 
 const Waitlist = () => {
   const [email, setEmail] = useState('');
-  const [consent, setConsent] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
@@ -13,15 +12,6 @@ const Waitlist = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
-
-    if (!consent) {
-      setError(
-        language === 'de'
-          ? 'Bitte bestätige die Einwilligung zur Datennutzung.'
-          : 'Please agree to the data usage consent.'
-      );
-      return;
-    }
 
     setIsSubmitting(true);
     setError('');
@@ -34,7 +24,7 @@ const Waitlist = () => {
         },
         body: JSON.stringify({
           email: email.trim(),
-          consent: consent
+          consent: true // Implicit consent on form submit, verified via Double Opt-in
         }),
       });
 
@@ -46,7 +36,6 @@ const Waitlist = () => {
       if (data && data.success) {
         setSubmitted(true);
         setEmail('');
-        setConsent(false);
       } else {
         throw new Error('Subscription failed');
       }
@@ -113,27 +102,6 @@ const Waitlist = () => {
                   required
                   autoComplete="off"
                 />
-                
-                {/* Consent Checkbox */}
-                <div className="flex items-start gap-2.5 text-left py-1">
-                  <input
-                    type="checkbox"
-                    id="waitlistConsent"
-                    checked={consent}
-                    onChange={(e) => setConsent(e.target.checked)}
-                    disabled={isSubmitting}
-                    className="mt-0.5 w-3.5 h-3.5 accent-primary cursor-pointer border border-primary/20 bg-transparent rounded focus:ring-0 disabled:opacity-50 disabled:cursor-not-allowed"
-                    required
-                  />
-                  <label 
-                    htmlFor="waitlistConsent" 
-                    className="font-sans text-[11px] tracking-wide text-primary/70 cursor-pointer font-light select-none leading-normal"
-                  >
-                    {language === 'de' 
-                      ? 'Ich willige in die Datenschutzerklärung und den Empfang von E-Mails ein.' 
-                      : 'I consent to the privacy policy and receiving emails.'}
-                  </label>
-                </div>
 
                 <button 
                   type="submit" 
