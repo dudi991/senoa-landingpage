@@ -4,6 +4,7 @@ import { useLanguage } from '../context/LanguageContext';
 
 const Waitlist = () => {
   const [email, setEmail] = useState('');
+  const [consent, setConsent] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
@@ -13,47 +14,47 @@ const Waitlist = () => {
     e.preventDefault();
     if (!email) return;
 
+    if (!consent) {
+      setError(
+        language === 'de'
+          ? 'Bitte bestätige die Einwilligung zur Datennutzung.'
+          : 'Please agree to the data usage consent.'
+      );
+      return;
+    }
+
     setIsSubmitting(true);
     setError('');
 
-    // MailerLite account and form IDs from Vite environment variables (or fallbacks)
-    const accountId = import.meta.env.VITE_MAILERLITE_ACCOUNT_ID || '2372265';
-    const formId = import.meta.env.VITE_MAILERLITE_FORM_ID || '188201569953514830';
-
     try {
-      const formData = new FormData();
-      formData.append('fields[email]', email);
-      formData.append('ajax', '1');
-
-      const response = await fetch(`https://assets.mailerlite.com/jsonp/${accountId}/forms/${formId}/subscribe`, {
+      const response = await fetch('/api/subscribe', {
         method: 'POST',
-        body: formData,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: email.trim(),
+          consent: consent
+        }),
       });
 
       if (!response.ok) {
         throw new Error('Subscription failed');
       }
 
-      let isSuccess = false;
-      try {
-        const data = await response.json();
-        isSuccess = data && (data.success === true || data.success === 'true');
-      } catch (parseError) {
-        // Fallback: If JSON parsing fails but HTTP status is 200 OK, treat it as successful
-        isSuccess = response.ok;
-      }
-
-      if (isSuccess) {
+      const data = await response.json();
+      if (data && data.success) {
         setSubmitted(true);
         setEmail('');
+        setConsent(false);
       } else {
         throw new Error('Subscription failed');
       }
     } catch (err) {
       setError(
         language === 'de'
-          ? 'Es gab ein Problem beim Eintragen in die Warteliste. Bitte versuche es noch einmal.'
-          : 'There was a problem joining the waitlist. Please try again.'
+          ? 'Die Anmeldung konnte gerade nicht abgeschlossen werden. Bitte versuche es erneut.'
+          : 'The subscription could not be completed at this time. Please try again.'
       );
     } finally {
       setIsSubmitting(false);
@@ -93,7 +94,7 @@ const Waitlist = () => {
                 <svg className="w-8 h-8 text-primary mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
-                <p className="text-primary text-sm font-light text-center">
+                <p className="text-primary text-sm font-light text-center leading-normal">
                   {t('waitlist.success')}
                 </p>
               </div>
@@ -112,6 +113,28 @@ const Waitlist = () => {
                   required
                   autoComplete="off"
                 />
+                
+                {/* Consent Checkbox */}
+                <div className="flex items-start gap-2.5 text-left py-1">
+                  <input
+                    type="checkbox"
+                    id="waitlistConsent"
+                    checked={consent}
+                    onChange={(e) => setConsent(e.target.checked)}
+                    disabled={isSubmitting}
+                    className="mt-0.5 w-3.5 h-3.5 accent-primary cursor-pointer border border-primary/20 bg-transparent rounded focus:ring-0 disabled:opacity-50 disabled:cursor-not-allowed"
+                    required
+                  />
+                  <label 
+                    htmlFor="waitlistConsent" 
+                    className="font-sans text-[11px] tracking-wide text-primary/70 cursor-pointer font-light select-none leading-normal"
+                  >
+                    {language === 'de' 
+                      ? 'Ich willige in die Datenschutzerklärung und den Empfang von E-Mails ein.' 
+                      : 'I consent to the privacy policy and receiving emails.'}
+                  </label>
+                </div>
+
                 <button 
                   type="submit" 
                   disabled={isSubmitting}

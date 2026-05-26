@@ -71,24 +71,22 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
       });
 
       if (response.ok) {
-        // If the user opted in to the waitlist, subscribe them to MailerLite in the background
+        // If the user opted in to the waitlist, subscribe them to rapidmail in the background
         if (subscribeWaitlist) {
-          const accountId = import.meta.env.VITE_MAILERLITE_ACCOUNT_ID || '2372265';
-          const formId = import.meta.env.VITE_MAILERLITE_FORM_ID || '188201569953514830';
-
-          const formData = new FormData();
-          formData.append('fields[email]', email);
-          formData.append('fields[name]', name);
-          formData.append('ajax', '1');
-
           try {
-            await fetch(`https://assets.mailerlite.com/jsonp/${accountId}/forms/${formId}/subscribe`, {
+            await fetch('/api/subscribe', {
               method: 'POST',
-              body: formData,
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                email: email.trim(),
+                consent: true
+              }),
             });
-          } catch (mlErr) {
-            console.error('MailerLite background subscription failed:', mlErr);
-            // We do not fail the contact form submission if MailerLite fails to avoid disrupting user experience
+          } catch (rmErr) {
+            console.error('rapidmail background subscription failed:', rmErr);
+            // We do not fail the contact form submission if rapidmail fails to avoid disrupting user experience
           }
         }
         setIsSubmitted(true);
