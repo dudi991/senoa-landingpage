@@ -48,7 +48,7 @@ export default async function handler(req: any, res: any) {
   try {
     // 4. Send subscription request to rapidmail API v3
     // We add the `send_activationmail=yes` query parameter to trigger double opt-in (unconfirmed recipient + activation email).
-    const rapidmailUrl = `https://apiv3.emailsys.net/v1/recipientlists/${listId}/recipients?send_activationmail=yes`;
+    const rapidmailUrl = 'https://apiv3.emailsys.net/v1/recipients?send_activationmail=yes';
     
     const credentialsBase64 = Buffer.from(`${username}:${password}`).toString('base64');
 
@@ -60,7 +60,8 @@ export default async function handler(req: any, res: any) {
         'Authorization': `Basic ${credentialsBase64}`
       },
       body: JSON.stringify({
-        email: email.trim()
+        email: email.trim(),
+        recipientlist_id: Number(listId)
       })
     });
 
