@@ -8,7 +8,7 @@ const Hero = ({ isCalm }: HeroProps) => {
   const { t } = useLanguage();
 
   return (
-    <section className="relative w-full min-h-[80vh] lg:h-[90vh] flex items-center overflow-hidden bg-white pt-16 pb-12 lg:py-0">
+    <section className="relative w-full min-h-[80vh] lg:min-h-[90vh] flex items-center overflow-hidden bg-white pt-24 sm:pt-28 lg:pt-28 pb-12 lg:pb-12">
       {/* Background Image */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img 
@@ -22,14 +22,14 @@ const Hero = ({ isCalm }: HeroProps) => {
         <div className={`absolute inset-0 bg-gradient-to-b from-white/80 via-white/40 to-white/75 lg:bg-gradient-to-r lg:from-white/75 lg:via-white/35 lg:to-transparent lg:from-white/55 transition-opacity duration-[2500ms] ease-in-out ${isCalm ? 'opacity-0' : 'opacity-100'}`} />
         {/* Calm Mode Horizontal Overlay */}
         <div className={`absolute inset-0 bg-gradient-to-b from-[#0B0D14]/90 via-[#0B0D14]/65 to-[#0B0D14]/85 lg:bg-gradient-to-r lg:from-[#0B0D14]/94 lg:via-[#0B0D14]/60 lg:to-transparent lg:from-[#0B0D14]/94 transition-opacity duration-[2500ms] ease-in-out ${isCalm ? 'opacity-100' : 'opacity-0'}`} />
-
+ 
         {/* --- Top Navbar Gradient Overlays (Vertical) --- */}
         {/* Day Mode Top Navbar Overlay */}
         <div className={`absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-white/80 via-white/30 to-transparent transition-opacity duration-[2500ms] ease-in-out ${isCalm ? 'opacity-0' : 'opacity-100'}`} />
         {/* Calm Mode Top Navbar Overlay */}
         <div className={`absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[#0B0D14]/85 via-[#0B0D14]/30 to-transparent transition-opacity duration-[2500ms] ease-in-out ${isCalm ? 'opacity-100' : 'opacity-0'}`} />
       </div>
-
+ 
       {/* Lunar Monogram Watermark (Signature Element) */}
       <div className="absolute -right-32 lg:-right-48 top-1/4 lg:top-1/2 lg:-translate-y-1/2 w-[400px] lg:w-[800px] h-[400px] lg:h-[800px] z-0 opacity-[0.04] pointer-events-none text-midnight">
         <svg viewBox="0 0 100 100" className="w-full h-full animate-[spin_120s_linear_infinite]">
@@ -42,9 +42,9 @@ const Hero = ({ isCalm }: HeroProps) => {
           <circle cx="50" cy="96" r="0.8" fill="currentColor" />
         </svg>
       </div>
-
+ 
       {/* Content */}
-      <div className="relative z-10 w-full px-6 sm:px-8 pt-12 xs:pt-16 sm:pt-32 lg:pt-24 pb-4">
+      <div className="relative z-10 w-full px-6 sm:px-8 pt-0 pb-0">
         <div className="max-w-[1600px] mx-auto">
           <div className="flex flex-col justify-center max-w-2xl">
             {/* Elegant Sub-headline/Slogan Tag */}
