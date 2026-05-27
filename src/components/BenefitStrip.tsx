@@ -29,8 +29,8 @@ const BenefitStrip = () => {
               key={num}
               className="px-6 md:px-12 lg:px-16 py-8 md:py-0"
             >
-              {/* Centered content wrapper that is internally left-aligned - w-fit mx-auto on mobile for optical centering */}
-              <div className="flex flex-col items-start text-left w-fit mx-auto md:w-full md:max-w-[320px] md:mx-auto">
+              {/* Centered content wrapper that is internally left-aligned */}
+              <div className="flex flex-col items-start text-left w-full max-w-[320px] mx-auto">
                 {/* Number - Slightly darker (text-primary/60) and with more vertical distance (mb-10) */}
                 <span className="font-sans text-xs tracking-[0.2em] font-semibold text-primary/60 mb-10 block select-none">
                   {String(num).padStart(2, '0')}
