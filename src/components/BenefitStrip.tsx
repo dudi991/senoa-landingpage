@@ -27,7 +27,7 @@ const BenefitStrip = () => {
           {[1, 2, 3].map((num) => (
             <div 
               key={num}
-              className="px-6 md:px-12 lg:px-16 py-8 md:py-0"
+              className="px-6 md:px-6 lg:px-16 py-8 md:py-0"
             >
               {/* Centered content wrapper that is internally left-aligned */}
               <div className="flex flex-col items-start text-left w-full max-w-[320px] mx-auto">

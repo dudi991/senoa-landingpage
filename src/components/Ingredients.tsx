@@ -111,7 +111,7 @@ const Ingredients = () => {
             return (
               <div 
                 key={`desktop-head-${group.key}`}
-                className={`px-6 md:px-12 lg:px-16 pb-12 flex justify-center ${idx < 2 ? 'border-r border-primary/10' : ''}`}
+                className={`px-6 md:px-6 lg:px-16 pb-12 flex justify-center ${idx < 2 ? 'border-r border-primary/10' : ''}`}
               >
                 <div className="flex flex-col items-start text-left w-full max-w-[280px]">
                   {/* Number */}
@@ -142,7 +142,7 @@ const Ingredients = () => {
             return (
               <div 
                 key={`desktop-ing-0-${group.key}`}
-                className={`px-6 md:px-12 lg:px-16 py-8 flex justify-center ${idx < 2 ? 'border-r border-primary/10' : ''}`}
+                className={`px-6 md:px-6 lg:px-16 py-8 flex justify-center ${idx < 2 ? 'border-r border-primary/10' : ''}`}
               >
                 <div className="flex flex-col items-start text-left w-full max-w-[280px]">
                   <h4 className="font-sans text-[16px] lg:text-[17px] font-semibold tracking-wide text-primary mb-1.5">
@@ -162,7 +162,7 @@ const Ingredients = () => {
             return (
               <div 
                 key={`desktop-ing-1-${group.key}`}
-                className={`px-6 md:px-12 lg:px-16 py-8 flex justify-center ${idx < 2 ? 'border-r border-primary/10' : ''}`}
+                className={`px-6 md:px-6 lg:px-16 py-8 flex justify-center ${idx < 2 ? 'border-r border-primary/10' : ''}`}
               >
                 <div className="flex flex-col items-start text-left w-full max-w-[280px]">
                   <h4 className="font-sans text-[16px] lg:text-[17px] font-semibold tracking-wide text-primary mb-1.5">
@@ -182,7 +182,7 @@ const Ingredients = () => {
             return (
               <div 
                 key={`desktop-ing-2-${group.key}`}
-                className={`px-6 md:px-12 lg:px-16 pt-8 pb-4 flex justify-center ${idx < 2 ? 'border-r border-primary/10' : ''}`}
+                className={`px-6 md:px-6 lg:px-16 pt-8 pb-4 flex justify-center ${idx < 2 ? 'border-r border-primary/10' : ''}`}
               >
                 <div className="flex flex-col items-start text-left w-full max-w-[280px]">
                   <h4 className="font-sans text-[16px] lg:text-[17px] font-semibold tracking-wide text-primary mb-1.5">
