@@ -13,11 +13,6 @@ const Navbar = ({ isCalm, onToggleCalm }: NavbarProps) => {
       {/* Brand Logo & Celestial Hallmark */}
       <div className={`flex items-center text-lg xs:text-xl sm:text-3xl tracking-[0.15em] font-sans leading-none select-none ${isCalm ? 'text-white' : 'text-primary'}`}>
         <span>HESPYRA</span>
-        <img 
-          src="images/logo1.webp" 
-          alt="HESPYRA Celestial Mark" 
-          className={`h-4 sm:h-6 w-auto ml-1.5 sm:ml-2.5 transition-all duration-[2.5s] ease-in-out hover:rotate-[360deg] cursor-pointer ${isCalm ? 'invert' : ''}`}
-        />
       </div>
       
       {/* Controls Container */}

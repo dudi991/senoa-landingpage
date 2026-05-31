@@ -43,7 +43,7 @@ const Ingredients = () => {
     <section id="ingredients" className="bg-white pt-16 md:pt-16 pb-16 md:pb-20 px-8 lg:px-12 relative z-20">
       <div className="max-w-[1800px] mx-auto">
         {/* Centered Section Header formatted exactly like other sections */}
-        <div className="mb-12 md:mb-16 lg:mb-24 text-center">
+        <div className="mb-12 md:mb-16 lg:mb-20 text-center max-w-2xl mx-auto px-6">
           <span className="font-sans text-[11px] tracking-[0.3em] font-semibold text-primary/60 uppercase mb-3 block">
             {t('ingredients.tag')}
           </span>
@@ -56,6 +56,9 @@ const Ingredients = () => {
             />
             <div className="w-8 h-[1px] bg-primary/25"></div>
           </div>
+          <p className="font-sans text-base md:text-lg leading-relaxed font-light text-primary/80 mt-8 max-w-xl mx-auto">
+            {t('ingredients.desc')}
+          </p>
         </div>
 
         {/* MOBILE VIEWPORT LAYOUT: Stacked chapters (Chapter 1 + ingredients, Chapter 2 + ingredients, etc.) */}

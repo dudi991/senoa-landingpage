@@ -14,20 +14,20 @@ const Hero = ({ isCalm }: HeroProps) => {
         <img 
           src="images/HESPYRA_HERO.webp" 
           alt="HESPYRA Night Reset Background" 
-          className="w-full h-full object-cover object-center opacity-85 saturate-[1.12] contrast-[1.04] brightness-[0.93] animate-ken-burns"
+          className={`w-full h-full object-cover object-center opacity-85 saturate-[1.12] contrast-[1.04] transition-all duration-[2500ms] animate-ken-burns ${isCalm ? 'brightness-[1.12]' : 'brightness-[0.93]'}`}
         />
         
         {/* --- Hero Gradient Overlays (Horizontal) --- */}
-        {/* Day Mode Horizontal Overlay */}
+        {/* Day Mode Horizontal Overlay (Original natural foggier settings restored) */}
         <div className={`absolute inset-0 bg-gradient-to-b from-white/80 via-white/40 to-white/75 lg:bg-gradient-to-r lg:from-white/75 lg:via-white/35 lg:to-transparent lg:from-white/55 transition-opacity duration-[2500ms] ease-in-out ${isCalm ? 'opacity-0' : 'opacity-100'}`} />
-        {/* Calm Mode Horizontal Overlay */}
-        <div className={`absolute inset-0 bg-gradient-to-b from-[#0B0D14]/90 via-[#0B0D14]/65 to-[#0B0D14]/85 lg:bg-gradient-to-r lg:from-[#0B0D14]/94 lg:via-[#0B0D14]/60 lg:to-transparent lg:from-[#0B0D14]/94 transition-opacity duration-[2500ms] ease-in-out ${isCalm ? 'opacity-100' : 'opacity-0'}`} />
+        {/* Calm Mode Horizontal Overlay (Highly brightened premium night mode) */}
+        <div className={`absolute inset-0 bg-gradient-to-b from-[#0B0D14]/20 via-[#0B0D14]/05 to-[#0B0D14]/15 lg:bg-gradient-to-r lg:from-[#0B0D14]/25 lg:via-[#0B0D14]/05 lg:to-transparent transition-opacity duration-[2500ms] ease-in-out ${isCalm ? 'opacity-100' : 'opacity-0'}`} />
  
         {/* --- Top Navbar Gradient Overlays (Vertical) --- */}
-        {/* Day Mode Top Navbar Overlay */}
+        {/* Day Mode Top Navbar Overlay (Original natural foggier settings restored) */}
         <div className={`absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-white/80 via-white/30 to-transparent transition-opacity duration-[2500ms] ease-in-out ${isCalm ? 'opacity-0' : 'opacity-100'}`} />
-        {/* Calm Mode Top Navbar Overlay */}
-        <div className={`absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[#0B0D14]/85 via-[#0B0D14]/30 to-transparent transition-opacity duration-[2500ms] ease-in-out ${isCalm ? 'opacity-100' : 'opacity-0'}`} />
+        {/* Calm Mode Top Navbar Overlay (Highly brightened premium night mode) */}
+        <div className={`absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[#0B0D14]/20 via-[#0B0D14]/02 to-transparent transition-opacity duration-[2500ms] ease-in-out ${isCalm ? 'opacity-100' : 'opacity-0'}`} />
       </div>
  
       {/* Lunar Monogram Watermark (Signature Element) */}
@@ -47,14 +47,14 @@ const Hero = ({ isCalm }: HeroProps) => {
       <div className="relative z-10 w-full px-6 sm:px-8 pt-0 pb-0">
         <div className="max-w-[1600px] mx-auto">
           <div className="flex flex-col justify-center max-w-2xl">
-            {/* Elegant Sub-headline/Slogan Tag */}
-            <span className="font-sans text-[11px] sm:text-[14px] tracking-[0.25em] sm:tracking-[0.3em] font-semibold text-primary/60 uppercase mb-6 sm:mb-8 block whitespace-pre-line leading-relaxed">{t('hero.slogan')}</span>
-
+            {/* Elegant Sub-headline/Slogan Tag (Maximally readable & mapped to calm-mode CSS) */}
+            <span className="font-sans text-[11px] sm:text-[14px] tracking-[0.25em] sm:tracking-[0.3em] font-semibold text-primary/80 uppercase mb-6 sm:mb-8 block whitespace-pre-line leading-relaxed">{t('hero.slogan')}</span>
+ 
             {/* 2. Headline H1 */}
             <h1 className="text-4xl sm:text-6xl lg:text-[5.25rem] leading-[1.12] sm:leading-[1.08] mb-10 sm:mb-16 font-serif text-primary">{t('hero.title').split('\n').map((line, i) => (<span key={i}>{line}{i < t('hero.title').split('\n').length - 1 && <br />}</span>))}</h1>
-
-            {/* 4. Description */}
-            <p className="text-primary/80 text-base sm:text-lg lg:text-xl mb-20 sm:mb-24 max-w-lg leading-relaxed font-light whitespace-pre-line">{t('hero.desc')}</p>
+ 
+            {/* 4. Description (Maximally readable solid black) */}
+            <p className="text-primary text-base sm:text-lg lg:text-xl mb-20 sm:mb-24 max-w-lg leading-relaxed font-light whitespace-pre-line">{t('hero.desc')}</p>
 
             {/* 6. CTA */}
             <div>

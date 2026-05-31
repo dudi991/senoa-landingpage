@@ -42,7 +42,7 @@ const CustomerStory = () => {
                 <p>
                   {t('philosophy.text1')}
                 </p>
-                <p>
+                <p className="whitespace-pre-line">
                   {t('philosophy.text2')}
                 </p>
               </div>

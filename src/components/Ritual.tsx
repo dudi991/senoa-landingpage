@@ -1,15 +1,7 @@
-import { useState } from 'react';
 import { GlassWater, Wind, Moon } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
-const stepImages = [
-  "images/hespyra_ankunft.webp",
-  "images/HESPYRA_SCOOP.webp",
-  "images/derAbend.webp"
-];
-
 const Ritual = () => {
-  const [activeStep, setActiveStep] = useState(0);
   const { t } = useLanguage();
 
   return (
@@ -60,34 +52,20 @@ const Ritual = () => {
             <div className="hidden lg:block h-6"></div>
           </div>
 
-
-
-
-          {/* Middle Column - Clean Square Image with Apple-style fluid crossfade */}
+          {/* Middle Column - Clean Square Image (Show only Step 2 Image statically) */}
           <div className="w-full max-w-[320px] mx-auto lg:max-w-none lg:mx-0 lg:col-span-4 aspect-square bg-primary/5 overflow-hidden rounded-sm shadow-sm relative">
-            {stepImages.map((src, idx) => (
-              <img 
-                key={idx}
-                src={src} 
-                alt={`${t('ritual.alt')} ${idx + 1}`}
-                className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-700 ease-in-out ${
-                  activeStep === idx ? 'opacity-100 z-10' : 'opacity-0 z-0'
-                }`}
-              />
-            ))}
+            <img 
+              src="images/HESPYRA_SCOOP.webp" 
+              alt={t('ritual.alt')} 
+              className="absolute inset-0 w-full h-full object-cover object-center"
+            />
           </div>
 
           {/* Right Column - Typographic Steps with Left Icons spanning the full height of the middle image */}
           <div className="lg:col-span-4 flex flex-col gap-10 lg:gap-0 lg:justify-between lg:h-full lg:pl-8 py-1 w-full max-w-[320px] mx-auto lg:max-w-none lg:mx-0">
             
             {/* Step I */}
-            <div 
-              className={`flex flex-row items-center gap-6 cursor-pointer transition-all duration-500 ${
-                activeStep === 0 ? 'opacity-100 translate-x-1' : 'opacity-40 hover:opacity-75'
-              }`}
-              onMouseEnter={() => setActiveStep(0)}
-              onClick={() => setActiveStep(0)}
-            >
+            <div className="flex flex-row items-center gap-6">
               <div className="text-primary flex-shrink-0">
                 <GlassWater className="w-10 h-10" strokeWidth={1} />
               </div>
@@ -105,13 +83,7 @@ const Ritual = () => {
             </div>
 
             {/* Step II */}
-            <div 
-              className={`flex flex-row items-center gap-6 cursor-pointer transition-all duration-500 ${
-                activeStep === 1 ? 'opacity-100 translate-x-1' : 'opacity-40 hover:opacity-75'
-              }`}
-              onMouseEnter={() => setActiveStep(1)}
-              onClick={() => setActiveStep(1)}
-            >
+            <div className="flex flex-row items-center gap-6">
               <div className="text-primary flex-shrink-0">
                 <Wind className="w-10 h-10" strokeWidth={1} />
               </div>
@@ -129,13 +101,7 @@ const Ritual = () => {
             </div>
 
             {/* Step III */}
-            <div 
-              className={`flex flex-row items-center gap-6 cursor-pointer transition-all duration-500 ${
-                activeStep === 2 ? 'opacity-100 translate-x-1' : 'opacity-40 hover:opacity-75'
-              }`}
-              onMouseEnter={() => setActiveStep(2)}
-              onClick={() => setActiveStep(2)}
-            >
+            <div className="flex flex-row items-center gap-6">
               <div className="text-primary flex-shrink-0">
                 <Moon className="w-10 h-10" strokeWidth={1} />
               </div>
@@ -154,9 +120,6 @@ const Ritual = () => {
 
           </div>
 
-
-
-
         </div>
       </div>
     </section>
@@ -164,4 +127,3 @@ const Ritual = () => {
 };
 
 export default Ritual;
-

@@ -30,11 +30,6 @@ const Footer = ({ onShowImprint, onShowContact, onShowAbout, onShowPrivacy }: Fo
           <div className="flex justify-center lg:justify-start items-center">
             <span className="font-sans text-[26px] tracking-[0.2em] font-bold text-primary flex items-center select-none">
               <span>HESPYRA</span>
-              <img 
-                src="images/logo1.webp" 
-                alt="HESPYRA Celestial Mark" 
-                className="h-5 w-auto ml-2.5 transition-all duration-[2.5s] ease-in-out hover:rotate-[360deg] cursor-pointer"
-              />
             </span>
           </div>
 

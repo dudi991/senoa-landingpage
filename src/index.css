@@ -59,6 +59,7 @@
     }
   }
   
+
   /* Calm Mode CSS Transitions & Overrides */
   .calm-mode .bg-white,
   .calm-mode .bg-secondary,
@@ -136,10 +137,19 @@
     background-color: rgba(243, 244, 246, 0.32) !important; /* Restored contrast for fine dividers in night mode */
   }
 
+  /* Key out the white background rectangle of the ritual symbol logo in day-mode */
+  img[src*="logo1"],
+  nav img {
+    mix-blend-mode: multiply !important;
+    filter: contrast(1.4) brightness(1.15) !important;
+    background-color: transparent !important;
+    opacity: 1 !important;
+  }
+
   /* Key out the white background rectangle of the ritual symbol logo in calm-mode */
   .calm-mode img[src*="logo1"],
   .calm-mode nav img {
-    filter: invert(1) !important; /* Removed contrast filter to preserve anti-aliasing and prevent line-thinning */
+    filter: contrast(1.4) brightness(1.15) invert(1) !important;
     mix-blend-mode: screen !important;
     background-color: transparent !important;
     opacity: 1 !important;

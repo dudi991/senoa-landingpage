@@ -13,10 +13,10 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 const translations: Record<Language, Record<string, string>> = {
   de: {
     // Hero
-    'hero.slogan': 'Nicht für den Schlaf.\nFür den Moment davor.',
+    'hero.slogan': 'NICHT FÜR DEN SCHLAF.\nFÜR DEN MOMENT DAVOR.',
     'hero.title': 'Feierabend beginnt im Kopf.',
-    'hero.desc': 'Wenn der Tag nachhallt, beginnt ein anderes Tempo. HESPYRA ist ein Abendritual für den stillen Übergang — vom Außen zurück zu dir.',
-    'hero.cta': 'Zum Ritual einladen lassen',
+    'hero.desc': 'Wenn der Tag nachhallt, braucht der Abend einen eigenen Anfang. HESPYRA ist ein tägliches Abendritual zum Einrühren — für den Übergang, wenn der Tag leiser werden darf.',
+    'hero.cta': 'EINLADUNG ERHALTEN',
     'hero.benefit1': 'Mentales Entlasten',
     'hero.benefit2': 'Regeneration',
     'hero.benefit3': 'Innere Stille',
@@ -27,14 +27,14 @@ const translations: Record<Language, Record<string, string>> = {
     'benefits.desc1': 'Der Tag darf sich lösen.',
     'benefits.title2': 'Sammeln',
     'benefits.desc2': 'Aufmerksamkeit kehrt zurück.',
-    'benefits.title3': 'Sinken',
-    'benefits.desc3': 'Der Abend wird tiefer.',
+    'benefits.title3': 'Ankommen',
+    'benefits.desc3': 'Der Abend wird spürbar.',
 
     // Philosophy / CustomerStory
     'philosophy.tag': 'Die Philosophie',
     'philosophy.title': 'Der Abend gehört wieder dir.',
     'philosophy.text1': 'Zwischen Gesprächen, Entscheidungen und Gedanken, die noch nachlaufen, geht oft jener Moment verloren, in dem der Tag innerlich endet.',
-    'philosophy.text2': 'HESPYRA ist für diesen Übergang geschaffen — bevor aus Bewegung wieder Stille wird.',
+    'philosophy.text2': 'HESPYRA gibt diesem Übergang eine Form:\nein stilles Abendritual für den Moment,\nbevor aus Bewegung wieder Ruhe wird.',
 
     // EditorialPause
     'pause.line1': 'Nicht alles muss mit',
@@ -44,18 +44,18 @@ const translations: Record<Language, Record<string, string>> = {
     'ritual.tag': 'Das Ritual',
     'ritual.title': 'Ein kleiner Moment.',
     'ritual.desc': 'Genug, um den Abend zu beginnen.',
-    'ritual.step1_tag': 'Ankommen',
-    'ritual.step1_text': 'Ein Scoop in dein Glas. Ein erster Moment, der nur dir gehört.',
-    'ritual.step2_tag': 'Loslassen',
-    'ritual.step2_text': 'Rühren. Atmen. Den Tag langsam aus dem Kopf nehmen.',
-    'ritual.step3_tag': 'Übergehen',
+    'ritual.step1_tag': 'Lösen',
+    'ritual.step1_text': 'Ein Scoop in dein Glas. Der Tag darf leiser werden.',
+    'ritual.step2_tag': 'Sammeln',
+    'ritual.step2_text': 'Rühren. Atmen. Aufmerksamkeit kehrt zurück.',
+    'ritual.step3_tag': 'Ankommen',
     'ritual.step3_text': 'Trink dein Ritual, bevor der Abend in die Nacht übergeht.',
     'ritual.alt': 'HESPYRA Abendritual Zubereitung Schritt',
 
     // Ingredients
     'ingredients.tag': 'Rezeptur',
     'ingredients.title': 'Eine Komposition für den Abend.',
-    'ingredients.desc': 'Ausgewählte Mineralien, Pflanzenextrakte und warme Geschmacksnoten verbinden sich zu einem Ritual, das nicht drängt — sondern begleitet.',
+    'ingredients.desc': 'Eine ruhige Komposition aus Mineralstoffen, Pflanzenextrakten, Aminosäuren und warmen Geschmacksnoten.',
     
     // Ingredients Groups (German)
     'ing.group_ruhe_tag': 'Mineralische Basis',
@@ -63,7 +63,7 @@ const translations: Record<Language, Record<string, string>> = {
     'ing.group_ruhe_desc': 'Eine ruhige Basis für den Übergang in den Abend.',
     
     'ing.group_balance_tag': 'Pflanzliche Tiefe',
-    'ing.group_balance_title': 'Balance',
+    'ing.group_balance_title': 'Sammlung',
     'ing.group_balance_desc': 'Pflanzliche Tiefe für einen Abend, der sich gesammelter anfühlt.',
     
     'ing.group_ritual_tag': 'Geschmack & Ritual',
@@ -105,11 +105,11 @@ const translations: Record<Language, Record<string, string>> = {
     // Gallery
     'gallery.tag': 'Abendkultur',
     'gallery.title': 'Abendkultur, neu gedacht.',
-    'gallery.desc': 'Nicht als Rückzug.\nSondern als bewusster Übergang in das, was nach dem Tag beginnt.',
+    'gallery.desc': 'Nicht als Rückzug.\nSondern als bewusster Übergang in einen Abend,\nder wieder dir gehört.',
 
     // Waitlist
     'waitlist.title': 'Die erste Edition von HESPYRA.',
-    'waitlist.desc': 'Wir öffnen HESPYRA in kleinen Schritten.\nTrage dich ein, um zu erfahren, wann das erste Ritual erhältlich ist.',
+    'waitlist.desc': 'Wir öffnen HESPYRA in kleinen Schritten.\nTrage dich ein, wenn du den ersten Schritt begleiten möchtest.',
     'waitlist.placeholder': 'E-Mail-Adresse',
     'waitlist.submit': 'Einladung erhalten',
     'waitlist.success': 'Danke. Wir melden uns leise.',
@@ -131,10 +131,10 @@ const translations: Record<Language, Record<string, string>> = {
   },
   en: {
     // Hero
-    'hero.slogan': 'Not for sleep.\nFor the moment before.',
+    'hero.slogan': 'NOT FOR SLEEP.\nFOR THE MOMENT BEFORE.',
     'hero.title': 'Evening starts in your mind.',
-    'hero.desc': 'When the day echoes, a different pace begins. HESPYRA is an evening ritual for the quiet transition — from the outside back to you.',
-    'hero.cta': 'Get invited to the ritual',
+    'hero.desc': 'When the day echoes, the evening needs its own beginning. HESPYRA is a daily evening ritual to stir in — for the transition when the day is allowed to become quieter.',
+    'hero.cta': 'RECEIVE INVITATION',
     'hero.benefit1': 'Mental Unwinding',
     'hero.benefit2': 'Regeneration',
     'hero.benefit3': 'Inner Stillness',
@@ -145,14 +145,14 @@ const translations: Record<Language, Record<string, string>> = {
     'benefits.desc1': 'The day is allowed to dissolve.',
     'benefits.title2': 'Gather',
     'benefits.desc2': 'Attention returns.',
-    'benefits.title3': 'Sink',
-    'benefits.desc3': 'The evening deepens.',
+    'benefits.title3': 'Arrive',
+    'benefits.desc3': 'The evening becomes tangible.',
 
     // Philosophy / CustomerStory
     'philosophy.tag': 'The Philosophy',
     'philosophy.title': 'Reclaim your evening.',
     'philosophy.text1': 'Between conversations, decisions, and thoughts that still linger, the moment in which the day ends internally is often lost.',
-    'philosophy.text2': 'HESPYRA is created for this transition — before movement becomes stillness again.',
+    'philosophy.text2': 'HESPYRA gives this transition a form:\na quiet evening ritual for the moment,\nbefore movement becomes calm again.',
 
     // EditorialPause
     'pause.line1': 'Not everything has to come',
@@ -162,18 +162,18 @@ const translations: Record<Language, Record<string, string>> = {
     'ritual.tag': 'The Ritual',
     'ritual.title': 'A small moment.',
     'ritual.desc': 'Enough to begin the evening.',
-    'ritual.step1_tag': 'Arrive',
-    'ritual.step1_text': 'One scoop in your glass. A first moment that belongs only to you.',
-    'ritual.step2_tag': 'Let Go',
-    'ritual.step2_text': 'Stir. Breathe. Slowly letting the day leave your mind.',
-    'ritual.step3_tag': 'Transition',
+    'ritual.step1_tag': 'Release',
+    'ritual.step1_text': 'One scoop in your glass. The day is allowed to become quieter.',
+    'ritual.step2_tag': 'Gather',
+    'ritual.step2_text': 'Stir. Breathe. Attention returns.',
+    'ritual.step3_tag': 'Arrive',
     'ritual.step3_text': 'Drink your ritual before evening transitions into the night.',
     'ritual.alt': 'HESPYRA evening ritual preparation step',
 
     // Ingredients
     'ingredients.tag': 'Formula',
     'ingredients.title': 'A composition for the evening.',
-    'ingredients.desc': 'Selected minerals, plant extracts, and warm flavor notes combine to create a ritual that does not rush — but accompanies.',
+    'ingredients.desc': 'A quiet composition of minerals, plant extracts, amino acids, and warm flavor notes.',
     
     // Ingredients Groups (English)
     'ing.group_ruhe_tag': 'Mineral Base',
@@ -181,7 +181,7 @@ const translations: Record<Language, Record<string, string>> = {
     'ing.group_ruhe_desc': 'A quiet base for the transition into the evening.',
     
     'ing.group_balance_tag': 'Botanical Depth',
-    'ing.group_balance_title': 'Balance',
+    'ing.group_balance_title': 'Gathering',
     'ing.group_balance_desc': 'Botanical depth for an evening that feels more centered.',
     
     'ing.group_ritual_tag': 'Flavor & Ritual',
@@ -223,11 +223,11 @@ const translations: Record<Language, Record<string, string>> = {
     // Gallery
     'gallery.tag': 'Evening Culture',
     'gallery.title': 'Evening culture, reimagined.',
-    'gallery.desc': 'Not as a retreat.\nBut as a conscious transition into what begins after the day.',
+    'gallery.desc': 'Not as a retreat.\nBut as a conscious transition into an evening\nthat belongs to you again.',
 
     // Waitlist
     'waitlist.title': 'The first edition of HESPYRA.',
-    'waitlist.desc': 'We open HESPYRA in small steps.\nJoin to know when the first ritual is available.',
+    'waitlist.desc': 'We open HESPYRA in small steps.\nSign up if you would like to accompany the first step.',
     'waitlist.placeholder': 'Email address',
     'waitlist.submit': 'Receive invitation',
     'waitlist.success': 'Thank you. We will reach out quietly.',
