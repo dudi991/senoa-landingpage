@@ -3,8 +3,8 @@ import { useLanguage } from '../context/LanguageContext';
 const Gallery = () => {
   const { t } = useLanguage();
   const images = [
-    "images/abendMeer.webp",
     "images/abend_lesen.webp",
+    "images/abendMeer.webp",
     "images/abendcouch.webp",
     "images/abendterasse.webp",
     "images/abendDraußen.webp",
