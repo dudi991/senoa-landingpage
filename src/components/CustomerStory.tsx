@@ -50,7 +50,7 @@ const CustomerStory = () => {
           </div>
 
           {/* Right Column - Large Widescreen Editorial Image */}
-          <div className="lg:col-span-7 relative min-h-[400px] lg:min-h-[500px] rounded-sm overflow-hidden shadow-sm analog-wrapper analog-grain">
+          <div className="lg:col-span-7 relative aspect-[3/2] lg:aspect-auto lg:h-full min-h-[220px] lg:min-h-[500px] rounded-sm overflow-hidden shadow-sm analog-wrapper analog-grain">
             <img 
               src="images/philosophieWindow.webp" 
               alt={t('philosophy.title')} 
