@@ -10,24 +10,24 @@ const Hero = ({ isCalm }: HeroProps) => {
   return (
     <section className="relative w-full min-h-[80vh] lg:min-h-[90vh] flex items-center overflow-hidden bg-white pt-24 sm:pt-28 lg:pt-28 pb-12 lg:pb-12">
       {/* Background Image */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
+      <div className="absolute inset-0 z-0 overflow-hidden analog-grain">
         <img 
-          src="images/HESPYRA_HERO.webp" 
+          src="images/heroNeu.webp" 
           alt="HESPYRA Night Reset Background" 
-          className={`w-full h-full object-cover object-center opacity-85 saturate-[1.12] contrast-[1.04] transition-all duration-[2500ms] animate-ken-burns ${isCalm ? 'brightness-[1.12]' : 'brightness-[0.93]'}`}
+          className={`w-full h-full object-cover object-center opacity-85 saturate-[1.12] contrast-[1.04] transition-all duration-[2500ms] animate-ken-burns ${isCalm ? 'brightness-[1.05]' : 'brightness-[0.93]'}`}
         />
         
         {/* --- Hero Gradient Overlays (Horizontal) --- */}
         {/* Day Mode Horizontal Overlay (Original natural foggier settings restored) */}
         <div className={`absolute inset-0 bg-gradient-to-b from-white/80 via-white/40 to-white/75 lg:bg-gradient-to-r lg:from-white/75 lg:via-white/35 lg:to-transparent lg:from-white/55 transition-opacity duration-[2500ms] ease-in-out ${isCalm ? 'opacity-0' : 'opacity-100'}`} />
-        {/* Calm Mode Horizontal Overlay (Highly brightened premium night mode) */}
-        <div className={`absolute inset-0 bg-gradient-to-b from-[#0B0D14]/20 via-[#0B0D14]/05 to-[#0B0D14]/15 lg:bg-gradient-to-r lg:from-[#0B0D14]/25 lg:via-[#0B0D14]/05 lg:to-transparent transition-opacity duration-[2500ms] ease-in-out ${isCalm ? 'opacity-100' : 'opacity-0'}`} />
+        {/* Calm Mode Horizontal Overlay (Perfect contrast for dark mode on light wall) */}
+        <div className={`absolute inset-0 bg-gradient-to-b from-[#0B0D14]/75 via-[#0B0D14]/40 to-[#0B0D14]/20 lg:bg-gradient-to-r lg:from-[#0B0D14]/70 lg:via-[#0B0D14]/30 lg:to-transparent transition-opacity duration-[2500ms] ease-in-out ${isCalm ? 'opacity-100' : 'opacity-0'}`} />
  
         {/* --- Top Navbar Gradient Overlays (Vertical) --- */}
         {/* Day Mode Top Navbar Overlay (Original natural foggier settings restored) */}
         <div className={`absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-white/80 via-white/30 to-transparent transition-opacity duration-[2500ms] ease-in-out ${isCalm ? 'opacity-0' : 'opacity-100'}`} />
-        {/* Calm Mode Top Navbar Overlay (Highly brightened premium night mode) */}
-        <div className={`absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[#0B0D14]/20 via-[#0B0D14]/02 to-transparent transition-opacity duration-[2500ms] ease-in-out ${isCalm ? 'opacity-100' : 'opacity-0'}`} />
+        {/* Calm Mode Top Navbar Overlay (twilight vignette for crisp white navbar text contrast) */}
+        <div className={`absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[#0B0D14]/70 via-[#0B0D14]/25 to-transparent transition-opacity duration-[2500ms] ease-in-out ${isCalm ? 'opacity-100' : 'opacity-0'}`} />
       </div>
  
       {/* Lunar Monogram Watermark (Signature Element) */}

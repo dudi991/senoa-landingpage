@@ -53,11 +53,11 @@ const Ritual = () => {
           </div>
 
           {/* Middle Column - Clean Square Image (Show only Step 2 Image statically) */}
-          <div className="w-full max-w-[320px] mx-auto lg:max-w-none lg:mx-0 lg:col-span-4 aspect-square bg-primary/5 overflow-hidden rounded-sm shadow-sm relative">
+          <div className="w-full max-w-[320px] mx-auto lg:max-w-none lg:mx-0 lg:col-span-4 aspect-square bg-primary/5 overflow-hidden rounded-sm shadow-sm relative analog-wrapper analog-grain">
             <img 
-              src="images/HESPYRA_SCOOP.webp" 
+              src="images/ritual.webp" 
               alt={t('ritual.alt')} 
-              className="absolute inset-0 w-full h-full object-cover object-center"
+              className="absolute inset-0 w-full h-full object-cover object-center analog-image"
             />
           </div>
 

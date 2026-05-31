@@ -50,11 +50,11 @@ const CustomerStory = () => {
           </div>
 
           {/* Right Column - Large Widescreen Editorial Image */}
-          <div className="lg:col-span-7 relative min-h-[400px] lg:min-h-[500px] rounded-sm overflow-hidden shadow-sm">
+          <div className="lg:col-span-7 relative min-h-[400px] lg:min-h-[500px] rounded-sm overflow-hidden shadow-sm analog-wrapper analog-grain">
             <img 
-              src="images/derAbend.webp" 
+              src="images/philosophieWindow.webp" 
               alt={t('philosophy.title')} 
-              className="absolute inset-0 w-full h-full object-cover"
+              className="absolute inset-0 w-full h-full object-cover analog-image"
             />
           </div>
 

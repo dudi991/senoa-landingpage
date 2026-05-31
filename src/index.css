@@ -243,4 +243,41 @@
                 color 2.5s cubic-bezier(0.16, 1, 0.3, 1), 
                 border-color 2.5s cubic-bezier(0.16, 1, 0.3, 1);
   }
+
+  /* Subtle Analog Film Grain and Soft Focus Overlays */
+  .analog-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* 
+    Subtle film grain overlay: 
+    Uses a data-URI SVG fractal noise with numOctaves=3 and baseFrequency=0.85
+    to create ultra-fine, organic noise.
+    The opacity is set to a super-subtle 4.5% (0.045), 
+    making it barely visible but instantly breaking the flat, smooth "digital/AI" look.
+  */
+  .analog-grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2;
+    opacity: 0.045; /* Ultra-subtle, elegant noise */
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+
+  /* 
+    Subtle analog lens softening:
+    Reduces artificial digital sharpening, providing a natural, warm lens focus.
+    We also slightly desaturate (grayscale 8%) and warm up the contrast.
+  */
+  .analog-image {
+    filter: grayscale(0.08) contrast(0.98) brightness(1.01) blur(0.2px);
+    transition: filter 0.7s ease, transform 0.7s ease;
+  }
+
+  .analog-image:hover {
+    filter: grayscale(0.03) contrast(1) brightness(1.02) blur(0px);
+  }
 }

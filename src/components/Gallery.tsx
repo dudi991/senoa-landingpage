@@ -3,12 +3,12 @@ import { useLanguage } from '../context/LanguageContext';
 const Gallery = () => {
   const { t } = useLanguage();
   const images = [
-    "images/abend1.webp",
-    "images/abend2.webp",
-    "images/HESPYRA_candle.webp",
-    "images/HESPYRA_Gruppe.webp",
-    "images/abend3.webp",
-    "images/abend4.webp"
+    "images/abendMeer.webp",
+    "images/abend_lesen.webp",
+    "images/abendterasse.webp",
+    "images/abendDraußen.webp",
+    "images/abend4.webp",
+    "images/HESPYRA_candle.webp"
   ];
 
   return (
@@ -53,12 +53,12 @@ const Gallery = () => {
           {images.map((src, index) => (
             <div 
               key={index} 
-              className="w-[85vw] sm:w-[50vw] md:w-[33.333vw] lg:w-[25vw] aspect-[16/10] relative flex-shrink-0 cursor-pointer overflow-hidden border-r-[6px] border-white snap-start transition-opacity duration-700 group-hover:opacity-40 hover:!opacity-100"
+              className="w-[85vw] sm:w-[50vw] md:w-[33.333vw] lg:w-[25vw] aspect-[16/10] relative flex-shrink-0 cursor-pointer overflow-hidden border-r-[6px] border-white snap-start transition-opacity duration-700 group-hover:opacity-40 hover:!opacity-100 analog-wrapper analog-grain"
             >
               <img 
                 src={src} 
                 alt={`Lifestyle ${index + 1}`} 
-                className="absolute inset-0 w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 hover:scale-105 transition-all duration-700 ease-out"
+                className="absolute inset-0 w-full h-full object-cover grayscale-[0.15] hover:grayscale-0 hover:scale-105 transition-all duration-700 ease-out analog-image"
               />
             </div>
           ))}
