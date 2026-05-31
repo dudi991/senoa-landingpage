@@ -28,7 +28,7 @@ const CustomerStory = () => {
             </div>
             
             {/* Elegant Grand Typographic Headline & Story Paragraphs aligned perfectly */}
-            <div className="w-full max-w-[320px] mx-auto lg:max-w-none lg:mx-0 flex flex-col items-center lg:items-start text-center lg:text-left">
+            <div className="w-full max-w-[320px] md:max-w-[680px] lg:max-w-none mx-auto lg:mx-0 flex flex-col items-center lg:items-start text-center lg:text-left">
               <h2 className="text-4xl lg:text-[3.25rem] leading-[1.15] font-serif text-primary tracking-tight mb-6 lg:mb-8">
                 {t('philosophy.title').split('\n').map((line, i) => (
                   <span key={i}>
@@ -50,7 +50,7 @@ const CustomerStory = () => {
           </div>
 
           {/* Right Column - Large Widescreen Editorial Image */}
-          <div className="lg:col-span-7 relative aspect-[3/2] lg:aspect-auto lg:h-full min-h-[220px] lg:min-h-[500px] rounded-sm overflow-hidden shadow-sm analog-wrapper analog-grain">
+          <div className="lg:col-span-7 relative aspect-[3/2] lg:aspect-auto lg:h-full min-h-[220px] lg:min-h-[500px] w-full max-w-[320px] md:max-w-[680px] lg:max-w-none mx-auto lg:mx-0 rounded-sm overflow-hidden shadow-sm analog-wrapper analog-grain">
             <img 
               src="images/philosophieWindow.webp" 
               alt={t('philosophy.title')} 
