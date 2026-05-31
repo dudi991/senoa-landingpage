@@ -1,7 +1,15 @@
+import { useRef, useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 
 const Gallery = () => {
   const { t } = useLanguage();
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  
+  // State for desktop click-and-drag horizontal scroll
+  const [isDown, setIsDown] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
   const images = [
     "images/abend_lesen.webp",
     "images/abendMeer.webp",
@@ -11,6 +19,29 @@ const Gallery = () => {
     "images/abend4.webp",
     "images/HESPYRA_candle.webp"
   ];
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (!scrollContainerRef.current) return;
+    setIsDown(true);
+    setStartX(e.pageX - scrollContainerRef.current.offsetLeft);
+    setScrollLeft(scrollContainerRef.current.scrollLeft);
+  };
+
+  const handleMouseLeave = () => {
+    setIsDown(false);
+  };
+
+  const handleMouseUp = () => {
+    setIsDown(false);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDown || !scrollContainerRef.current) return;
+    e.preventDefault();
+    const x = e.pageX - scrollContainerRef.current.offsetLeft;
+    const walk = (x - startX) * 1.5; // Scroll speed modifier
+    scrollContainerRef.current.scrollLeft = scrollLeft - walk;
+  };
 
   return (
     <section className="w-full bg-white pt-10 lg:pt-16 pb-3 lg:pb-4 overflow-hidden">
@@ -48,9 +79,20 @@ const Gallery = () => {
         </div>
       </div>
 
-      {/* Smooth Manual Swipe Gallery */}
+      {/* Smooth Click-and-Drag horizontal scroll gallery for both mobile and desktop */}
       <div className="w-full bg-primary/5 transition-colors duration-700">
-        <div className="flex w-full overflow-x-auto overflow-y-hidden snap-x snap-mandatory scrollbar-hide group">
+        <div 
+          ref={scrollContainerRef}
+          onMouseDown={handleMouseDown}
+          onMouseLeave={handleMouseLeave}
+          onMouseUp={handleMouseUp}
+          onMouseMove={handleMouseMove}
+          className={`flex w-full overflow-x-auto overflow-y-hidden scrollbar-hide group transition-all select-none ${
+            isDown 
+              ? 'cursor-grabbing snap-none' 
+              : 'cursor-grab snap-x snap-mandatory'
+          }`}
+        >
           {images.map((src, index) => (
             <div 
               key={index} 
@@ -61,6 +103,7 @@ const Gallery = () => {
                 alt={`Lifestyle ${index + 1}`} 
                 className="absolute inset-0 w-full h-full object-cover grayscale-[0.15] hover:grayscale-0 hover:scale-105 transition-all duration-700 ease-out analog-image"
                 loading="lazy"
+                draggable="false"
               />
             </div>
           ))}
