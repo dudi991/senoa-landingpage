@@ -251,30 +251,54 @@
   }
 
   /* 
-    Subtle film grain overlay: 
-    Uses a data-URI SVG fractal noise with numOctaves=3 and baseFrequency=0.85
-    to create ultra-fine, organic noise.
-    The opacity is set to a super-subtle 4.5% (0.045), 
-    making it barely visible but instantly breaking the flat, smooth "digital/AI" look.
+    Idea A: Dynamic active film grain overlay
+    We animate the background-position of the SVG noise using a rapid 4-step loop
+    to simulate real-time chemical film grain.
   */
+  @keyframes activeGrain {
+    0%, 100% { background-position: 0px 0px; }
+    20% { background-position: 15px 30px; }
+    40% { background-position: -25px 10px; }
+    60% { background-position: 30px -15px; }
+    80% { background-position: -10px -25px; }
+  }
+
   .analog-grain::after {
     content: "";
     position: absolute;
     inset: 0;
     pointer-events: none;
-    z-index: 2;
+    z-index: 3;
     opacity: 0.045; /* Ultra-subtle, elegant noise */
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    background-size: 180px 180px;
+    animation: activeGrain 0.35s steps(5) infinite; /* Fast, stepped grain loop simulating analog film projection */
   }
 
   /* 
-    Subtle analog lens softening:
+    Idea C: Subtle ambient warm light leak (Lens Flare)
+    A very soft amber radial gradient positioned in the top-right corner of the container.
+    At 5.5% opacity, it merges beautifully with the image colors.
+  */
+  .analog-grain::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2;
+    opacity: 0.055; /* Ultra-subtle counter-light flare */
+    background: radial-gradient(circle at 85% 15%, rgba(255, 175, 90, 1) 0%, rgba(255, 150, 50, 0.4) 40%, transparent 80%);
+    mix-blend-mode: screen;
+  }
+
+  /* 
+    Idea B: Vintage lens characteristics (Anti-sharpening, subtle center focus)
     Reduces artificial digital sharpening, providing a natural, warm lens focus.
     We also slightly desaturate (grayscale 8%) and warm up the contrast.
   */
   .analog-image {
-    filter: grayscale(0.08) contrast(0.98) brightness(1.01) blur(0.2px);
-    transition: filter 0.7s ease, transform 0.7s ease;
+    filter: grayscale(0.08) contrast(0.97) brightness(1.01) blur(0.25px);
+    transition: filter 0.8s ease, transform 0.8s ease;
   }
 
   .analog-image:hover {
