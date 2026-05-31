@@ -59,6 +59,7 @@ const Gallery = () => {
                 src={src} 
                 alt={`Lifestyle ${index + 1}`} 
                 className="absolute inset-0 w-full h-full object-cover grayscale-[0.15] hover:grayscale-0 hover:scale-105 transition-all duration-700 ease-out analog-image"
+                loading="lazy"
               />
             </div>
           ))}

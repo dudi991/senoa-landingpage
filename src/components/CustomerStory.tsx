@@ -55,6 +55,7 @@ const CustomerStory = () => {
               src="images/philosophieWindow.webp" 
               alt={t('philosophy.title')} 
               className="absolute inset-0 w-full h-full object-cover analog-image"
+              loading="lazy"
             />
           </div>
 

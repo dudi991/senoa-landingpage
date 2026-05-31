@@ -58,6 +58,7 @@ const Ritual = () => {
               src="images/ritual.webp" 
               alt={t('ritual.alt')} 
               className="absolute inset-0 w-full h-full object-cover object-center analog-image"
+              loading="lazy"
             />
           </div>
 
