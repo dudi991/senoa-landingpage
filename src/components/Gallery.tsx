@@ -5,6 +5,7 @@ const Gallery = () => {
   const images = [
     "images/abendMeer.webp",
     "images/abend_lesen.webp",
+    "images/abendcouch.webp",
     "images/abendterasse.webp",
     "images/abendDraußen.webp",
     "images/abend4.webp",
