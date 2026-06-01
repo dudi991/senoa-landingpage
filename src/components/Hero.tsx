@@ -12,7 +12,7 @@ const Hero = ({ isCalm }: HeroProps) => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0 overflow-hidden analog-grain">
         <img 
-          src="images/heroNeu.webp" 
+          src="images/heroAbend.webp" 
           alt="HESPYRA Night Reset Background" 
           className={`w-full h-full object-cover object-center opacity-85 saturate-[1.12] contrast-[1.04] transition-all duration-[2500ms] animate-ken-burns ${isCalm ? 'brightness-[1.05]' : 'brightness-[0.93]'}`}
         />

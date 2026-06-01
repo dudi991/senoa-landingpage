@@ -17,6 +17,16 @@ const Waitlist = () => {
     setError('');
 
     try {
+      // Dev-Mode Mock: Simulate successful subscription locally if the Vercel API is not running
+      if (import.meta.env.DEV) {
+        console.log('[Dev Mode] Simulating Waitlist API subscription for:', email.trim());
+        await new Promise((resolve) => setTimeout(resolve, 850));
+        setSubmitted(true);
+        setEmail('');
+        setIsSubmitting(false);
+        return;
+      }
+
       const response = await fetch('/api/subscribe', {
         method: 'POST',
         headers: {
