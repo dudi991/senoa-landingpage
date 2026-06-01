@@ -14,7 +14,7 @@ const Hero = ({ isCalm }: HeroProps) => {
         <img 
           src="images/heroAbend.webp" 
           alt="HESPYRA Night Reset Background" 
-          className={`w-full h-full object-cover object-center opacity-85 saturate-[1.12] contrast-[1.04] transition-all duration-[2500ms] animate-ken-burns ${isCalm ? 'brightness-[1.05]' : 'brightness-[0.93]'}`}
+          className={`w-full h-full object-cover object-center opacity-85 saturate-[0.94] contrast-[0.97] blur-[0.35px] transition-all duration-[2500ms] animate-ken-burns ${isCalm ? 'brightness-[1.05]' : 'brightness-[0.93]'}`}
         />
         
         {/* --- Hero Gradient Overlays (Horizontal) --- */}
