@@ -1,19 +1,19 @@
-# Umsetzungsplan - LYVAN Digital Flagship Rebranding & Restrukturierung
+# Umsetzungsplan - HESPYRA Digital Flagship Restrukturierung
 
-Wir strukturieren die Landingpage in `elys_final` um, um die neue Markenidentität **LYVAN** und die neue 9-teilige Seitenstruktur zu implementieren. Die minimalistische, edle "Quiet Luxury"-Ästhetik (helle Hintergründe, großzügige Abstände, feine Linien, Serif-Schriftzüge) bleibt dabei vollkommen erhalten.
+Wir strukturieren die Landingpage in `elys_final` um, um die Markenidentität **HESPYRA** und die neue 9-teilige Seitenstruktur zu implementieren. Die minimalistische, edle "Quiet Luxury"-Ästhetik (helle Hintergründe, großzügige Abstände, feine Linien, Serif-Schriftzüge) bleibt dabei vollkommen erhalten.
 
 ---
 
 ## 📐 Die neue Seitenstruktur & Kopie (German Version)
 
 ### 1. **Header & Navigation (Navbar.tsx)**
-*   **Logo:** `L Y V A N` (tracking-widest font-sans)
+*   **Logo:** `H E S P Y R A` (tracking-widest font-sans)
 *   **Links:** `RITUAL`, `REZEPTUR`, `PHILOSOPHIE`, `WARTELISTE`
 *   **CTA Button:** `WARTELISTE BEITRETEN` (bg-accent text-white)
 
 ### 2. **Hero – Der Wunschzustand (Hero.tsx)**
 *   **Headline:** `Feierabend beginnt im Kopf.`
-*   **Subheading:** `LYVAN ist dein tägliches Abendritual — ein bewusster Übergang aus dem Leistungsmodus in echte Ruhe.`
+*   **Subheading:** `HESPYRA ist dein tägliches Abendritual — ein bewusster Übergang aus dem Leistungsmodus in echte Ruhe.`
 *   **CTA Button:** `WARTELISTE BEITRETEN`
 *   **Key Benefits Grid:**
     *   *Emotional Decompression* ➔ *Mentales Entlasten*
@@ -34,7 +34,7 @@ Wir strukturieren die Landingpage in `elys_final` um, um die neue Markenidentit�
 *   **Headline:** `Der Tag endet nicht von allein.`
 *   **Story-Text:**
     *   *Zwischen Meetings, Nachrichten und Gedanken, die nie ganz still werden, vergessen viele Menschen, wie sich echte Ruhe anfühlt.*
-    *   *LYVAN schafft Raum für den Übergang — bevor aus Erschöpfung wieder Regeneration werden kann.*
+    *   *HESPYRA schafft Raum für den Übergang — bevor aus Erschöpfung wieder Regeneration werden kann.*
 
 ### 5. **Editorial Pause – Weniger funktionieren. Mehr ankommen. (EditorialPause.tsx)**
 *   Ein typografisches Ruhebild als visuelle Atempause der Seite.
@@ -68,18 +68,18 @@ Wir strukturieren die Landingpage in `elys_final` um, um die neue Markenidentit�
 *   Unsere edle Bildergalerie mit der neuen deutschen Überschrift:
     *   `Moderne Abende brauchen neue Rituale.`
 
-### 9. **Waitlist – Werde Teil von LYVAN. (Waitlist.tsx)**
+### 9. **Waitlist – Werde Teil von HESPYRA. (Waitlist.tsx)**
 *   Ein extrem minimalistisches Eingabefeld für E-Mails (feiner 1px-Rahmen) mit dem dominanten, kontrastreichen Button `DABEI SEIN`.
 
 ### 10. **Footer – Minimaler Abschluss (Footer.tsx)**
-*   Abschluss-Branding `LYVAN` mit dem Claim "Dein Abend. Deine Ruhe. Dein Ritual." sowie Impressum & Datenschutz.
+*   Abschluss-Branding `HESPYRA` mit dem Claim "Dein Abend. Deine Ruhe. Dein Ritual." sowie Impressum & Datenschutz.
 
 ---
 
 ## 🛠️ Geplante Änderungen in `elys_final`
 
 1.  **[MODIFY] [App.tsx](file:///d:/antigravity/elys_final/src/App.tsx):** Strukturierung der Seitenreihenfolge und Einbindung der neuen/angepassten Komponenten.
-2.  **[MODIFY] [Navbar.tsx](file:///d:/antigravity/elys_final/src/components/Navbar.tsx):** Umbenennung auf LYVAN & deutsche Navigation.
+2.  **[MODIFY] [Navbar.tsx](file:///d:/antigravity/elys_final/src/components/Navbar.tsx):** Branding & deutsche Navigation.
 3.  **[MODIFY] [Hero.tsx](file:///d:/antigravity/elys_final/src/components/Hero.tsx):** Aktualisierung der Texte und Anpassung an das helle Design.
 4.  **[NEW] [BenefitStrip.tsx](file:///d:/antigravity/elys_final/src/components/BenefitStrip.tsx):** Der feine 5er-Vorteilsstreifen.
 5.  **[NEW] [CustomerStory.tsx](file:///d:/antigravity/elys_final/src/components/CustomerStory.tsx):** Die neue Editorial-Sektion "Der Tag endet nicht von allein".

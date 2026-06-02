@@ -95,9 +95,19 @@
     color: rgba(243, 244, 246, 0.8) !important;
   }
   
+  .calm-mode .text-primary\/70,
+  .calm-mode [class*="text-primary/70"] {
+    color: rgba(243, 244, 246, 0.75) !important;
+  }
+  
   .calm-mode .text-primary\/60,
   .calm-mode [class*="text-primary/60"] {
     color: rgba(243, 244, 246, 0.82) !important; /* Brighter kicker text for enhanced night mode contrast */
+  }
+  
+  .calm-mode .text-primary\/50,
+  .calm-mode [class*="text-primary/50"] {
+    color: rgba(243, 244, 246, 0.65) !important;
   }
   
   .calm-mode .text-primary\/40,
@@ -214,6 +224,12 @@
   .calm-mode .border-primary:hover {
     background-color: #F3F4F6 !important;
     color: #0B0D14 !important;
+  }
+  
+  /* Prevent text-primary hover elements from turning dark/invisible on dark background */
+  .calm-mode .hover\:text-primary:hover,
+  .calm-mode [class*="hover:text-primary"]:hover {
+    color: #FFFFFF !important;
   }
   
   /* Gallery image borders and background override in calm mode */

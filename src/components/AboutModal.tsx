@@ -72,7 +72,7 @@ const AboutModal = ({ isOpen, onClose }: AboutModalProps) => {
             </p>
 
             <p>
-              Unser erstes Ritual ist eine trinkbare Komposition für den Abend: ausgewählte Mineralien, Pflanzenextrakte und warme Geschmacksnoten, verbunden mit einer einfachen Handlung. Ein Scoop. Ein Glas. Ein Moment, in dem der Tag leiser werden darf.
+              Unser erstes Ritual ist eine trinkbare Komposition für den Abend: ausgewählte Mineralien, Pflanzenextrakte und warme Geschmacksnoten, verbunden mit einer einfachen Handlung. Ein Löffel. Ein Glas. Ein Moment, in dem der Tag leiser werden darf.
             </p>
 
             <div className="pl-4 border-l border-primary/20 py-1 space-y-2">
@@ -112,7 +112,7 @@ const AboutModal = ({ isOpen, onClose }: AboutModalProps) => {
             </p>
 
             <p>
-              Our first ritual is a drinkable composition for the evening: selected minerals, plant extracts, and warm flavor notes, combined with a simple action. A scoop. A glass. A moment in which the day is allowed to grow quieter.
+              Our first ritual is a drinkable composition for the evening: selected minerals, plant extracts, and warm flavor notes, combined with a simple action. A spoon. A glass. A moment in which the day is allowed to grow quieter.
             </p>
 
             <div className="pl-4 border-l border-primary/20 py-1 space-y-2">

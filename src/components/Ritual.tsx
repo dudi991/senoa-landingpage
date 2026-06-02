@@ -71,12 +71,9 @@ const Ritual = () => {
                 <GlassWater className="w-10 h-10" strokeWidth={1} />
               </div>
               <div className="flex flex-col text-left">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xs font-sans font-normal text-primary tracking-widest">I.</span>
-                  <h4 className="font-sans text-[13px] tracking-[0.2em] font-bold uppercase leading-none text-primary">
-                    {t('ritual.step1_tag')}
-                  </h4>
-                </div>
+                <h4 className="font-sans text-[13px] tracking-[0.2em] font-bold uppercase leading-none text-primary mb-2">
+                  {t('ritual.step1_tag')}
+                </h4>
                 <p className="text-base lg:text-lg text-primary/70 leading-relaxed font-light max-w-sm">
                   {t('ritual.step1_text')}
                 </p>
@@ -89,12 +86,9 @@ const Ritual = () => {
                 <Wind className="w-10 h-10" strokeWidth={1} />
               </div>
               <div className="flex flex-col text-left">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xs font-sans font-normal text-primary tracking-widest">II.</span>
-                  <h4 className="font-sans text-[13px] tracking-[0.2em] font-bold uppercase leading-none text-primary">
-                    {t('ritual.step2_tag')}
-                  </h4>
-                </div>
+                <h4 className="font-sans text-[13px] tracking-[0.2em] font-bold uppercase leading-none text-primary mb-2">
+                  {t('ritual.step2_tag')}
+                </h4>
                 <p className="text-base lg:text-lg text-primary/70 leading-relaxed font-light max-w-sm">
                   {t('ritual.step2_text')}
                 </p>
@@ -107,12 +101,9 @@ const Ritual = () => {
                 <Moon className="w-10 h-10" strokeWidth={1} />
               </div>
               <div className="flex flex-col text-left">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xs font-sans font-normal text-primary tracking-widest">III.</span>
-                  <h4 className="font-sans text-[13px] tracking-[0.2em] font-bold uppercase leading-none text-primary">
-                    {t('ritual.step3_tag')}
-                  </h4>
-                </div>
+                <h4 className="font-sans text-[13px] tracking-[0.2em] font-bold uppercase leading-none text-primary mb-2">
+                  {t('ritual.step3_tag')}
+                </h4>
                 <p className="text-base lg:text-lg text-primary/70 leading-relaxed font-light max-w-sm">
                   {t('ritual.step3_text')}
                 </p>
@@ -121,6 +112,16 @@ const Ritual = () => {
 
           </div>
 
+        </div>
+
+        {/* Centered Product Clarity Signoff / Bridge */}
+        <div className="mt-16 lg:mt-20 text-center max-w-sm mx-auto select-none">
+          <p className="font-sans text-sm sm:text-base text-primary/80 font-normal mb-1">
+            {t('ritual.clarity_line1')}
+          </p>
+          <p className="font-sans text-sm sm:text-base text-primary/50 font-light">
+            {t('ritual.clarity_line2')}
+          </p>
         </div>
       </div>
     </section>

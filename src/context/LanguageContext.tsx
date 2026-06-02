@@ -15,7 +15,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Hero
     'hero.slogan': 'NICHT FÜR DEN SCHLAF.\nFÜR DEN MOMENT DAVOR.',
     'hero.title': 'Feierabend beginnt im Kopf.',
-    'hero.desc': 'Wenn der Tag nachhallt, braucht der Abend einen eigenen Anfang. HESPYRA ist ein tägliches Abendritual zum Einrühren — für den Übergang, wenn der Tag leiser werden darf.',
+    'hero.desc': 'HESPYRA ist ein trinkbares Abendritual.\nFür den Moment, in dem der Tag leiser werden darf.',
     'hero.cta': 'EINLADUNG ERHALTEN',
     'hero.benefit1': 'Mentales Entlasten',
     'hero.benefit2': 'Regeneration',
@@ -34,7 +34,7 @@ const translations: Record<Language, Record<string, string>> = {
     'philosophy.tag': 'Die Philosophie',
     'philosophy.title': 'Der Abend gehört wieder dir.',
     'philosophy.text1': 'Zwischen Gesprächen, Entscheidungen und Gedanken, die noch nachlaufen, geht oft jener Moment verloren, in dem der Tag innerlich endet.',
-    'philosophy.text2': 'HESPYRA gibt diesem Übergang eine Form:\nein stilles Abendritual für den Moment,\nbevor aus Bewegung wieder Ruhe wird.',
+    'philosophy.text2': 'HESPYRA gibt diesem Übergang eine Form: ein stilles Abendritual für den Moment, in dem der Tag zurücktreten darf.',
 
     // EditorialPause
     'pause.line1': 'Nicht alles muss mit',
@@ -43,9 +43,11 @@ const translations: Record<Language, Record<string, string>> = {
     // Ritual
     'ritual.tag': 'Das Ritual',
     'ritual.title': 'Ein kleiner Moment.',
-    'ritual.desc': 'Genug, um den Abend zu beginnen.',
+    'ritual.desc': 'Genug, um den Abend zu beginnen.\n\nWarm. Weich. Zurückhaltend.\nVanille, Tonka und eine ruhige Tiefe.\nNicht süß. Nicht schwer. Nicht laut.\n\nEin Löffel. Ein Glas.\nEin leiser Schnitt im Tag.\n\nNicht nebenbei.\nSondern als Anfang.',
+    'ritual.clarity_line1': 'Ein trinkbares Ritual in Pulverform.',
+    'ritual.clarity_line2': 'Für den Moment, in dem der Tag zurücktreten darf.',
     'ritual.step1_tag': 'Lösen',
-    'ritual.step1_text': 'Ein Scoop in dein Glas. Der Tag darf leiser werden.',
+    'ritual.step1_text': 'Ein Löffel ins Glas. Der Tag darf leiser werden.',
     'ritual.step2_tag': 'Sammeln',
     'ritual.step2_text': 'Rühren. Atmen. Aufmerksamkeit kehrt zurück.',
     'ritual.step3_tag': 'Ankommen',
@@ -54,31 +56,31 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Ingredients
     'ingredients.tag': 'Rezeptur',
-    'ingredients.title': 'Eine Komposition für den Abend.',
-    'ingredients.desc': 'Eine ruhige Komposition aus Mineralstoffen, Pflanzenextrakten, Aminosäuren und warmen Geschmacksnoten.',
+    'ingredients.title': 'Eine ruhige Komposition für den Abend.',
+    'ingredients.desc': 'Mineralstoffe, Pflanzenextrakte, Aminosäuren und warme Geschmacksnoten — ausgewählt für ein Ritual, das nicht laut wirken muss.',
     
     // Ingredients Groups (German)
-    'ing.group_ruhe_tag': 'Mineralische Basis',
-    'ing.group_ruhe_title': 'Ruhe',
-    'ing.group_ruhe_desc': 'Eine ruhige Basis für den Übergang in den Abend.',
+    'ing.group_ruhe_tag': 'Mineralstoffe',
+    'ing.group_ruhe_title': 'Lösen',
+    'ing.group_ruhe_desc': 'Eine mineralische Basis für den Moment, in dem der Tag nachlassen darf.',
     
-    'ing.group_balance_tag': 'Pflanzliche Tiefe',
-    'ing.group_balance_title': 'Sammlung',
-    'ing.group_balance_desc': 'Pflanzliche Tiefe für einen Abend, der sich gesammelter anfühlt.',
+    'ing.group_balance_tag': 'Pflanzenextrakte',
+    'ing.group_balance_title': 'Sammeln',
+    'ing.group_balance_desc': 'Ausgewählte Pflanzenextrakte und Aminosäuren für mehr innere Sammlung.',
     
     'ing.group_ritual_tag': 'Geschmack & Ritual',
-    'ing.group_ritual_title': 'Ritual',
-    'ing.group_ritual_desc': 'Warme Noten und vertraute Zutaten, die aus Zubereitung ein Ritual machen.',
+    'ing.group_ritual_title': 'Ankommen',
+    'ing.group_ritual_desc': 'Warme Noten und vertraute Zutaten, die aus Zubereitung einen stillen Moment des Ankommens machen.',
 
     // Ingredients descriptions (German)
     'ing.mag_bis': 'Eine mineralische Basis für den Abend.',
-    'ing.theanine': 'Aus grünem Tee. Klar, mild, zurückhaltend.',
-    'ing.apigenin': 'Ein Pflanzenstoff aus der Kamille.',
-    'ing.ashwa': 'Eine Wurzel mit langer Tradition.',
-    'ing.saffron': 'Ein Extrakt mit warmer Tiefe.',
-    'ing.phosph': 'Ein natürlicher Bestandteil pflanzlicher Lecithine.',
-    'ing.reishi': 'Erdig, tief, traditionell geschätzt.',
-    'ing.glycine': 'Sanft und leicht süßlich.',
+    'ing.theanine': 'Aus grünem Tee. Klar, mild, unaufgeregt.',
+    'ing.apigenin': 'Ein Pflanzenstoff aus der Kamille. Leise, vertraut, abendlich.',
+    'ing.ashwa': 'Eine Wurzel mit langer Tradition — ruhig, erdig, zurückhaltend.',
+    'ing.saffron': 'Ein Extrakt mit warmer Tiefe und feiner Präsenz.',
+    'ing.phosph': 'Aus pflanzlichen Lecithinen gewonnen. Ein klarer Bestandteil der Komposition.',
+    'ing.reishi': 'Ein Pilz mit Tiefe. Traditionell geschätzt, warm im Charakter.',
+    'ing.glycine': 'Sanft, leicht süßlich, rund.',
     'ing.vanilla': 'Warm, weich, ritualhaft.',
 
     // Ingredients Names (German)
@@ -133,7 +135,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Hero
     'hero.slogan': 'NOT FOR SLEEP.\nFOR THE MOMENT BEFORE.',
     'hero.title': 'Evening starts in your mind.',
-    'hero.desc': 'When the day echoes, the evening needs its own beginning. HESPYRA is a daily evening ritual to stir in — for the transition when the day is allowed to become quieter.',
+    'hero.desc': 'HESPYRA is a drinkable evening ritual.\nFor the moment when the day is allowed to become quieter.',
     'hero.cta': 'RECEIVE INVITATION',
     'hero.benefit1': 'Mental Unwinding',
     'hero.benefit2': 'Regeneration',
@@ -152,7 +154,7 @@ const translations: Record<Language, Record<string, string>> = {
     'philosophy.tag': 'The Philosophy',
     'philosophy.title': 'Reclaim your evening.',
     'philosophy.text1': 'Between conversations, decisions, and thoughts that still linger, the moment in which the day ends internally is often lost.',
-    'philosophy.text2': 'HESPYRA gives this transition a form:\na quiet evening ritual for the moment,\nbefore movement becomes calm again.',
+    'philosophy.text2': 'HESPYRA gives this transition a form: a quiet evening ritual for the moment in which the day is allowed to step back.',
 
     // EditorialPause
     'pause.line1': 'Not everything has to come',
@@ -161,9 +163,11 @@ const translations: Record<Language, Record<string, string>> = {
     // Ritual
     'ritual.tag': 'The Ritual',
     'ritual.title': 'A small moment.',
-    'ritual.desc': 'Enough to begin the evening.',
+    'ritual.desc': 'Enough to begin the evening.\n\nWarm. Soft. Reserved.\nVanilla, tonka, and a quiet depth.\nNot sweet. Not heavy. Not loud.\n\nOne spoon. One glass.\nA quiet break in the day.\n\nNot in passing.\nBut as a beginning.',
+    'ritual.clarity_line1': 'A drinkable ritual in powder form.',
+    'ritual.clarity_line2': 'For the moment when the day is allowed to step back.',
     'ritual.step1_tag': 'Release',
-    'ritual.step1_text': 'One scoop in your glass. The day is allowed to become quieter.',
+    'ritual.step1_text': 'One spoon in your glass. The day is allowed to become quieter.',
     'ritual.step2_tag': 'Gather',
     'ritual.step2_text': 'Stir. Breathe. Attention returns.',
     'ritual.step3_tag': 'Arrive',
@@ -172,31 +176,31 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Ingredients
     'ingredients.tag': 'Formula',
-    'ingredients.title': 'A composition for the evening.',
-    'ingredients.desc': 'A quiet composition of minerals, plant extracts, amino acids, and warm flavor notes.',
+    'ingredients.title': 'A quiet composition for the evening.',
+    'ingredients.desc': 'Minerals, plant extracts, amino acids, and warm flavor notes — selected for a ritual that does not need to seem loud.',
     
     // Ingredients Groups (English)
-    'ing.group_ruhe_tag': 'Mineral Base',
-    'ing.group_ruhe_title': 'Stillness',
-    'ing.group_ruhe_desc': 'A quiet base for the transition into the evening.',
+    'ing.group_ruhe_tag': 'Minerals',
+    'ing.group_ruhe_title': 'Release',
+    'ing.group_ruhe_desc': 'A mineral base for the moment when the day is allowed to wind down.',
     
-    'ing.group_balance_tag': 'Botanical Depth',
-    'ing.group_balance_title': 'Gathering',
-    'ing.group_balance_desc': 'Botanical depth for an evening that feels more centered.',
+    'ing.group_balance_tag': 'Plant Extracts',
+    'ing.group_balance_title': 'Gather',
+    'ing.group_balance_desc': 'Selected plant extracts and amino acids for greater inner focus.',
     
     'ing.group_ritual_tag': 'Flavor & Ritual',
-    'ing.group_ritual_title': 'Ritual',
-    'ing.group_ritual_desc': 'Warm notes and familiar ingredients that turn preparation into a ritual.',
+    'ing.group_ritual_title': 'Arrive',
+    'ing.group_ritual_desc': 'Warm notes and familiar ingredients that turn preparation into a quiet moment of arrival.',
 
     // Ingredients descriptions (English)
     'ing.mag_bis': 'A mineral base for the evening.',
-    'ing.theanine': 'From green tea. Clear, mild, reserved.',
-    'ing.apigenin': 'A botanical compound from chamomile.',
-    'ing.ashwa': 'A root with a long tradition.',
-    'ing.saffron': 'An extract with warm depth.',
-    'ing.phosph': 'A natural component of plant lecithines.',
-    'ing.reishi': 'Earthy, deep, traditionally valued.',
-    'ing.glycine': 'Gentle and subtly sweet.',
+    'ing.theanine': 'From green tea. Clear, mild, calm.',
+    'ing.apigenin': 'A botanical compound from chamomile. Quiet, familiar, evening-like.',
+    'ing.ashwa': 'A root with a long tradition — quiet, earthy, reserved.',
+    'ing.saffron': 'An extract with warm depth and a delicate presence.',
+    'ing.phosph': 'Sourced from plant lecithins. A clear component of the composition.',
+    'ing.reishi': 'A mushroom with depth. Traditionally valued, warm in character.',
+    'ing.glycine': 'Gentle, subtly sweet, well-rounded.',
     'ing.vanilla': 'Warm, soft, ritualistic.',
 
     // Ingredients Names (English)
