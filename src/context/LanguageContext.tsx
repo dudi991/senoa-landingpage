@@ -15,7 +15,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Hero
     'hero.slogan': 'NICHT FÜR DEN SCHLAF.\nFÜR DEN MOMENT DAVOR.',
     'hero.title': 'Feierabend beginnt im Kopf.',
-    'hero.desc': 'HESPYRA ist ein trinkbares Abendritual.\nFür den Moment, in dem der Tag leiser werden darf.',
+    'hero.desc': 'HESPYRA ist ein Abendritual zum Trinken.\nFür den Moment, in dem der Tag leiser werden darf.',
     'hero.cta': 'EINLADUNG ERHALTEN',
     'hero.benefit1': 'Mentales Entlasten',
     'hero.benefit2': 'Regeneration',
