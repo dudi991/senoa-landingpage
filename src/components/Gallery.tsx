@@ -12,7 +12,7 @@ const Gallery = () => {
 
   const images = [
     "images/abend_lesen.webp",
-    "images/abendMeer.webp",
+    "images/philosopieWarm.webp",
     "images/abendterasse.webp",
     "images/abendDraußen.webp",
     "images/abend4.webp",

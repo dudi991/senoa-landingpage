@@ -52,7 +52,7 @@ const CustomerStory = () => {
           {/* Right Column - Large Widescreen Editorial Image */}
           <div className="lg:col-span-7 relative aspect-[3/2] lg:aspect-auto lg:h-full min-h-[220px] lg:min-h-[500px] w-full max-w-[320px] md:max-w-[680px] lg:max-w-none mx-auto lg:mx-0 rounded-sm overflow-hidden shadow-sm analog-wrapper analog-grain">
             <img 
-              src="images/abendcouch.webp" 
+              src="images/philosophieHESPYRA.webp" 
               alt={t('philosophy.title')} 
               className="absolute inset-0 w-full h-full object-cover object-center analog-image"
               loading="lazy"

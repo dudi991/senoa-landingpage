@@ -15,7 +15,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Hero
     'hero.slogan': 'NICHT FÜR DEN SCHLAF.\nFÜR DEN MOMENT DAVOR.',
     'hero.title': 'Feierabend beginnt im Kopf.',
-    'hero.desc': 'HESPYRA ist ein Abendritual zum Trinken.\nFür den Moment, in dem der Tag leiser werden darf.',
+    'hero.desc': 'HESPYRA ist ein trinkbares Abendritual.\nFür den Moment, in dem der Tag leiser wird.',
     'hero.cta': 'EINLADUNG ERHALTEN',
     'hero.benefit1': 'Mentales Entlasten',
     'hero.benefit2': 'Regeneration',
@@ -24,11 +24,11 @@ const translations: Record<Language, Record<string, string>> = {
     // BenefitStrip - Variant B
     'benefits.tag': 'Der Abend beginnt nicht plötzlich.',
     'benefits.title1': 'Lösen',
-    'benefits.desc1': 'Der Tag darf sich lösen.',
+    'benefits.desc1': 'Der Tag darf zurücktreten.',
     'benefits.title2': 'Sammeln',
-    'benefits.desc2': 'Aufmerksamkeit kehrt zurück.',
+    'benefits.desc2': 'Die Aufmerksamkeit kehrt zurück.',
     'benefits.title3': 'Ankommen',
-    'benefits.desc3': 'Der Abend wird spürbar.',
+    'benefits.desc3': 'Der Abend wird erreichbar.',
 
     // Philosophy / CustomerStory
     'philosophy.tag': 'Die Philosophie',
@@ -58,11 +58,12 @@ const translations: Record<Language, Record<string, string>> = {
     'ingredients.tag': 'Rezeptur',
     'ingredients.title': 'Eine ruhige Komposition für den Abend.',
     'ingredients.desc': 'Mineralstoffe, Pflanzenextrakte, Aminosäuren und warme Geschmacksnoten — ausgewählt für ein Ritual, das nicht laut wirken muss.',
+    'ingredients.list_label': 'Die Bestandteile der Komposition',
     
     // Ingredients Groups (German)
     'ing.group_ruhe_tag': 'Mineralstoffe',
     'ing.group_ruhe_title': 'Lösen',
-    'ing.group_ruhe_desc': 'Für den Moment, in dem der Tag nachlassen darf.',
+    'ing.group_ruhe_desc': 'Für den Moment, in dem der Tag zurücktreten darf.',
     
     'ing.group_balance_tag': 'Pflanzenextrakte',
     'ing.group_balance_title': 'Sammeln',
@@ -111,16 +112,16 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Waitlist
     'waitlist.title': 'Die erste Edition von HESPYRA.',
-    'waitlist.desc': 'Wir öffnen HESPYRA in kleinen Schritten.\nTrag dich ein, wenn du die erste Edition begleiten möchtest.',
+    'waitlist.desc': 'Wir öffnen HESPYRA in kleinen Schritten.\nTrag dich ein, wenn du erfahren möchtest,\nwann die erste Edition beginnt.',
     'waitlist.placeholder': 'E-Mail-Adresse',
     'waitlist.submit': 'Einladung erhalten',
     'waitlist.success': 'Danke. Wir melden uns leise.',
     'waitlist.benefit1_title': 'Erste Edition',
-    'waitlist.benefit1_desc': 'Zugang zum ersten Launch.',
+    'waitlist.benefit1_desc': 'Ein früher Zugang zum Start.',
     'waitlist.benefit2_title': 'Abendnotizen',
     'waitlist.benefit2_desc': 'Gedanken und Bilder aus der Welt von HESPYRA.',
-    'waitlist.benefit3_title': 'Ritual Preview',
-    'waitlist.benefit3_desc': 'Ein früher Blick auf Produkt und Komposition.',
+    'waitlist.benefit3_title': 'Das Ritual',
+    'waitlist.benefit3_desc': 'Ein erster Blick auf Produkt und Komposition.',
 
     // Footer
     'footer.about': 'ÜBER UNS',
@@ -135,7 +136,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Hero
     'hero.slogan': 'NOT FOR SLEEP.\nFOR THE MOMENT BEFORE.',
     'hero.title': 'Evening starts in your mind.',
-    'hero.desc': 'HESPYRA is a drinkable evening ritual.\nFor the moment when the day is allowed to become quieter.',
+    'hero.desc': 'HESPYRA is a drinkable evening ritual.\nFor the moment when the day becomes quieter.',
     'hero.cta': 'RECEIVE INVITATION',
     'hero.benefit1': 'Mental Unwinding',
     'hero.benefit2': 'Regeneration',
@@ -144,11 +145,11 @@ const translations: Record<Language, Record<string, string>> = {
     // BenefitStrip - Variant B
     'benefits.tag': 'The evening does not begin suddenly.',
     'benefits.title1': 'Release',
-    'benefits.desc1': 'The day is allowed to dissolve.',
+    'benefits.desc1': 'The day is allowed to step back.',
     'benefits.title2': 'Gather',
-    'benefits.desc2': 'Attention returns.',
+    'benefits.desc2': 'The attention returns.',
     'benefits.title3': 'Arrive',
-    'benefits.desc3': 'The evening becomes tangible.',
+    'benefits.desc3': 'The evening becomes reachable.',
 
     // Philosophy / CustomerStory
     'philosophy.tag': 'The Philosophy',
@@ -178,11 +179,12 @@ const translations: Record<Language, Record<string, string>> = {
     'ingredients.tag': 'Formula',
     'ingredients.title': 'A quiet composition for the evening.',
     'ingredients.desc': 'Minerals, plant extracts, amino acids, and warm flavor notes — selected for a ritual that does not need to seem loud.',
+    'ingredients.list_label': 'The components of the composition',
     
     // Ingredients Groups (English)
     'ing.group_ruhe_tag': 'Minerals',
     'ing.group_ruhe_title': 'Release',
-    'ing.group_ruhe_desc': 'For the moment when the day is allowed to wind down.',
+    'ing.group_ruhe_desc': 'For the moment when the day is allowed to step back.',
     
     'ing.group_balance_tag': 'Plant Extracts',
     'ing.group_balance_title': 'Gather',
@@ -231,16 +233,16 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Waitlist
     'waitlist.title': 'The first edition of HESPYRA.',
-    'waitlist.desc': 'We open HESPYRA in small steps.\nSign up if you would like to accompany the first edition.',
+    'waitlist.desc': 'We open HESPYRA in small steps.\nSign up if you would like to know\nwhen the first edition begins.',
     'waitlist.placeholder': 'Email address',
     'waitlist.submit': 'Receive invitation',
     'waitlist.success': 'Thank you. We will reach out quietly.',
     'waitlist.benefit1_title': 'First Edition',
-    'waitlist.benefit1_desc': 'Access to the first launch.',
+    'waitlist.benefit1_desc': 'An early access to the start.',
     'waitlist.benefit2_title': 'Evening Notes',
     'waitlist.benefit2_desc': 'Thoughts and images from the world of HESPYRA.',
-    'waitlist.benefit3_title': 'Ritual Preview',
-    'waitlist.benefit3_desc': 'An early glance at the product and composition.',
+    'waitlist.benefit3_title': 'The Ritual',
+    'waitlist.benefit3_desc': 'A first glance at the product and composition.',
 
     // Footer
     'footer.about': 'ABOUT',

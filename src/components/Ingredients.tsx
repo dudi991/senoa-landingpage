@@ -56,7 +56,10 @@ const Ingredients = () => {
             />
             <div className="w-8 h-[1px] bg-primary/25"></div>
           </div>
-          <p className="font-sans text-base md:text-lg leading-relaxed font-light text-primary/80 mt-8 max-w-xl mx-auto">
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-primary mt-8 mb-4 max-w-xl mx-auto leading-tight">
+            {t('ingredients.title')}
+          </h2>
+          <p className="font-sans text-base md:text-lg leading-relaxed font-light text-primary/80 mt-4 max-w-xl mx-auto">
             {t('ingredients.desc')}
           </p>
         </div>

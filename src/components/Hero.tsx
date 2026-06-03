@@ -12,20 +12,20 @@ const Hero = ({ isCalm }: HeroProps) => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0 overflow-hidden analog-grain">
         <img 
-          src="images/heroWarm.webp" 
+          src="images/heroWarm2.webp" 
           alt="HESPYRA Night Reset Background" 
-          className={`w-full h-full object-cover object-center opacity-85 saturate-[0.94] contrast-[0.97] blur-[0.35px] transition-all duration-[2500ms] animate-ken-burns ${isCalm ? 'brightness-[1.05]' : 'brightness-[0.93]'}`}
+          className={`w-full h-full object-cover object-center opacity-94 saturate-[0.96] contrast-[1.04] transition-all duration-[2500ms] animate-ken-burns ${isCalm ? 'brightness-[1.02]' : 'brightness-[0.96]'}`}
         />
         
         {/* --- Hero Gradient Overlays (Horizontal) --- */}
         {/* Day Mode Horizontal Overlay (Original natural foggier settings restored) */}
-        <div className={`absolute inset-0 bg-gradient-to-b from-white/80 via-white/40 to-white/75 lg:bg-gradient-to-r lg:from-white/75 lg:via-white/35 lg:to-transparent lg:from-white/55 transition-opacity duration-[2500ms] ease-in-out ${isCalm ? 'opacity-0' : 'opacity-100'}`} />
+        <div className={`absolute inset-0 bg-gradient-to-b from-white/70 via-white/25 to-white/60 lg:bg-gradient-to-r lg:from-white/60 lg:via-white/20 lg:to-transparent transition-opacity duration-[2500ms] ease-in-out ${isCalm ? 'opacity-0' : 'opacity-100'}`} />
         {/* Calm Mode Horizontal Overlay (Perfect contrast for dark mode on light wall) */}
         <div className={`absolute inset-0 bg-gradient-to-b from-[#0B0D14]/75 via-[#0B0D14]/40 to-[#0B0D14]/20 lg:bg-gradient-to-r lg:from-[#0B0D14]/70 lg:via-[#0B0D14]/30 lg:to-transparent transition-opacity duration-[2500ms] ease-in-out ${isCalm ? 'opacity-100' : 'opacity-0'}`} />
  
         {/* --- Top Navbar Gradient Overlays (Vertical) --- */}
         {/* Day Mode Top Navbar Overlay (Original natural foggier settings restored) */}
-        <div className={`absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-white/80 via-white/30 to-transparent transition-opacity duration-[2500ms] ease-in-out ${isCalm ? 'opacity-0' : 'opacity-100'}`} />
+        <div className={`absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-white/70 via-white/15 to-transparent transition-opacity duration-[2500ms] ease-in-out ${isCalm ? 'opacity-0' : 'opacity-100'}`} />
         {/* Calm Mode Top Navbar Overlay (twilight vignette for crisp white navbar text contrast) */}
         <div className={`absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[#0B0D14]/70 via-[#0B0D14]/25 to-transparent transition-opacity duration-[2500ms] ease-in-out ${isCalm ? 'opacity-100' : 'opacity-0'}`} />
       </div>
@@ -58,7 +58,7 @@ const Hero = ({ isCalm }: HeroProps) => {
 
             {/* 6. CTA */}
             <div>
-              <a href="#waitlist" className="inline-block text-center bg-accent px-12 w-full max-w-[320px] py-4 text-xs tracking-widest font-semibold uppercase mb-4 text-white hover:bg-opacity-80 transition-opacity">{t('hero.cta')}</a>
+              <a href="#waitlist" className="inline-block text-center bg-accent px-5 w-full max-w-[290px] py-2.5 text-xs tracking-[0.22em] font-normal whitespace-nowrap uppercase rounded-sm mb-4 text-white hover:bg-opacity-80 transition-all duration-300 shadow-sm">{t('hero.cta')}</a>
             </div>
           </div>
         </div>
