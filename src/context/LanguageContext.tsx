@@ -62,7 +62,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Ingredients Groups (German)
     'ing.group_ruhe_tag': 'Mineralstoffe',
     'ing.group_ruhe_title': 'Lösen',
-    'ing.group_ruhe_desc': 'Eine mineralische Basis für den Moment, in dem der Tag nachlassen darf.',
+    'ing.group_ruhe_desc': 'Für den Moment, in dem der Tag nachlassen darf.',
     
     'ing.group_balance_tag': 'Pflanzenextrakte',
     'ing.group_balance_title': 'Sammeln',
@@ -73,7 +73,7 @@ const translations: Record<Language, Record<string, string>> = {
     'ing.group_ritual_desc': 'Warme Noten und vertraute Zutaten, die aus Zubereitung einen stillen Moment des Ankommens machen.',
 
     // Ingredients descriptions (German)
-    'ing.mag_bis': 'Eine mineralische Basis für den Abend.',
+    'ing.mag_bis': 'Zwei Magnesiumformen, bewusst gewählt für die ruhige Basis der Rezeptur.',
     'ing.theanine': 'Aus grünem Tee. Klar, mild, unaufgeregt.',
     'ing.apigenin': 'Ein Pflanzenstoff aus der Kamille. Leise, vertraut, abendlich.',
     'ing.ashwa': 'Eine Wurzel mit langer Tradition — ruhig, erdig, zurückhaltend.',
@@ -111,7 +111,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Waitlist
     'waitlist.title': 'Die erste Edition von HESPYRA.',
-    'waitlist.desc': 'Wir öffnen HESPYRA in kleinen Schritten.\nTrage dich ein, wenn du den ersten Schritt begleiten möchtest.',
+    'waitlist.desc': 'Wir öffnen HESPYRA in kleinen Schritten.\nTrag dich ein, wenn du die erste Edition begleiten möchtest.',
     'waitlist.placeholder': 'E-Mail-Adresse',
     'waitlist.submit': 'Einladung erhalten',
     'waitlist.success': 'Danke. Wir melden uns leise.',
@@ -182,7 +182,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Ingredients Groups (English)
     'ing.group_ruhe_tag': 'Minerals',
     'ing.group_ruhe_title': 'Release',
-    'ing.group_ruhe_desc': 'A mineral base for the moment when the day is allowed to wind down.',
+    'ing.group_ruhe_desc': 'For the moment when the day is allowed to wind down.',
     
     'ing.group_balance_tag': 'Plant Extracts',
     'ing.group_balance_title': 'Gather',
@@ -193,7 +193,7 @@ const translations: Record<Language, Record<string, string>> = {
     'ing.group_ritual_desc': 'Warm notes and familiar ingredients that turn preparation into a quiet moment of arrival.',
 
     // Ingredients descriptions (English)
-    'ing.mag_bis': 'A mineral base for the evening.',
+    'ing.mag_bis': 'Two forms of magnesium, consciously chosen for the calm foundation of the formula.',
     'ing.theanine': 'From green tea. Clear, mild, calm.',
     'ing.apigenin': 'A botanical compound from chamomile. Quiet, familiar, evening-like.',
     'ing.ashwa': 'A root with a long tradition — quiet, earthy, reserved.',
@@ -231,7 +231,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Waitlist
     'waitlist.title': 'The first edition of HESPYRA.',
-    'waitlist.desc': 'We open HESPYRA in small steps.\nSign up if you would like to accompany the first step.',
+    'waitlist.desc': 'We open HESPYRA in small steps.\nSign up if you would like to accompany the first edition.',
     'waitlist.placeholder': 'Email address',
     'waitlist.submit': 'Receive invitation',
     'waitlist.success': 'Thank you. We will reach out quietly.',
