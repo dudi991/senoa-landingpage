@@ -1,5 +1,4 @@
-import { useState, useEffect, lazy, Suspense } from 'react';
-import Lenis from 'lenis';
+import { useState, lazy, Suspense } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import BenefitStrip from './components/BenefitStrip';
@@ -26,46 +25,6 @@ function App() {
   const [showPrivacy, setShowPrivacy] = useState(false);
   const [isCalm, setIsCalm] = useState(false);
 
-  // Lenis Smooth Scroll Initialization
-  useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.4,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      smoothWheel: true,
-      wheelMultiplier: 1,
-      touchMultiplier: 1.5,
-    });
-
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-
-    // Bind link clicks to Lenis smooth scroll
-    const handleAnchorClick = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      const anchor = target.closest('a');
-      if (anchor && anchor.getAttribute('href')?.startsWith('#')) {
-        const targetId = anchor.getAttribute('href');
-        if (targetId && targetId !== '#') {
-          const targetEl = document.querySelector(targetId);
-          if (targetEl) {
-            e.preventDefault();
-            lenis.scrollTo(targetEl as HTMLElement);
-          }
-        }
-      }
-    };
-
-    document.addEventListener('click', handleAnchorClick);
-
-    return () => {
-      lenis.destroy();
-      document.removeEventListener('click', handleAnchorClick);
-    };
-  }, []);
 
   return (
     <div className={`min-h-screen font-sans overflow-x-hidden selection:bg-primary selection:text-white ${isCalm ? 'calm-mode bg-[#0B0D14] text-[#F3F4F6]' : 'bg-white text-primary'}`}>

@@ -9,6 +9,12 @@
     overflow-x: hidden;
   }
 
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
   body {
     @apply bg-background text-primary font-sans antialiased;
   }
@@ -240,21 +246,25 @@
     background-color: #0B0D14 !important;
   }
   
-  /* Global smooth transition rule for calm mode */
+  /* Optimized smooth transition rule for calm mode to prevent scroll jank */
+  body,
   .min-h-screen,
   section,
-  div,
-  span,
+  footer,
+  nav,
+  input,
+  textarea,
+  button,
+  a,
   p,
   h1,
   h2,
   h3,
   h4,
-  footer,
-  input,
-  textarea,
-  button,
-  a {
+  .bg-\[\#FAF9F6\],
+  .w-14.h-14,
+  .border-white,
+  .bg-primary\/5 {
     transition: background-color 2.5s cubic-bezier(0.16, 1, 0.3, 1), 
                 color 2.5s cubic-bezier(0.16, 1, 0.3, 1), 
                 border-color 2.5s cubic-bezier(0.16, 1, 0.3, 1);
